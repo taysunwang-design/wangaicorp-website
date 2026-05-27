@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -10,19 +9,18 @@ export default function Home() {
         <div className="nav-links">
           <a href="#about">About</a>
           <a href="#services">Services</a>
+
           <Link href="/platform">Platform</Link>
+
           <a href="#contact">Contact</a>
         </div>
       </nav>
 
       <main>
         <section className="hero">
-          <Image
-            src="/logo11.png"
-            alt="WANG CORP Logo"
-            width={760}
-            height={760}
-            priority
+          <img
+            src="/wang-symbol.png"
+            alt="Wang Corp Symbol"
             className="hero-logo"
           />
 
@@ -35,130 +33,81 @@ export default function Home() {
           <div className="hero-line"></div>
 
           <p className="hero-description">
-            Building transparent and sustainable industrial cooperation between
-            global markets through consulting, trade coordination, and
-            intelligent digital infrastructure.
+            Building transparent and sustainable industrial cooperation
+            between global markets through consulting, trade coordination,
+            and intelligent digital infrastructure.
           </p>
 
           <div className="hero-actions">
             <Link href="/platform" className="primary-button">
-              Enter Wang Platform
+              Enter Platform
             </Link>
 
-            <a href="#services" className="secondary-button">
-              Explore Services
+            <a href="#contact" className="secondary-button">
+              Contact Us
             </a>
           </div>
         </section>
 
         <section id="about" className="content-section">
           <div className="section-inner">
-            <p className="section-label">BUILT ON TRANSPARENCY</p>
+            <div className="section-label">ABOUT</div>
 
             <h2 className="section-title">
-              A Different Approach To International Industry
+              Global industrial coordination with modern digital infrastructure.
             </h2>
 
             <p className="section-text">
-              WANG CORP. was founded on the belief that sustainable industrial
-              business can only exist when every side benefits equally —
-              suppliers, clients, and coordinators alike.
+              Wang Corp operates as an international coordination and
+              infrastructure company focused on heavy industry,
+              engineering partnerships, strategic sourcing,
+              industrial digitalization, and AI-assisted communication.
             </p>
-
-            <div className="card-grid">
-              <div className="info-card">
-                <h3>Transparent Coordination</h3>
-
-                <p>
-                  We believe trust is built through operational transparency,
-                  realistic expectations, and long-term cooperation rather than
-                  short-term transactions.
-                </p>
-              </div>
-
-              <div className="info-card">
-                <h3>Bridging Global Markets</h3>
-
-                <p>
-                  WANG CORP. works as a bridge between international industrial
-                  ecosystems, supporting both global companies entering China
-                  and Chinese companies expanding abroad.
-                </p>
-              </div>
-
-              <div className="info-card">
-                <h3>Lean & Efficient Operations</h3>
-
-                <p>
-                  We prioritize efficiency, agility, and practical execution
-                  over unnecessary corporate overhead and inflated operational
-                  structures.
-                </p>
-              </div>
-
-              <div className="info-card">
-                <h3>Digital Industrial Infrastructure</h3>
-
-                <p>
-                  Alongside industrial consulting and coordination, WANG CORP.
-                  is developing intelligent digital platforms designed to
-                  simplify global industrial communication and collaboration.
-                </p>
-              </div>
-            </div>
           </div>
         </section>
 
         <section id="services" className="content-section">
           <div className="section-inner">
-            <p className="section-label">SERVICES</p>
+            <div className="section-label">SERVICES</div>
 
             <h2 className="section-title">
-              Human Coordination Supported By Digital Infrastructure
+              Industrial systems built for international cooperation.
             </h2>
-
-            <p className="section-text">
-              WANG CORP. combines trade coordination, procurement support,
-              market development, industrial consulting, and digital platform
-              thinking under one lean international structure.
-            </p>
 
             <div className="card-grid">
               <div className="info-card">
                 <h3>Industrial Coordination</h3>
 
                 <p>
-                  Cross-border communication, project follow-up, supplier-user
-                  alignment, and practical industrial workflow support.
+                  International supplier coordination, RFQ management,
+                  project tracking, and engineering communication support.
                 </p>
               </div>
 
               <div className="info-card">
-                <h3>Trade & Procurement</h3>
+                <h3>Strategic Sourcing</h3>
 
                 <p>
-                  Sourcing coordination, supplier evaluation, quotation support,
-                  purchasing assistance, and international procurement
-                  communication.
+                  Global industrial procurement and manufacturing partnerships
+                  focused on steel, mining, and heavy industry sectors.
                 </p>
               </div>
 
               <div className="info-card">
-                <h3>Market Development</h3>
+                <h3>Digital Infrastructure</h3>
 
                 <p>
-                  Supporting companies entering new markets through localization,
-                  representation, business development, and strategic
-                  communication.
+                  Enterprise-grade industrial platforms integrating AI,
+                  multilingual communication, and operational coordination.
                 </p>
               </div>
 
               <div className="info-card">
-                <h3>Digital Platform</h3>
+                <h3>AI-Assisted Communication</h3>
 
                 <p>
-                  AI-assisted communication, multilingual workflows, industrial
-                  data organization, and future procurement infrastructure.
+                  Real-time multilingual industrial communication and
+                  coordination systems for global business operations.
                 </p>
               </div>
             </div>
@@ -167,21 +116,34 @@ export default function Home() {
 
         <section id="contact" className="content-section">
           <div className="section-inner">
-            <p className="section-label">CONTACT</p>
+            <div className="section-label">CONTACT</div>
 
-            <h2 className="section-title">Start A Conversation</h2>
-
-            <p className="section-text">
-              For international industrial cooperation, supplier coordination,
-              platform development, or project communication, contact WANG CORP.
-            </p>
+            <h2 className="section-title">
+              Let’s build the next generation of industrial infrastructure.
+            </h2>
 
             <div className="contact-box">
-              <p>Email setup is currently in progress.</p>
-              <p>Official WANG CORP. contact addresses will be added soon.</p>
+              <p>Email: info@wangicorp.com</p>
+
+              <p>Business: international coordination & infrastructure</p>
+
+              <p>Location: Singapore / China / Türkiye</p>
             </div>
           </div>
         </section>
+
+        <footer className="content-section">
+          <div className="section-inner">
+            <p
+              style={{
+                color: "rgba(255,255,255,0.42)",
+                fontSize: "0.92rem",
+              }}
+            >
+              © 2026 WANG CORP. All rights reserved.
+            </p>
+          </div>
+        </footer>
       </main>
     </>
   );
