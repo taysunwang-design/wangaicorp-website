@@ -1,105 +1,188 @@
-export default function PlatformPage() {
+import Image from "next/image";
+import Link from "next/link";
+
+export default function Home() {
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        background: "#050505",
-        color: "#f5f5f5",
-        padding: "120px 40px",
-        fontFamily: "Arial, sans-serif",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-        }}
-      >
-        <p
-          style={{
-            color: "#6e6e6e",
-            letterSpacing: "4px",
-            marginBottom: "20px",
-          }}
-        >
-          WANG PLATFORM
-        </p>
+    <>
+      <nav className="navbar">
+        <div className="logo-text">WANG CORP.</div>
 
-        <h1
-          style={{
-            fontSize: "72px",
-            lineHeight: 1,
-            fontWeight: 700,
-            marginBottom: "40px",
-          }}
-        >
-          Industrial Coordination Infrastructure
-        </h1>
-
-        <p
-          style={{
-            maxWidth: "800px",
-            fontSize: "22px",
-            lineHeight: 1.7,
-            color: "#cfcfcf",
-            marginBottom: "80px",
-          }}
-        >
-          Wang Platform is a next-generation industrial coordination system
-          designed for international heavy industry communication, supplier
-          management, AI-assisted translation, RFQ coordination, and project
-          collaboration.
-        </p>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: "24px",
-          }}
-        >
-          {[
-            "AI Translation Layer",
-            "Industrial CRM",
-            "RFQ Management",
-            "Supplier Coordination",
-            "Secure Client Portal",
-            "Project Communication",
-            "Document Center",
-            "Global Collaboration",
-          ].map((item) => (
-            <div
-              key={item}
-              style={{
-                border: "1px solid rgba(255,255,255,0.08)",
-                borderRadius: "20px",
-                padding: "30px",
-                background: "rgba(255,255,255,0.03)",
-                backdropFilter: "blur(10px)",
-              }}
-            >
-              <h3
-                style={{
-                  fontSize: "22px",
-                  marginBottom: "12px",
-                }}
-              >
-                {item}
-              </h3>
-
-              <p
-                style={{
-                  color: "#9d9d9d",
-                  lineHeight: 1.6,
-                }}
-              >
-                Enterprise-grade infrastructure designed for modern industrial
-                operations and international coordination.
-              </p>
-            </div>
-          ))}
+        <div className="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <Link href="/platform">Platform</Link>
+          <a href="#contact">Contact</a>
         </div>
-      </div>
-    </main>
+      </nav>
+
+      <main>
+        <section className="hero">
+          <Image
+            src="/logo11.png"
+            alt="WANG CORP Logo"
+            width={760}
+            height={760}
+            priority
+            className="hero-logo"
+          />
+
+          <h1 className="hero-title">
+            International Industrial
+            <br />
+            Coordination & Infrastructure
+          </h1>
+
+          <div className="hero-line"></div>
+
+          <p className="hero-description">
+            Building transparent and sustainable industrial cooperation between
+            global markets through consulting, trade coordination, and
+            intelligent digital infrastructure.
+          </p>
+
+          <div className="hero-actions">
+            <Link href="/platform" className="primary-button">
+              Enter Wang Platform
+            </Link>
+
+            <a href="#services" className="secondary-button">
+              Explore Services
+            </a>
+          </div>
+        </section>
+
+        <section id="about" className="content-section">
+          <div className="section-inner">
+            <p className="section-label">BUILT ON TRANSPARENCY</p>
+
+            <h2 className="section-title">
+              A Different Approach To International Industry
+            </h2>
+
+            <p className="section-text">
+              WANG CORP. was founded on the belief that sustainable industrial
+              business can only exist when every side benefits equally —
+              suppliers, clients, and coordinators alike.
+            </p>
+
+            <div className="card-grid">
+              <div className="info-card">
+                <h3>Transparent Coordination</h3>
+
+                <p>
+                  We believe trust is built through operational transparency,
+                  realistic expectations, and long-term cooperation rather than
+                  short-term transactions.
+                </p>
+              </div>
+
+              <div className="info-card">
+                <h3>Bridging Global Markets</h3>
+
+                <p>
+                  WANG CORP. works as a bridge between international industrial
+                  ecosystems, supporting both global companies entering China
+                  and Chinese companies expanding abroad.
+                </p>
+              </div>
+
+              <div className="info-card">
+                <h3>Lean & Efficient Operations</h3>
+
+                <p>
+                  We prioritize efficiency, agility, and practical execution
+                  over unnecessary corporate overhead and inflated operational
+                  structures.
+                </p>
+              </div>
+
+              <div className="info-card">
+                <h3>Digital Industrial Infrastructure</h3>
+
+                <p>
+                  Alongside industrial consulting and coordination, WANG CORP.
+                  is developing intelligent digital platforms designed to
+                  simplify global industrial communication and collaboration.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" className="content-section">
+          <div className="section-inner">
+            <p className="section-label">SERVICES</p>
+
+            <h2 className="section-title">
+              Human Coordination Supported By Digital Infrastructure
+            </h2>
+
+            <p className="section-text">
+              WANG CORP. combines trade coordination, procurement support,
+              market development, industrial consulting, and digital platform
+              thinking under one lean international structure.
+            </p>
+
+            <div className="card-grid">
+              <div className="info-card">
+                <h3>Industrial Coordination</h3>
+
+                <p>
+                  Cross-border communication, project follow-up, supplier-user
+                  alignment, and practical industrial workflow support.
+                </p>
+              </div>
+
+              <div className="info-card">
+                <h3>Trade & Procurement</h3>
+
+                <p>
+                  Sourcing coordination, supplier evaluation, quotation support,
+                  purchasing assistance, and international procurement
+                  communication.
+                </p>
+              </div>
+
+              <div className="info-card">
+                <h3>Market Development</h3>
+
+                <p>
+                  Supporting companies entering new markets through localization,
+                  representation, business development, and strategic
+                  communication.
+                </p>
+              </div>
+
+              <div className="info-card">
+                <h3>Digital Platform</h3>
+
+                <p>
+                  AI-assisted communication, multilingual workflows, industrial
+                  data organization, and future procurement infrastructure.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="content-section">
+          <div className="section-inner">
+            <p className="section-label">CONTACT</p>
+
+            <h2 className="section-title">Start A Conversation</h2>
+
+            <p className="section-text">
+              For international industrial cooperation, supplier coordination,
+              platform development, or project communication, contact WANG CORP.
+            </p>
+
+            <div className="contact-box">
+              <p>Email setup is currently in progress.</p>
+              <p>Official WANG CORP. contact addresses will be added soon.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
