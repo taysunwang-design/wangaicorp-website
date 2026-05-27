@@ -4,15 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "WANG CORP.",
   description: "International Industrial Coordination & Infrastructure",
+
   icons: {
-    icon: [
-      {
-        url: "/favicon.png?v=4",
-        type: "image/png",
-      },
-    ],
-    shortcut: "/favicon.png?v=4",
-    apple: "/favicon.png?v=4",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.png",
   },
 };
 
@@ -24,9 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" href="/favicon.png?v=4" />
-        <link rel="shortcut icon" href="/favicon.png?v=4" />
-        <link rel="apple-touch-icon" href="/favicon.png?v=4" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
       </head>
 
       <body>{children}</body>
