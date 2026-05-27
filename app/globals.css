@@ -302,4 +302,123 @@ body {
   .platform-title {
     font-size: 2.5rem;
   }
+}.home-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("/bg-stone.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.home-hero {
+  min-height: 100vh;
+  padding: 150px 24px 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.home-logo {
+  width: 520px;
+  max-width: 82vw;
+  height: auto;
+
+  margin-bottom: 30px;
+
+  filter:
+    drop-shadow(0 0 22px rgba(180, 255, 220, 0.12))
+    drop-shadow(0 0 60px rgba(180, 255, 220, 0.06));
+}
+
+.home-title {
+  max-width: 1150px;
+
+  margin-bottom: 30px;
+
+  font-size: clamp(3rem, 6vw, 5.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+
+  color: white;
+}
+
+.home-description {
+  max-width: 920px;
+
+  margin-bottom: 42px;
+
+  font-size: 1.2rem;
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.home-actions {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary-button,
+.secondary-button {
+  min-width: 210px;
+  height: 54px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.primary-button {
+  color: #07100b;
+
+  background: linear-gradient(
+    135deg,
+    rgba(205, 230, 214, 1),
+    rgba(139, 170, 148, 1)
+  );
+}
+
+.secondary-button {
+  color: rgba(255, 255, 255, 0.86);
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  background: rgba(0, 0, 0, 0.24);
+}
+
+@media (max-width: 768px) {
+  .home-logo {
+    width: 360px;
+  }
+
+  .home-actions {
+    flex-direction: column;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+    max-width: 320px;
+  }
 }
