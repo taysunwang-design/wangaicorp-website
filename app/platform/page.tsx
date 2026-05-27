@@ -11,7 +11,7 @@ export default function PlatformPage() {
           <a href="/#about">About</a>
           <a href="/#services">Services</a>
           <a href="/platform">Platform</a>
-          <a href="/#contact">Contact</a>
+          <a href="/contact">Contact</a>
         </div>
       </nav>
 
@@ -35,7 +35,7 @@ export default function PlatformPage() {
           </div>
         </section>
 <div className="home-actions" style={{ marginTop: "40px" }}>
-  <a href="/#contact" className="primary-button">
+  <a href="/contact" className="primary-button">
     Request Access
   </a>
 
