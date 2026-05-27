@@ -1,41 +1,15 @@
 "use client";
 
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
-  const locale = useLocale();
   const t = useTranslations("Home");
-  const nav = useTranslations("Nav");
-
-  const switchLanguage = (newLocale: string) => {
-    window.location.href = `/${newLocale}`;
-  };
+  const locale = useLocale();
 
   return (
     <>
-      <nav className="navbar">
-        <a href={`/${locale}`} className="logo-text">
-          WANG CORP.
-        </a>
-
-        <div className="nav-links">
-          <a href={`/${locale}`}>{nav("home")}</a>
-          <a href={`/${locale}/about`}>{nav("about")}</a>
-          <a href={`/${locale}/services`}>{nav("services")}</a>
-          <a href={`/${locale}/platform`}>{nav("platform")}</a>
-          <a href={`/${locale}/contact`}>{nav("contact")}</a>
-
-          <select
-            className="language-selector"
-            value={locale}
-            onChange={(e) => switchLanguage(e.target.value)}
-          >
-            <option value="en">EN</option>
-            <option value="tr">TR</option>
-            <option value="zh">中文</option>
-          </select>
-        </div>
-      </nav>
+      <Navbar />
 
       <main className="home-page">
         <section className="home-hero">

@@ -1,34 +1,22 @@
+import Navbar from "../components/Navbar";
+
 export default function ContactPage() {
   return (
     <>
-      <nav className="navbar">
-        <a href="/" className="logo-text">
-          WANG CORP.
-        </a>
-
-        <div className="nav-links">
-          <a href="/">Home</a>
-          <a href="/en/about">About</a>
-          <a href="/en/services">Services</a>
-          <a href="/en/platform">Platform</a>
-          <a href="/en/contact">Contact</a>
-        </div>
-      </nav>
+      <Navbar />
 
       <main className="platform-page">
         <section className="platform-hero">
-          <p className="platform-label">
-            CONTACT
-          </p>
+          <p className="platform-label">CONTACT</p>
 
           <h1 className="platform-title">
             Contact Infrastructure Under Development
           </h1>
 
           <p className="platform-description">
-            Official WANG CORP. communication channels,
-            enterprise email infrastructure,
-            and client access systems are currently being prepared.
+            Official WANG CORP. communication channels, enterprise email
+            infrastructure, and client access systems are currently being
+            prepared.
           </p>
 
           <div className="platform-status">
@@ -36,21 +24,12 @@ export default function ContactPage() {
             Contact system in development
           </div>
 
-          <div
-            className="home-actions"
-            style={{ marginTop: "40px" }}
-          >
-            <a
-              href="/"
-              className="primary-button"
-            >
+          <div className="home-actions" style={{ marginTop: "40px" }}>
+            <a href="/en" className="primary-button">
               Return Home
             </a>
 
-            <a
-              href="/platform"
-              className="secondary-button"
-            >
+            <a href="/en/platform" className="secondary-button">
               View Platform
             </a>
           </div>

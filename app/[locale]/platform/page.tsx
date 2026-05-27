@@ -1,19 +1,9 @@
+import Navbar from "../components/Navbar";
+
 export default function PlatformPage() {
   return (
     <>
-      <nav className="navbar">
-        <a href="/" className="logo-text">
-          WANG CORP.
-        </a>
-
-        <div className="nav-links">
-          <a href="/">Home</a>
-          <a href="/#about">About</a>
-          <a href="/#services">Services</a>
-          <a href="/platform">Platform</a>
-          <a href="/contact">Contact</a>
-        </div>
-      </nav>
+      <Navbar />
 
       <main className="platform-page">
         <section className="platform-hero">
@@ -33,16 +23,18 @@ export default function PlatformPage() {
             <span className="status-dot"></span>
             Platform architecture in development
           </div>
-        </section>
-<div className="home-actions" style={{ marginTop: "40px" }}>
-  <a href="/contact" className="primary-button">
-    Request Access
-  </a>
 
-  <a href="/" className="secondary-button">
-    Return Home
-  </a>
-</div>
+          <div className="home-actions" style={{ marginTop: "40px" }}>
+            <a href="/en/contact" className="primary-button">
+              Request Access
+            </a>
+
+            <a href="/en" className="secondary-button">
+              Return Home
+            </a>
+          </div>
+        </section>
+
         <section className="platform-grid">
           <div className="platform-card">
             <h3>AI Translation Layer</h3>
