@@ -34,7 +34,15 @@ export default function PlatformPage() {
             Platform architecture in development
           </div>
         </section>
+<div className="home-actions" style={{ marginTop: "40px" }}>
+  <a href="/#contact" className="primary-button">
+    Request Access
+  </a>
 
+  <a href="/" className="secondary-button">
+    Return Home
+  </a>
+</div>
         <section className="platform-grid">
           <div className="platform-card">
             <h3>AI Translation Layer</h3>
