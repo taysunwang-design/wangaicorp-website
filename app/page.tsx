@@ -31,15 +31,6 @@ export default function Home() {
             intelligent digital infrastructure.
           </p>
 
-          <div className="home-actions">
-            <a href="/platform" className="primary-button">
-              Enter Platform
-            </a>
-
-            <a href="/#contact" className="secondary-button">
-              Contact Us
-            </a>
-          </div>
         </section>
 
         <section id="about" className="content-section">
