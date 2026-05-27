@@ -9,7 +9,7 @@ export default function Home() {
         <div className="nav-links">
           <a href="#about">About</a>
           <a href="#services">Services</a>
-          <a href="#platform">Platform</a>
+          <a href="platform">Platform</a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
