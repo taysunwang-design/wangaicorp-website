@@ -4,15 +4,18 @@ export default function Home() {
   return (
     <>
       <nav className="navbar">
-        <div className="logo-text">WANG CORP.</div>
+  <a href="/" className="logo-text">
+    WANG CORP.
+  </a>
 
-        <div className="nav-links">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="platform">Platform</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
+  <div className="nav-links">
+    <a href="/">Home</a>
+    <a href="/#about">About</a>
+    <a href="/#services">Services</a>
+    <a href="/platform">Platform</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
 
       <main>
         <section className="hero">
