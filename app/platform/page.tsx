@@ -1,149 +1,107 @@
-import Link from "next/link";
-
-export default function Home() {
+export default function PlatformPage() {
   return (
     <>
       <nav className="navbar">
-        <div className="logo-text">WANG CORP.</div>
+        <a href="/" className="logo-text">
+          WANG CORP.
+        </a>
 
         <div className="nav-links">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-
-          <Link href="/platform">Platform</Link>
-
-          <a href="#contact">Contact</a>
+          <a href="/#about">About</a>
+          <a href="/#services">Services</a>
+          <a href="/platform">Platform</a>
+          <a href="/#contact">Contact</a>
         </div>
       </nav>
 
-      <main>
-        <section className="hero">
-          <img
-            src="/wang-symbol.png"
-            alt="Wang Corp Symbol"
-            className="hero-logo"
-          />
+      <main className="platform-page">
+        <section className="platform-hero">
+          <p className="platform-label">WANG PLATFORM</p>
 
-          <h1 className="hero-title">
-            International Industrial
-            <br />
-            Coordination & Infrastructure
+          <h1 className="platform-title">
+            Industrial Coordination Infrastructure
           </h1>
 
-          <div className="hero-line"></div>
-
-          <p className="hero-description">
-            Building transparent and sustainable industrial cooperation
-            between global markets through consulting, trade coordination,
-            and intelligent digital infrastructure.
+          <p className="platform-description">
+            Wang Platform is a next-generation industrial coordination system
+            designed for international heavy industry communication, supplier
+            management, AI-assisted translation, RFQ coordination, and project
+            collaboration.
           </p>
 
-          <div className="hero-actions">
-            <Link href="/platform" className="primary-button">
-              Enter Platform
-            </Link>
-
-            <a href="#contact" className="secondary-button">
-              Contact Us
-            </a>
+          <div className="platform-status">
+            <span className="status-dot"></span>
+            Platform architecture in development
           </div>
         </section>
 
-        <section id="about" className="content-section">
-          <div className="section-inner">
-            <div className="section-label">ABOUT</div>
+        <section className="platform-grid">
+          <div className="platform-card">
+            <h3>AI Translation Layer</h3>
+            <p>
+              Multilingual communication infrastructure designed for industrial
+              terminology, supplier coordination, and cross-border project
+              communication.
+            </p>
+          </div>
 
-            <h2 className="section-title">
-              Global industrial coordination with modern digital infrastructure.
-            </h2>
+          <div className="platform-card">
+            <h3>Industrial CRM</h3>
+            <p>
+              Company, plant, department, contact, project, and equipment-level
+              relationship management designed specifically for heavy industry.
+            </p>
+          </div>
 
-            <p className="section-text">
-              Wang Corp operates as an international coordination and
-              infrastructure company focused on heavy industry,
-              engineering partnerships, strategic sourcing,
-              industrial digitalization, and AI-assisted communication.
+          <div className="platform-card">
+            <h3>RFQ Management</h3>
+            <p>
+              Structured request, quotation, document, and technical
+              clarification workflows for international industrial procurement.
+            </p>
+          </div>
+
+          <div className="platform-card">
+            <h3>Supplier Coordination</h3>
+            <p>
+              A controlled workspace for suppliers, clients, engineers, and
+              coordinators to communicate through a single transparent channel.
+            </p>
+          </div>
+
+          <div className="platform-card">
+            <h3>Secure Client Portal</h3>
+            <p>
+              Permission-based access for clients, suppliers, and internal users
+              with controlled visibility across projects, files, and messages.
+            </p>
+          </div>
+
+          <div className="platform-card">
+            <h3>Project Communication</h3>
+            <p>
+              Centralized project records, meeting notes, technical discussions,
+              and progress updates for long-cycle industrial cooperation.
+            </p>
+          </div>
+
+          <div className="platform-card">
+            <h3>Document Center</h3>
+            <p>
+              Organized storage for catalogs, drawings, quotations,
+              specifications, project documents, inspection files, and
+              commercial records.
+            </p>
+          </div>
+
+          <div className="platform-card">
+            <h3>Global Collaboration</h3>
+            <p>
+              A digital foundation for industrial cooperation between China,
+              Türkiye, Europe, and global heavy industry markets.
             </p>
           </div>
         </section>
-
-        <section id="services" className="content-section">
-          <div className="section-inner">
-            <div className="section-label">SERVICES</div>
-
-            <h2 className="section-title">
-              Industrial systems built for international cooperation.
-            </h2>
-
-            <div className="card-grid">
-              <div className="info-card">
-                <h3>Industrial Coordination</h3>
-
-                <p>
-                  International supplier coordination, RFQ management,
-                  project tracking, and engineering communication support.
-                </p>
-              </div>
-
-              <div className="info-card">
-                <h3>Strategic Sourcing</h3>
-
-                <p>
-                  Global industrial procurement and manufacturing partnerships
-                  focused on steel, mining, and heavy industry sectors.
-                </p>
-              </div>
-
-              <div className="info-card">
-                <h3>Digital Infrastructure</h3>
-
-                <p>
-                  Enterprise-grade industrial platforms integrating AI,
-                  multilingual communication, and operational coordination.
-                </p>
-              </div>
-
-              <div className="info-card">
-                <h3>AI-Assisted Communication</h3>
-
-                <p>
-                  Real-time multilingual industrial communication and
-                  coordination systems for global business operations.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" className="content-section">
-          <div className="section-inner">
-            <div className="section-label">CONTACT</div>
-
-            <h2 className="section-title">
-              Let’s build the next generation of industrial infrastructure.
-            </h2>
-
-            <div className="contact-box">
-              <p>Email: info@wangicorp.com</p>
-
-              <p>Business: international coordination & infrastructure</p>
-
-              <p>Location: Singapore / China / Türkiye</p>
-            </div>
-          </div>
-        </section>
-
-        <footer className="content-section">
-          <div className="section-inner">
-            <p
-              style={{
-                color: "rgba(255,255,255,0.42)",
-                fontSize: "0.92rem",
-              }}
-            >
-              © 2026 WANG CORP. All rights reserved.
-            </p>
-          </div>
-        </footer>
       </main>
     </>
   );
