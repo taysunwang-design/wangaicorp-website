@@ -8,10 +8,10 @@ export default function ContactPage() {
 
         <div className="nav-links">
           <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/services">Services</a>
-          <a href="/platform">Platform</a>
-          <a href="/contact/">Contact</a>
+          <a href="/en/about">About</a>
+          <a href="/en/services">Services</a>
+          <a href="/en/platform">Platform</a>
+          <a href="/en/contact">Contact</a>
         </div>
       </nav>
 

@@ -497,4 +497,25 @@ a {
   .platform-title {
     font-size: 2.5rem;
   }
+}.language-selector {
+  padding: 8px 12px;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  background: rgba(0, 0, 0, 0.35);
+
+  color: white;
+
+  font-size: 0.85rem;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.language-selector option {
+  background: #050505;
+  color: white;
 }

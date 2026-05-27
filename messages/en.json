@@ -1,0 +1,16 @@
+{
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "platform": "Platform",
+    "contact": "Contact"
+  },
+  "Home": {
+    "title1": "International Industrial",
+    "title2": "Coordination & Infrastructure",
+    "description": "Building transparent and sustainable industrial cooperation between global markets through consulting, trade coordination, and intelligent digital infrastructure.",
+    "platform": "ENTER PLATFORM",
+    "contact": "CONTACT US"
+  }
+}

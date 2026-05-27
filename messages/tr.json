@@ -1,0 +1,16 @@
+{
+  "Nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetler",
+    "platform": "Platform",
+    "contact": "İletişim"
+  },
+  "Home": {
+    "title1": "Uluslararası Endüstriyel",
+    "title2": "Koordinasyon ve Altyapı",
+    "description": "Danışmanlık, ticari koordinasyon ve akıllı dijital altyapı aracılığıyla küresel pazarlar arasında şeffaf ve sürdürülebilir endüstriyel iş birliği oluşturuyoruz.",
+    "platform": "PLATFORMA GİR",
+    "contact": "BİZE ULAŞIN"
+  }
+}
