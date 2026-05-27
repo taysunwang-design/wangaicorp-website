@@ -6,11 +6,112 @@
     "platform": "Platform",
     "contact": "Contact"
   },
+
   "Home": {
     "title1": "International Industrial",
     "title2": "Coordination & Infrastructure",
     "description": "Building transparent and sustainable industrial cooperation between global markets through consulting, trade coordination, and intelligent digital infrastructure.",
     "platform": "ENTER PLATFORM",
     "contact": "CONTACT US"
+  },
+
+  "About": {
+    "label": "ABOUT WANG CORP.",
+    "title": "Global industrial coordination with modern digital infrastructure.",
+    "description": "WANG CORP. operates as an international coordination and infrastructure company focused on heavy industry, engineering partnerships, strategic sourcing, industrial digitalization, and AI-assisted communication.",
+    "cards": {
+      "transparent": {
+        "title": "Transparent Coordination",
+        "text": "We believe trust is built through operational transparency, realistic expectations, and long-term cooperation rather than short-term transactions."
+      },
+      "markets": {
+        "title": "Bridging Global Markets",
+        "text": "WANG CORP. works as a bridge between international industrial ecosystems, supporting both global companies entering China and Chinese companies expanding abroad."
+      },
+      "lean": {
+        "title": "Lean & Efficient Operations",
+        "text": "We prioritize efficiency, agility, and practical execution over unnecessary corporate overhead and inflated operational structures."
+      },
+      "digital": {
+        "title": "Digital Industrial Infrastructure",
+        "text": "Alongside industrial consulting and coordination, WANG CORP. is developing intelligent digital platforms designed to simplify global industrial communication and collaboration."
+      }
+    }
+  },
+
+  "Services": {
+    "label": "SERVICES",
+    "title": "Industrial systems built for international cooperation.",
+    "description": "WANG CORP. provides coordination, sourcing, communication, and infrastructure services focused on heavy industry and global industrial operations.",
+    "cards": {
+      "coordination": {
+        "title": "Industrial Coordination",
+        "text": "International supplier coordination, RFQ management, project tracking, and engineering communication support."
+      },
+      "sourcing": {
+        "title": "Strategic Sourcing",
+        "text": "Global industrial procurement and manufacturing partnerships focused on steel, mining, and heavy industry sectors."
+      },
+      "infrastructure": {
+        "title": "Digital Infrastructure",
+        "text": "Enterprise-grade industrial platforms integrating AI, multilingual communication, and operational coordination."
+      },
+      "communication": {
+        "title": "AI-Assisted Communication",
+        "text": "Real-time multilingual industrial communication and coordination systems for global business operations."
+      }
+    }
+  },
+
+  "Platform": {
+    "label": "WANG PLATFORM",
+    "title": "Industrial Coordination System",
+    "description": "Enterprise-grade digital infrastructure for supplier coordination, multilingual communication, RFQ management, and international industrial collaboration.",
+    "status": "Platform architecture in development",
+    "request": "REQUEST ACCESS",
+    "return": "RETURN HOME",
+    "cards": {
+      "translation": {
+        "title": "AI Translation Layer",
+        "text": "Multilingual communication infrastructure designed for industrial terminology, supplier coordination, and cross-border project communication."
+      },
+      "crm": {
+        "title": "Industrial CRM",
+        "text": "Company, plant, department, contact, project, and equipment-level relationship management designed specifically for heavy industry."
+      },
+      "rfq": {
+        "title": "RFQ Management",
+        "text": "Structured request, quotation, document, and technical clarification workflows for international industrial procurement."
+      },
+      "supplier": {
+        "title": "Supplier Coordination",
+        "text": "A controlled workspace for suppliers, clients, engineers, and coordinators to communicate through a single transparent channel."
+      },
+      "portal": {
+        "title": "Secure Client Portal",
+        "text": "Permission-based access for clients, suppliers, and internal users with controlled visibility across projects, files, and messages."
+      },
+      "project": {
+        "title": "Project Communication",
+        "text": "Centralized project records, meeting notes, technical discussions, and progress updates for long-cycle industrial cooperation."
+      },
+      "documents": {
+        "title": "Document Center",
+        "text": "Organized storage for catalogs, drawings, quotations, specifications, project documents, inspection files, and commercial records."
+      },
+      "global": {
+        "title": "Global Collaboration",
+        "text": "A digital foundation for industrial cooperation between China, Türkiye, Europe, and global heavy industry markets."
+      }
+    }
+  },
+
+  "Contact": {
+    "label": "CONTACT",
+    "title": "Contact Infrastructure Under Development",
+    "description": "Official WANG CORP. communication channels, enterprise email infrastructure, and client access systems are currently being prepared.",
+    "status": "Contact system in development",
+    "home": "RETURN HOME",
+    "platform": "VIEW PLATFORM"
   }
 }

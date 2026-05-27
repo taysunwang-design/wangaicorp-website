@@ -1,50 +1,43 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import Navbar from "../components/Navbar";
 
 export default function ServicesPage() {
+  const t = useTranslations("Services");
+
   return (
     <>
       <Navbar />
 
       <main className="platform-page">
         <section className="platform-hero">
-          <p className="platform-label">SERVICES</p>
+          <p className="platform-label">{t("label")}</p>
 
-          <h1 className="platform-title">
-            Industrial systems built for international cooperation.
-          </h1>
+          <h1 className="platform-title">{t("title")}</h1>
+
+          <p className="platform-description">{t("description")}</p>
         </section>
 
         <section className="platform-grid">
           <div className="platform-card">
-            <h3>Industrial Coordination</h3>
-            <p>
-              International supplier coordination, RFQ management, project
-              tracking, and engineering communication support.
-            </p>
+            <h3>{t("cards.coordination.title")}</h3>
+            <p>{t("cards.coordination.text")}</p>
           </div>
 
           <div className="platform-card">
-            <h3>Strategic Sourcing</h3>
-            <p>
-              Global industrial procurement and manufacturing partnerships
-              focused on steel, mining, and heavy industry sectors.
-            </p>
+            <h3>{t("cards.sourcing.title")}</h3>
+            <p>{t("cards.sourcing.text")}</p>
           </div>
 
           <div className="platform-card">
-            <h3>Digital Infrastructure</h3>
-            <p>
-              Enterprise-grade industrial platforms integrating AI, multilingual
-              communication, and operational coordination.
-            </p>
+            <h3>{t("cards.infrastructure.title")}</h3>
+            <p>{t("cards.infrastructure.text")}</p>
           </div>
 
           <div className="platform-card">
-            <h3>AI-Assisted Communication</h3>
-            <p>
-              Real-time multilingual industrial communication and coordination
-              systems for global business operations.
-            </p>
+            <h3>{t("cards.communication.title")}</h3>
+            <p>{t("cards.communication.text")}</p>
           </div>
         </section>
       </main>

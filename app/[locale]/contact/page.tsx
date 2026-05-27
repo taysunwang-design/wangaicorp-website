@@ -1,36 +1,51 @@
+"use client";
+
+import { useTranslations, useLocale } from "next-intl";
 import Navbar from "../components/Navbar";
 
 export default function ContactPage() {
+  const t = useTranslations("Contact");
+  const locale = useLocale();
+
   return (
     <>
       <Navbar />
 
       <main className="platform-page">
         <section className="platform-hero">
-          <p className="platform-label">CONTACT</p>
+          <p className="platform-label">
+            {t("label")}
+          </p>
 
           <h1 className="platform-title">
-            Contact Infrastructure Under Development
+            {t("title")}
           </h1>
 
           <p className="platform-description">
-            Official WANG CORP. communication channels, enterprise email
-            infrastructure, and client access systems are currently being
-            prepared.
+            {t("description")}
           </p>
 
           <div className="platform-status">
             <span className="status-dot"></span>
-            Contact system in development
+            {t("status")}
           </div>
 
-          <div className="home-actions" style={{ marginTop: "40px" }}>
-            <a href="../" className="primary-button">
-              Return Home
+          <div
+            className="home-actions"
+            style={{ marginTop: "40px" }}
+          >
+            <a
+              href={`/${locale}`}
+              className="primary-button"
+            >
+              {t("home")}
             </a>
 
-            <a href="../platform" className="secondary-button">
-              View Platform
+            <a
+              href={`/${locale}/platform`}
+              className="secondary-button"
+            >
+              {t("platform")}
             </a>
           </div>
         </section>

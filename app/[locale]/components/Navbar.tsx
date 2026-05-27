@@ -9,9 +9,9 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const switchLanguage = (newLocale: string) => {
-    const parts = pathname.split("/");
-    parts[1] = newLocale;
-    window.location.href = parts.join("/");
+    const segments = pathname.split("/");
+    segments[1] = newLocale;
+    window.location.href = segments.join("/");
   };
 
   return (

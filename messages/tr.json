@@ -6,11 +6,112 @@
     "platform": "Platform",
     "contact": "İletişim"
   },
+
   "Home": {
     "title1": "Uluslararası Endüstriyel",
     "title2": "Koordinasyon ve Altyapı",
     "description": "Danışmanlık, ticari koordinasyon ve akıllı dijital altyapı aracılığıyla küresel pazarlar arasında şeffaf ve sürdürülebilir endüstriyel iş birliği oluşturuyoruz.",
     "platform": "PLATFORMA GİR",
     "contact": "BİZE ULAŞIN"
+  },
+
+  "About": {
+    "label": "WANG CORP. HAKKINDA",
+    "title": "Modern dijital altyapı ile küresel endüstriyel koordinasyon.",
+    "description": "WANG CORP.; ağır sanayi, mühendislik ortaklıkları, stratejik tedarik, endüstriyel dijitalleşme ve yapay zeka destekli iletişim alanlarına odaklanan uluslararası bir koordinasyon ve altyapı şirketidir.",
+    "cards": {
+      "transparent": {
+        "title": "Şeffaf Koordinasyon",
+        "text": "Güvenin; operasyonel şeffaflık, gerçekçi beklentiler ve kısa vadeli işlemler yerine uzun vadeli iş birliğiyle kurulduğuna inanıyoruz."
+      },
+      "markets": {
+        "title": "Küresel Pazarlar Arasında Köprü",
+        "text": "WANG CORP., uluslararası endüstriyel ekosistemler arasında köprü görevi görür; hem Çin pazarına girmek isteyen global şirketleri hem de yurt dışına açılmak isteyen Çinli şirketleri destekler."
+      },
+      "lean": {
+        "title": "Yalın ve Verimli Operasyonlar",
+        "text": "Gereksiz kurumsal yükler ve şişirilmiş operasyonel yapılar yerine verimlilik, çeviklik ve pratik uygulamaya öncelik veriyoruz."
+      },
+      "digital": {
+        "title": "Dijital Endüstriyel Altyapı",
+        "text": "Endüstriyel danışmanlık ve koordinasyonun yanında WANG CORP., küresel endüstriyel iletişimi ve iş birliğini sadeleştirmek için akıllı dijital platformlar geliştirmektedir."
+      }
+    }
+  },
+
+  "Services": {
+    "label": "HİZMETLER",
+    "title": "Uluslararası iş birliği için geliştirilen endüstriyel sistemler.",
+    "description": "WANG CORP.; ağır sanayi ve küresel endüstriyel operasyonlara yönelik koordinasyon, tedarik, iletişim ve altyapı hizmetleri sunmaktadır.",
+    "cards": {
+      "coordination": {
+        "title": "Endüstriyel Koordinasyon",
+        "text": "Uluslararası tedarikçi koordinasyonu, RFQ yönetimi, proje takibi ve mühendislik iletişim desteği."
+      },
+      "sourcing": {
+        "title": "Stratejik Tedarik",
+        "text": "Çelik, madencilik ve ağır sanayi sektörlerine odaklanan küresel endüstriyel satın alma ve üretim ortaklıkları."
+      },
+      "infrastructure": {
+        "title": "Dijital Altyapı",
+        "text": "Yapay zeka, çok dilli iletişim ve operasyonel koordinasyonu entegre eden kurumsal endüstriyel platformlar."
+      },
+      "communication": {
+        "title": "Yapay Zeka Destekli İletişim",
+        "text": "Küresel iş operasyonları için gerçek zamanlı çok dilli endüstriyel iletişim ve koordinasyon sistemleri."
+      }
+    }
+  },
+
+  "Platform": {
+    "label": "WANG PLATFORM",
+    "title": "Endüstriyel Koordinasyon Sistemi",
+    "description": "Tedarikçi koordinasyonu, çok dilli iletişim, RFQ yönetimi ve uluslararası endüstriyel iş birliği için kurumsal seviyede dijital altyapı.",
+    "status": "Platform altyapısı geliştirme aşamasında",
+    "request": "ERİŞİM TALEP ET",
+    "return": "ANA SAYFAYA DÖN",
+    "cards": {
+      "translation": {
+        "title": "AI Çeviri Katmanı",
+        "text": "Endüstriyel terminoloji, tedarikçi koordinasyonu ve sınır ötesi proje iletişimi için tasarlanmış çok dilli iletişim altyapısı."
+      },
+      "crm": {
+        "title": "Endüstriyel CRM",
+        "text": "Ağır sanayi için özel olarak tasarlanmış şirket, tesis, departman, kontak, proje ve ekipman seviyesinde ilişki yönetimi."
+      },
+      "rfq": {
+        "title": "RFQ Yönetimi",
+        "text": "Uluslararası endüstriyel satın alma süreçleri için yapılandırılmış talep, teklif, doküman ve teknik açıklama iş akışları."
+      },
+      "supplier": {
+        "title": "Tedarikçi Koordinasyonu",
+        "text": "Tedarikçiler, müşteriler, mühendisler ve koordinatörler için tek ve şeffaf iletişim kanalı sağlayan kontrollü çalışma alanı."
+      },
+      "portal": {
+        "title": "Güvenli Müşteri Portalı",
+        "text": "Projeler, dosyalar ve mesajlar üzerinde kontrollü görünürlük sağlayan yetki tabanlı erişim sistemi."
+      },
+      "project": {
+        "title": "Proje İletişimi",
+        "text": "Uzun vadeli endüstriyel iş birlikleri için merkezi proje kayıtları, toplantı notları ve teknik iletişim altyapısı."
+      },
+      "documents": {
+        "title": "Doküman Merkezi",
+        "text": "Kataloglar, çizimler, teklifler, teknik şartnameler, proje dosyaları ve ticari kayıtlar için düzenli depolama sistemi."
+      },
+      "global": {
+        "title": "Küresel İş Birliği",
+        "text": "Çin, Türkiye, Avrupa ve küresel ağır sanayi pazarları arasında dijital iş birliği altyapısı."
+      }
+    }
+  },
+
+  "Contact": {
+    "label": "İLETİŞİM",
+    "title": "İletişim Altyapısı Geliştirme Aşamasında",
+    "description": "Resmi WANG CORP. iletişim kanalları, kurumsal e-posta altyapısı ve müşteri erişim sistemleri şu anda hazırlanmaktadır.",
+    "status": "İletişim sistemi geliştirme aşamasında",
+    "home": "ANA SAYFAYA DÖN",
+    "platform": "PLATFORMU GÖRÜNTÜLE"
   }
 }

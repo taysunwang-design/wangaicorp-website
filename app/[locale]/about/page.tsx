@@ -1,61 +1,43 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import Navbar from "../components/Navbar";
 
 export default function AboutPage() {
+  const t = useTranslations("About");
+
   return (
     <>
       <Navbar />
 
       <main className="platform-page">
         <section className="platform-hero">
-          <p className="platform-label">ABOUT WANG CORP.</p>
+          <p className="platform-label">{t("label")}</p>
 
-          <h1 className="platform-title">
-            Global industrial coordination with modern digital infrastructure.
-          </h1>
+          <h1 className="platform-title">{t("title")}</h1>
 
-          <p className="platform-description">
-            WANG CORP. operates as an international coordination and
-            infrastructure company focused on heavy industry, engineering
-            partnerships, strategic sourcing, industrial digitalization, and
-            AI-assisted communication.
-          </p>
+          <p className="platform-description">{t("description")}</p>
         </section>
 
         <section className="platform-grid">
           <div className="platform-card">
-            <h3>Transparent Coordination</h3>
-            <p>
-              We believe trust is built through operational transparency,
-              realistic expectations, and long-term cooperation rather than
-              short-term transactions.
-            </p>
+            <h3>{t("cards.transparent.title")}</h3>
+            <p>{t("cards.transparent.text")}</p>
           </div>
 
           <div className="platform-card">
-            <h3>Bridging Global Markets</h3>
-            <p>
-              WANG CORP. works as a bridge between international industrial
-              ecosystems, supporting both global companies entering China and
-              Chinese companies expanding abroad.
-            </p>
+            <h3>{t("cards.markets.title")}</h3>
+            <p>{t("cards.markets.text")}</p>
           </div>
 
           <div className="platform-card">
-            <h3>Lean & Efficient Operations</h3>
-            <p>
-              We prioritize efficiency, agility, and practical execution over
-              unnecessary corporate overhead and inflated operational
-              structures.
-            </p>
+            <h3>{t("cards.lean.title")}</h3>
+            <p>{t("cards.lean.text")}</p>
           </div>
 
           <div className="platform-card">
-            <h3>Digital Industrial Infrastructure</h3>
-            <p>
-              Alongside industrial consulting and coordination, WANG CORP. is
-              developing intelligent digital platforms designed to simplify
-              global industrial communication and collaboration.
-            </p>
+            <h3>{t("cards.digital.title")}</h3>
+            <p>{t("cards.digital.text")}</p>
           </div>
         </section>
       </main>
