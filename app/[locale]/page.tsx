@@ -1,11 +1,10 @@
 "use client";
 
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import Navbar from "./components/Navbar";
 
 export default function Home() {
   const t = useTranslations("Home");
-  const locale = useLocale();
 
   return (
     <>
@@ -22,16 +21,6 @@ export default function Home() {
           </h1>
 
           <p className="home-description">{t("description")}</p>
-
-          <div className="home-actions">
-            <a href={`/${locale}/platform`} className="primary-button">
-              {t("platform")}
-            </a>
-
-            <a href={`/${locale}/contact`} className="secondary-button">
-              {t("contact")}
-            </a>
-          </div>
         </section>
       </main>
     </>

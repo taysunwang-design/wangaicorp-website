@@ -9,9 +9,7 @@ export default function PlatformPage() {
         <section className="platform-hero">
           <p className="platform-label">WANG PLATFORM</p>
 
-          <h1 className="platform-title">
-            Industrial Coordination System
-          </h1>
+          <h1 className="platform-title">Industrial Coordination System</h1>
 
           <p className="platform-description">
             Enterprise-grade digital infrastructure for supplier coordination,
@@ -25,11 +23,11 @@ export default function PlatformPage() {
           </div>
 
           <div className="home-actions" style={{ marginTop: "40px" }}>
-            <a href="/en/contact" className="primary-button">
+            <a href="../contact" className="primary-button">
               Request Access
             </a>
 
-            <a href="/en" className="secondary-button">
+            <a href="../" className="secondary-button">
               Return Home
             </a>
           </div>
@@ -66,39 +64,6 @@ export default function PlatformPage() {
             <p>
               A controlled workspace for suppliers, clients, engineers, and
               coordinators to communicate through a single transparent channel.
-            </p>
-          </div>
-
-          <div className="platform-card">
-            <h3>Secure Client Portal</h3>
-            <p>
-              Permission-based access for clients, suppliers, and internal users
-              with controlled visibility across projects, files, and messages.
-            </p>
-          </div>
-
-          <div className="platform-card">
-            <h3>Project Communication</h3>
-            <p>
-              Centralized project records, meeting notes, technical discussions,
-              and progress updates for long-cycle industrial cooperation.
-            </p>
-          </div>
-
-          <div className="platform-card">
-            <h3>Document Center</h3>
-            <p>
-              Organized storage for catalogs, drawings, quotations,
-              specifications, project documents, inspection files, and
-              commercial records.
-            </p>
-          </div>
-
-          <div className="platform-card">
-            <h3>Global Collaboration</h3>
-            <p>
-              A digital foundation for industrial cooperation between China,
-              Türkiye, Europe, and global heavy industry markets.
             </p>
           </div>
         </section>

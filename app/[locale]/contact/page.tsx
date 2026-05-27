@@ -25,11 +25,11 @@ export default function ContactPage() {
           </div>
 
           <div className="home-actions" style={{ marginTop: "40px" }}>
-            <a href="/en" className="primary-button">
+            <a href="../" className="primary-button">
               Return Home
             </a>
 
-            <a href="/en/platform" className="secondary-button">
+            <a href="../platform" className="secondary-button">
               View Platform
             </a>
           </div>
