@@ -1,52 +1,62 @@
-"use client";
-
-import { useTranslations, useLocale } from "next-intl";
 import Navbar from "../components/Navbar";
 
 export default function ContactPage() {
-  const t = useTranslations("Contact");
-  const locale = useLocale();
-
   return (
     <>
       <Navbar />
 
       <main className="platform-page">
         <section className="platform-hero">
-          <p className="platform-label">
-            {t("label")}
-          </p>
+          <p className="platform-label">CONTACT</p>
 
-          <h1 className="platform-title">
-            {t("title")}
-          </h1>
+          <h1 className="platform-title">Get In Touch</h1>
 
           <p className="platform-description">
-            {t("description")}
+            For inquiries regarding sourcing, industrial equipment, project
+            coordination, trading, and international business cooperation,
+            please contact WANG CORP. by email.
           </p>
 
           <div className="platform-status">
-            <span className="status-dot"></span>
-            {t("status")}
+            <span></span>
+            Corporate email system active
+          </div>
+        </section>
+
+        <section className="platform-grid">
+          <div className="platform-card">
+            <h3>General Inquiry</h3>
+            <p>
+              For general business inquiries, project discussions, supplier
+              introductions, and partnership opportunities:
+            </p>
+            <p>
+              <strong>Email:</strong> info@wangaicorp.com
+            </p>
           </div>
 
-          <div
-            className="home-actions"
-            style={{ marginTop: "40px" }}
-          >
-            <a
-              href={`/${locale}`}
-              className="primary-button"
-            >
-              {t("home")}
-            </a>
+          <div className="platform-card">
+            <h3>Website</h3>
+            <p>
+              <strong>Web:</strong> www.wangaicorp.com
+            </p>
+          </div>
 
-            <a
-              href={`/${locale}/platform`}
-              className="secondary-button"
-            >
-              {t("platform")}
-            </a>
+          <div className="platform-card">
+            <h3>Response Time</h3>
+            <p>
+              We aim to respond to business inquiries within 1 to 2 business
+              days.
+            </p>
+          </div>
+
+          <div className="platform-card">
+            <h3>Business Focus</h3>
+            <p>Industrial Coordination</p>
+            <p>Strategic Sourcing</p>
+            <p>Trading & Consulting</p>
+            <p>Project Communication</p>
+            <p>International Cooperation</p>
           </div>
         </section>
       </main>

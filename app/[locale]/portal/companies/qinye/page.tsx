@@ -7,77 +7,70 @@ export default function QinyePage() {
 
       <main className="platform-page">
         <section className="platform-hero">
-          <p className="platform-label">COMPANY PROFILE</p>
+          <p className="platform-label">GROUP COMPANY</p>
 
           <h1 className="platform-title">
-            Qinhuangdao Qinye Heavy Industry Co., Ltd.
+            Qinye Heavy Industry
           </h1>
 
           <p className="platform-description">
-            Strategic heavy industry manufacturing partner focused on blast
-            furnace equipment, steel plant machinery, bulk material handling
-            systems and large-scale industrial fabrication.
+            Qinhuangdao-based heavy industry manufacturing company focused on
+            steel plant equipment, blast furnace top charging systems,
+            industrial valves, torpedo cars and large fabricated components.
           </p>
         </section>
 
         <section className="platform-grid">
-
           <div className="platform-card">
             <h3>Company Information</h3>
-
-            <p><strong>Country:</strong> China</p>
-            <p><strong>City:</strong> Qinhuangdao</p>
-            <p><strong>Founded:</strong> 2008</p>
-            <p><strong>Employees:</strong> 900+</p>
-            <p><strong>Industry:</strong> Heavy Industry Equipment</p>
+            <p><strong>Location:</strong> Qinhuangdao, China</p>
+            <p><strong>Type:</strong> Manufacturing Factory</p>
+            <p><strong>Role:</strong> First factory of the group</p>
+            <p><strong>Sector:</strong> Steel Plant & Heavy Industry Equipment</p>
           </div>
 
           <div className="platform-card">
-            <h3>Main Products</h3>
-
-            <p>Blast Furnace Equipment</p>
-            <p>Bell-less Top Systems</p>
-            <p>Charging Equipment</p>
-            <p>Stacker Reclaimers</p>
-            <p>Steel Plant Machinery</p>
+            <h3>Main Capabilities</h3>
+            <p>Blast Furnace Top Charging Equipment</p>
+            <p>Industrial Valves</p>
+            <p>Torpedo Cars</p>
+            <p>Heavy Fabricated Structures</p>
+            <p>Steel Plant Mechanical Equipment</p>
           </div>
 
           <div className="platform-card">
-            <h3>Key Contacts</h3>
-
-            <p>Lan Dawei</p>
-            <p>Zhou Hesong</p>
-            <p>Alice Zhang</p>
-            <p>Victor Zheng</p>
-          </div>
-
-          <div className="platform-card">
-            <h3>Resources</h3>
-
-            <p>Company Profile</p>
-            <p>Product Catalog</p>
-            <p>Videos</p>
-            <p>Presentations</p>
-          </div>
-
-          <div className="platform-card">
-            <h3>Projects</h3>
-
-            <p>thyssenkrupp Steel Europe</p>
-            <p>Erdemir</p>
-            <p>İsdemir</p>
-            <p>Kardemir</p>
-          </div>
-
-          <div className="platform-card">
-            <h3>Internal Notes</h3>
-
+            <h3>Manufacturing Scope</h3>
             <p>
-              Internal project history, visit reports and strategic notes will
-              be available according to user permissions.
+              Qinye Heavy Industry manufactures equipment and components within
+              its own production capability. For larger complete systems, QETC
+              may coordinate with external partners while Qinye manufactures
+              selected parts or assemblies.
             </p>
           </div>
 
+          <div className="platform-card">
+            <h3>Typical Applications</h3>
+            <p>Blast Furnace Area</p>
+            <p>Steelmaking Logistics</p>
+            <p>Material Handling Components</p>
+            <p>Large Steel Plant Spare Parts</p>
+          </div>
+
+          <div className="platform-card">
+            <h3>Access Level</h3>
+            <p>Premium / Internal</p>
+            <p>
+              Detailed technical capability, references, drawings and project
+              history are available according to user permission level.
+            </p>
+          </div>
+
+          <div className="platform-card">
+            <h3>Related Group Companies</h3>
+            <p>QETC Engineering & Technology</p>
+            <p>Shenye Heavy Equipment</p>
+            <p>Shenye Foundry</p>
+          </div>
         </section>
       </main>
     </>
