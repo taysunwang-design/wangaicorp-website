@@ -1,4 +1,5 @@
 import Navbar from "../../components/Navbar";
+import { getTranslations } from "next-intl/server";
 import Parser from "rss-parser";
 
 export const revalidate = 3600;
@@ -16,23 +17,13 @@ const parser = new Parser();
 
 const feeds = [
   {
-    source: "Power Technology",
-    category: "Power",
-    url: "https://www.power-technology.com/feed/",
-  },
-  {
-    source: "Offshore Technology",
-    category: "Oil & Gas",
-    url: "https://www.offshore-technology.com/feed/",
-  },
-  {
-    source: "Energy Monitor",
-    category: "Energy Markets",
-    url: "https://www.energymonitor.ai/feed/",
+    source: "GMK Center",
+    category: "Steel Market",
+    url: "https://gmk.center/en/feed/",
   },
 ];
 
-async function getEnergyNews(): Promise<FeedItem[]> {
+async function getSteelNews(): Promise<FeedItem[]> {
   const results = await Promise.allSettled(
     feeds.map(async (feed) => {
       const response = await fetch(feed.url, {
@@ -42,7 +33,7 @@ async function getEnergyNews(): Promise<FeedItem[]> {
       const xml = await response.text();
       const parsedFeed = await parser.parseString(xml);
 
-      return parsedFeed.items.slice(0, 5).map((item) => ({
+      return parsedFeed.items.slice(0, 12).map((item) => ({
         title: item.title || "Untitled",
         link: item.link || "#",
         pubDate: item.pubDate,
@@ -56,9 +47,9 @@ async function getEnergyNews(): Promise<FeedItem[]> {
     })
   );
 
-  return results
-    .flatMap((result) => (result.status === "fulfilled" ? result.value : []))
-    .slice(0, 12);
+  return results.flatMap((result) =>
+    result.status === "fulfilled" ? result.value : []
+  );
 }
 
 function formatDate(date?: string) {
@@ -89,8 +80,19 @@ function getUpdatedTime() {
   }).format(new Date());
 }
 
-export default async function EnergyNewsPage() {
-  const newsItems = await getEnergyNews();
+export default async function SteelNewsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  const t = await getTranslations({
+    locale,
+    namespace: "NewsPages.steel",
+  });
+
+  const newsItems = await getSteelNews();
 
   return (
     <>
@@ -98,23 +100,19 @@ export default async function EnergyNewsPage() {
 
       <main className="platform-page">
         <section className="platform-hero">
-          <p className="platform-label">ENERGY NEWS</p>
+          <p className="platform-label">{t("label")}</p>
 
-          <h1 className="platform-title">Energy Market Intelligence</h1>
+          <h1 className="platform-title">{t("title")}</h1>
 
-          <p className="platform-description">
-            Automatically updated headlines related to power generation, oil and
-            gas, industrial energy costs, electricity markets and energy
-            infrastructure developments affecting heavy industry.
-          </p>
+          <p className="platform-description">{t("description")}</p>
 
           <div className="platform-status">
             <span></span>
-            Auto-updating energy news feed active · Updated hourly
+            {t("status")}
           </div>
 
           <p className="platform-description">
-            Last updated: {getUpdatedTime()}
+            {t("lastUpdated")}: {getUpdatedTime()}
           </p>
         </section>
 
@@ -132,15 +130,15 @@ export default async function EnergyNewsPage() {
 
               <div className="locked-note">
                 <p>
-                  <strong>Source:</strong> {item.source}
+                  <strong>{t("source")}:</strong> {item.source}
                 </p>
 
                 <p>
-                  <strong>Date:</strong> {formatDate(item.pubDate)}
+                  <strong>{t("date")}:</strong> {formatDate(item.pubDate)}
                 </p>
 
                 <a href={item.link} target="_blank" rel="noopener noreferrer">
-                  Read original source →
+                  {t("readOriginal")} →
                 </a>
               </div>
             </article>

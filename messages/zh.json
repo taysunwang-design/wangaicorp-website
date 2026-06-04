@@ -103,6 +103,65 @@
       }
     }
   },
+  "News": {
+  "label": "新闻",
+  "title": "全球工业新闻",
+  "description": "涵盖钢铁、矿业、物流、能源、工业项目和全球市场的精选自动更新新闻。",
+  "status": "实时分类预览已启用 · 每小时更新",
+  "latest": "最新新闻",
+  "statusLabel": "状态",
+  "analysisStatus": "高级情报专区仅向授权用户开放",
+  "categories": {
+    "steel": {
+      "title": "钢铁",
+      "description": "钢铁行业动态、生产趋势、工厂投资及全球钢铁市场发展。"
+    },
+    "mining": {
+      "title": "矿业",
+      "description": "矿业项目、原材料供应、铁矿石、铜、煤炭及矿业投资动态。"
+    },
+    "logistics": {
+      "title": "航运与物流",
+      "description": "运费、港口、运输中断、地缘政治风险及国际物流动态。"
+    },
+    "energy": {
+      "title": "能源",
+      "description": "影响重工业的煤炭、天然气、石油、电力及工业能源发展。"
+    },
+    "projects": {
+      "title": "工业项目",
+      "description": "新建工厂投资、EPC项目、基础设施建设及工业扩张新闻。"
+    },
+    "marketIntelligence": {
+      "title": "情报",
+      "description": "面向特定用户的 Wang Corp 高级分析、内部信息、机会信号和市场解读。"
+    }
+  }
+},
+
+"NewsPages": {
+  "steel": {
+    "label": "钢铁新闻",
+    "title": "钢铁行业新闻",
+    "description": "自动更新与钢铁市场、钢材价格、生产趋势、贸易、原材料影响和全球钢铁行业发展相关的资讯。",
+    "status": "钢铁新闻自动更新已启用 · 每小时更新",
+    "lastUpdated": "最后更新",
+    "source": "来源",
+    "date": "日期",
+    "readOriginal": "阅读原始来源"
+  },
+
+  "mining": {
+    "label": "矿业新闻",
+    "title": "矿业与原材料新闻",
+    "description": "自动更新与铁矿石、煤炭、铜、原材料供应、矿业项目和工业大宗商品市场相关的资讯。",
+    "status": "矿业新闻自动更新已启用 · 每小时更新",
+    "lastUpdated": "最后更新",
+    "source": "来源",
+    "date": "日期",
+    "readOriginal": "阅读原始来源"
+  }
+},
   "Contact": {
     "label": "联系我们",
     "title": "欢迎与我们联系",

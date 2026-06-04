@@ -103,6 +103,65 @@
       }
     }
   },
+  "News": {
+  "label": "NEWS",
+  "title": "Global Industrial News",
+  "description": "Curated and automatically updated industrial news covering steel, mining, logistics, energy, industrial projects and global markets.",
+  "status": "Live category previews active · Updated hourly",
+  "latest": "Latest",
+  "statusLabel": "Status",
+  "analysisStatus": "Premium intelligence section available for authorized users",
+  "categories": {
+    "steel": {
+      "title": "Steel",
+      "description": "Steel industry updates, production trends, plant investments and global steel market developments."
+    },
+    "mining": {
+      "title": "Mining",
+      "description": "Mining projects, raw material supply, iron ore, copper, coal and mineral investment updates."
+    },
+    "logistics": {
+      "title": "Shipping & Logistics",
+      "description": "Freight rates, ports, shipping disruptions, geopolitical risks and international logistics updates."
+    },
+    "energy": {
+      "title": "Energy",
+      "description": "Coal, gas, oil, electricity and industrial energy developments affecting heavy industry."
+    },
+    "projects": {
+      "title": "Industrial Projects",
+      "description": "New plant investments, EPC projects, infrastructure development and industrial expansion news."
+    },
+    "marketIntelligence": {
+      "title": "Intelligence",
+      "description": "Premium Wang Corp analysis, inside notes, opportunity signals and market interpretation for selected users."
+    }
+  }
+},
+
+"NewsPages": {
+  "steel": {
+    "label": "STEEL NEWS",
+    "title": "Steel Industry News",
+    "description": "Automatically updated headlines related to steel markets, steel prices, production trends, trade, raw material impact and global steel industry developments.",
+    "status": "Auto-updating steel news feed active · Updated hourly",
+    "lastUpdated": "Last updated",
+    "source": "Source",
+    "date": "Date",
+    "readOriginal": "Read original source"
+  },
+
+  "mining": {
+    "label": "MINING NEWS",
+    "title": "Mining & Raw Materials News",
+    "description": "Automatically updated headlines related to iron ore, coal, copper, raw material supply, mining projects and industrial commodity markets.",
+    "status": "Auto-updating mining news feed active · Updated hourly",
+    "lastUpdated": "Last updated",
+    "source": "Source",
+    "date": "Date",
+    "readOriginal": "Read original source"
+  }
+},
   "Contact": {
     "label": "CONTACT",
     "title": "Contact Infrastructure Under Development",

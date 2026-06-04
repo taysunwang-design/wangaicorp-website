@@ -1,4 +1,5 @@
 import Navbar from "../../components/Navbar";
+import { getTranslations } from "next-intl/server";
 import Parser from "rss-parser";
 
 export const revalidate = 3600;
@@ -79,7 +80,18 @@ function getUpdatedTime() {
   }).format(new Date());
 }
 
-export default async function SteelNewsPage() {
+export default async function SteelNewsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  const t = await getTranslations({
+    locale,
+    namespace: "NewsPages.steel",
+  });
+
   const newsItems = await getSteelNews();
 
   return (
@@ -88,23 +100,19 @@ export default async function SteelNewsPage() {
 
       <main className="platform-page">
         <section className="platform-hero">
-          <p className="platform-label">STEEL NEWS</p>
+          <p className="platform-label">{t("label")}</p>
 
-          <h1 className="platform-title">Steel Industry Intelligence</h1>
+          <h1 className="platform-title">{t("title")}</h1>
 
-          <p className="platform-description">
-            Automatically updated headlines related to steel markets, steel
-            prices, production trends, trade, raw material impact and global
-            steel industry developments.
-          </p>
+          <p className="platform-description">{t("description")}</p>
 
           <div className="platform-status">
             <span></span>
-            Auto-updating steel news feed active · Updated hourly
+            {t("status")}
           </div>
 
           <p className="platform-description">
-            Last updated: {getUpdatedTime()}
+            {t("lastUpdated")}: {getUpdatedTime()}
           </p>
         </section>
 
@@ -122,15 +130,15 @@ export default async function SteelNewsPage() {
 
               <div className="locked-note">
                 <p>
-                  <strong>Source:</strong> {item.source}
+                  <strong>{t("source")}:</strong> {item.source}
                 </p>
 
                 <p>
-                  <strong>Date:</strong> {formatDate(item.pubDate)}
+                  <strong>{t("date")}:</strong> {formatDate(item.pubDate)}
                 </p>
 
                 <a href={item.link} target="_blank" rel="noopener noreferrer">
-                  Read original source →
+                  {t("readOriginal")} →
                 </a>
               </div>
             </article>

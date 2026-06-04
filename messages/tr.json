@@ -103,6 +103,65 @@
       }
     }
   },
+  "News": {
+  "label": "HABERLER",
+  "title": "Küresel Endüstriyel Haberler",
+  "description": "Çelik, madencilik, lojistik, enerji, endüstriyel projeler ve küresel pazarlarla ilgili derlenmiş ve otomatik güncellenen haberler.",
+  "status": "Canlı kategori önizlemeleri aktif · Saatlik güncellenir",
+  "latest": "Son Haber",
+  "statusLabel": "Durum",
+  "analysisStatus": "Premium istihbarat bölümü yetkili kullanıcılar için kullanılabilir",
+  "categories": {
+    "steel": {
+      "title": "Çelik",
+      "description": "Çelik sektörü güncellemeleri, üretim trendleri, tesis yatırımları ve küresel çelik piyasası gelişmeleri."
+    },
+    "mining": {
+      "title": "Madencilik",
+      "description": "Madencilik projeleri, hammadde arzı, demir cevheri, bakır, kömür ve maden yatırımı gelişmeleri."
+    },
+    "logistics": {
+      "title": "Deniz Taşımacılığı & Lojistik",
+      "description": "Navlun fiyatları, limanlar, sevkiyat aksaklıkları, jeopolitik riskler ve uluslararası lojistik gelişmeleri."
+    },
+    "energy": {
+      "title": "Enerji",
+      "description": "Ağır sanayiyi etkileyen kömür, gaz, petrol, elektrik ve endüstriyel enerji gelişmeleri."
+    },
+    "projects": {
+      "title": "Endüstriyel Projeler",
+      "description": "Yeni tesis yatırımları, EPC projeleri, altyapı geliştirmeleri ve endüstriyel büyüme haberleri."
+    },
+    "marketIntelligence": {
+      "title": "İstihbarat",
+      "description": "Seçilmiş kullanıcılar için Wang Corp özel analizleri, içeriden notlar, fırsat sinyalleri ve piyasa yorumları."
+    }
+  }
+},
+
+"NewsPages": {
+  "steel": {
+    "label": "ÇELİK HABERLERİ",
+    "title": "Çelik Endüstrisi Haberleri",
+    "description": "Çelik piyasaları, çelik fiyatları, üretim trendleri, ticaret, hammadde etkisi ve küresel çelik sektörü gelişmeleriyle ilgili otomatik güncellenen haberler.",
+    "status": "Otomatik güncellenen çelik haber akışı aktif · Saatlik güncellenir",
+    "lastUpdated": "Son güncelleme",
+    "source": "Kaynak",
+    "date": "Tarih",
+    "readOriginal": "Orijinal kaynağı oku"
+  },
+
+  "mining": {
+    "label": "MADENCİLİK HABERLERİ",
+    "title": "Madencilik ve Hammadde Haberleri",
+    "description": "Demir cevheri, kömür, bakır, hammadde arzı, madencilik projeleri ve endüstriyel emtia piyasalarıyla ilgili otomatik güncellenen haberler.",
+    "status": "Otomatik güncellenen madencilik haber akışı aktif · Saatlik güncellenir",
+    "lastUpdated": "Son güncelleme",
+    "source": "Kaynak",
+    "date": "Tarih",
+    "readOriginal": "Orijinal kaynağı oku"
+  }
+},
   "Contact": {
     "label": "İLETİŞİM",
     "title": "Bizimle İletişime Geçin",

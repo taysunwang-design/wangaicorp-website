@@ -1,4 +1,5 @@
 import Navbar from "../../components/Navbar";
+import { getTranslations } from "next-intl/server";
 import Parser from "rss-parser";
 
 export const revalidate = 3600;
@@ -89,7 +90,18 @@ function getUpdatedTime() {
   }).format(new Date());
 }
 
-export default async function MiningNewsPage() {
+export default async function MiningNewsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  const t = await getTranslations({
+    locale,
+    namespace: "NewsPages.mining",
+  });
+
   const newsItems = await getMiningNews();
 
   return (
@@ -98,23 +110,19 @@ export default async function MiningNewsPage() {
 
       <main className="platform-page">
         <section className="platform-hero">
-          <p className="platform-label">MINING NEWS</p>
+          <p className="platform-label">{t("label")}</p>
 
-          <h1 className="platform-title">Mining & Raw Materials Intelligence</h1>
+          <h1 className="platform-title">{t("title")}</h1>
 
-          <p className="platform-description">
-            Automatically updated headlines related to iron ore, coal, copper,
-            raw material supply, mining projects and industrial commodity
-            markets.
-          </p>
+          <p className="platform-description">{t("description")}</p>
 
           <div className="platform-status">
             <span></span>
-            Auto-updating mining news feed active · Updated hourly
+            {t("status")}
           </div>
 
           <p className="platform-description">
-            Last updated: {getUpdatedTime()}
+            {t("lastUpdated")}: {getUpdatedTime()}
           </p>
         </section>
 
@@ -132,15 +140,15 @@ export default async function MiningNewsPage() {
 
               <div className="locked-note">
                 <p>
-                  <strong>Source:</strong> {item.source}
+                  <strong>{t("source")}:</strong> {item.source}
                 </p>
 
                 <p>
-                  <strong>Date:</strong> {formatDate(item.pubDate)}
+                  <strong>{t("date")}:</strong> {formatDate(item.pubDate)}
                 </p>
 
                 <a href={item.link} target="_blank" rel="noopener noreferrer">
-                  Read original source →
+                  {t("readOriginal")} →
                 </a>
               </div>
             </article>

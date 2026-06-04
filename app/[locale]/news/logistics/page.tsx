@@ -1,4 +1,5 @@
 import Navbar from "../../components/Navbar";
+import { getTranslations } from "next-intl/server";
 import Parser from "rss-parser";
 
 export const revalidate = 3600;
@@ -16,18 +17,13 @@ const parser = new Parser();
 
 const feeds = [
   {
-    source: "The Maritime Executive",
-    category: "Shipping",
-    url: "https://maritime-executive.com/rss",
-  },
-  {
-    source: "FreightWaves",
-    category: "Freight",
-    url: "https://www.freightwaves.com/news/feed",
+    source: "GMK Center",
+    category: "Steel Market",
+    url: "https://gmk.center/en/feed/",
   },
 ];
 
-async function getLogisticsNews(): Promise<FeedItem[]> {
+async function getSteelNews(): Promise<FeedItem[]> {
   const results = await Promise.allSettled(
     feeds.map(async (feed) => {
       const response = await fetch(feed.url, {
@@ -37,7 +33,7 @@ async function getLogisticsNews(): Promise<FeedItem[]> {
       const xml = await response.text();
       const parsedFeed = await parser.parseString(xml);
 
-      return parsedFeed.items.slice(0, 6).map((item) => ({
+      return parsedFeed.items.slice(0, 12).map((item) => ({
         title: item.title || "Untitled",
         link: item.link || "#",
         pubDate: item.pubDate,
@@ -51,9 +47,9 @@ async function getLogisticsNews(): Promise<FeedItem[]> {
     })
   );
 
-  return results
-    .flatMap((result) => (result.status === "fulfilled" ? result.value : []))
-    .slice(0, 12);
+  return results.flatMap((result) =>
+    result.status === "fulfilled" ? result.value : []
+  );
 }
 
 function formatDate(date?: string) {
@@ -84,8 +80,19 @@ function getUpdatedTime() {
   }).format(new Date());
 }
 
-export default async function LogisticsNewsPage() {
-  const newsItems = await getLogisticsNews();
+export default async function SteelNewsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  const t = await getTranslations({
+    locale,
+    namespace: "NewsPages.steel",
+  });
+
+  const newsItems = await getSteelNews();
 
   return (
     <>
@@ -93,23 +100,19 @@ export default async function LogisticsNewsPage() {
 
       <main className="platform-page">
         <section className="platform-hero">
-          <p className="platform-label">LOGISTICS NEWS</p>
+          <p className="platform-label">{t("label")}</p>
 
-          <h1 className="platform-title">Shipping & Logistics Intelligence</h1>
+          <h1 className="platform-title">{t("title")}</h1>
 
-          <p className="platform-description">
-            Automatically updated headlines related to global shipping, freight,
-            ports, supply chain disruptions, vessel movements and international
-            logistics risks.
-          </p>
+          <p className="platform-description">{t("description")}</p>
 
           <div className="platform-status">
             <span></span>
-            Auto-updating logistics news feed active · Updated hourly
+            {t("status")}
           </div>
 
           <p className="platform-description">
-            Last updated: {getUpdatedTime()}
+            {t("lastUpdated")}: {getUpdatedTime()}
           </p>
         </section>
 
@@ -127,15 +130,15 @@ export default async function LogisticsNewsPage() {
 
               <div className="locked-note">
                 <p>
-                  <strong>Source:</strong> {item.source}
+                  <strong>{t("source")}:</strong> {item.source}
                 </p>
 
                 <p>
-                  <strong>Date:</strong> {formatDate(item.pubDate)}
+                  <strong>{t("date")}:</strong> {formatDate(item.pubDate)}
                 </p>
 
                 <a href={item.link} target="_blank" rel="noopener noreferrer">
-                  Read original source →
+                  {t("readOriginal")} →
                 </a>
               </div>
             </article>

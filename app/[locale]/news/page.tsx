@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import { getLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import Parser from "rss-parser";
 
 export const revalidate = 3600;
@@ -11,10 +11,8 @@ type LatestItem = {
 };
 
 type NewsCategory = {
-  title: string;
+  key: string;
   href: string;
-  description: string;
-  sources: string[];
   feeds?: {
     source: string;
     category: string;
@@ -26,25 +24,19 @@ const parser = new Parser();
 
 const newsCategories: NewsCategory[] = [
   {
-  title: "Steel",
-  href: "steel",
-  description:
-    "Steel industry updates, production trends, plant investments and global steel market developments.",
-  sources: ["GMK Center", "World Steel Association", "SteelOrbis"],
-  feeds: [
-    {
-      source: "GMK Center",
-      category: "Steel Market",
-      url: "https://gmk.center/en/feed/",
-    },
-  ],
-},
+    key: "steel",
+    href: "steel",
+    feeds: [
+      {
+        source: "GMK Center",
+        category: "Steel Market",
+        url: "https://gmk.center/en/feed/",
+      },
+    ],
+  },
   {
-    title: "Mining",
+    key: "mining",
     href: "mining",
-    description:
-      "Mining projects, raw material supply, iron ore, copper, coal and mineral investment updates.",
-    sources: ["MINING.COM", "Global Energy Monitor", "Mining Technology"],
     feeds: [
       {
         source: "MINING.COM",
@@ -54,11 +46,8 @@ const newsCategories: NewsCategory[] = [
     ],
   },
   {
-    title: "Shipping & Logistics",
+    key: "logistics",
     href: "logistics",
-    description:
-      "Freight rates, ports, shipping disruptions, geopolitical risks and international logistics updates.",
-    sources: ["The Maritime Executive", "FreightWaves"],
     feeds: [
       {
         source: "The Maritime Executive",
@@ -68,11 +57,8 @@ const newsCategories: NewsCategory[] = [
     ],
   },
   {
-    title: "Energy",
+    key: "energy",
     href: "energy",
-    description:
-      "Coal, gas, oil, electricity and industrial energy developments affecting heavy industry.",
-    sources: ["Power Technology", "Offshore Technology", "Energy Monitor"],
     feeds: [
       {
         source: "Power Technology",
@@ -82,11 +68,8 @@ const newsCategories: NewsCategory[] = [
     ],
   },
   {
-    title: "Industrial Projects",
+    key: "projects",
     href: "projects",
-    description:
-      "New plant investments, EPC projects, infrastructure development and industrial expansion news.",
-    sources: ["Mining Technology", "Power Technology", "Offshore Technology"],
     feeds: [
       {
         source: "Mining Technology",
@@ -96,12 +79,9 @@ const newsCategories: NewsCategory[] = [
     ],
   },
   {
-  title: "Market Intelligence",
-  href: "market-intelligence",
-  description:
-    "Wang Corp analysis explaining how global events affect sourcing, logistics, projects and suppliers.",
-  sources: ["Wang Corp Analysis", "Partner Network", "Market Intelligence"],
-},
+    key: "marketIntelligence",
+    href: "market-intelligence",
+  },
 ];
 
 async function getLatestHeadline(
@@ -130,8 +110,17 @@ async function getLatestHeadline(
   }
 }
 
-export default async function NewsPage() {
-  const locale = await getLocale();
+export default async function NewsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  const t = await getTranslations({
+    locale,
+    namespace: "News",
+  });
 
   const latestItems = await Promise.all(
     newsCategories.map((category) => getLatestHeadline(category.feeds))
@@ -143,19 +132,15 @@ export default async function NewsPage() {
 
       <main className="platform-page">
         <section className="platform-hero">
-          <p className="platform-label">NEWS & INTELLIGENCE</p>
+          <p className="platform-label">{t("label")}</p>
 
-          <h1 className="platform-title">Global Industrial Intelligence</h1>
+          <h1 className="platform-title">{t("title")}</h1>
 
-          <p className="platform-description">
-            Curated and automatically updated industrial news covering steel,
-            mining, logistics, energy, industrial projects and market
-            intelligence.
-          </p>
+          <p className="platform-description">{t("description")}</p>
 
           <div className="platform-status">
             <span></span>
-            Live category previews active · Updated hourly
+            {t("status")}
           </div>
         </section>
 
@@ -165,24 +150,27 @@ export default async function NewsPage() {
             const latest = latestItems[index];
 
             return (
-              <a href={href} className="platform-card" key={category.title}>
-                <h3>{category.title}</h3>
+              <a href={href} className="platform-card" key={category.key}>
+                <h3>{t(`categories.${category.key}.title`)}</h3>
 
-                <p>{category.description}</p>
+                <p>{t(`categories.${category.key}.description`)}</p>
 
                 <div className="locked-note">
                   {latest ? (
                     <>
-                      <strong>Latest:</strong>
+                      <strong>{t("latest")}:</strong>
+
                       <p>{latest.title}</p>
+
                       <p>
                         {latest.source} · {latest.category}
                       </p>
                     </>
                   ) : (
                     <>
-                      <strong>Status:</strong>
-                      <p>Analysis section / source feed under development</p>
+                      <strong>{t("statusLabel")}:</strong>
+
+                      <p>{t("analysisStatus")}</p>
                     </>
                   )}
                 </div>

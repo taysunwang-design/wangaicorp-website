@@ -1,78 +1,145 @@
 import Navbar from "../../components/Navbar";
+import { getTranslations } from "next-intl/server";
+import Parser from "rss-parser";
 
-const insights = [
+export const revalidate = 3600;
+
+type FeedItem = {
+  title: string;
+  link: string;
+  pubDate?: string;
+  contentSnippet: string;
+  source: string;
+  category: string;
+};
+
+const parser = new Parser();
+
+const feeds = [
   {
-    category: "Logistics Impact",
-    title: "Shipping disruptions and freight cost risk",
-    description:
-      "Future Wang Corp analysis will explain how geopolitical events, port delays and shipping disruptions may affect industrial sourcing, delivery schedules and landed cost."
+    source: "GMK Center",
+    category: "Steel Market",
+    url: "https://gmk.center/en/feed/",
   },
-  {
-    category: "Steel Market Impact",
-    title: "Steel demand, raw materials and equipment opportunity",
-    description:
-      "This section will connect steel market developments with possible demand for plant upgrades, spare parts, modernization projects and supplier opportunities."
-  },
-  {
-    category: "Mining & Raw Materials",
-    title: "Mining investments and industrial equipment demand",
-    description:
-      "Future analysis will track mining projects, raw material supply and how new investments may create demand for heavy equipment, castings and project coordination."
-  },
-  {
-    category: "Project Opportunity",
-    title: "Industrial investments as business signals",
-    description:
-      "Wang Corp will monitor public investment news and identify possible opportunities for manufacturers, EPC partners, suppliers and trading coordination."
-  },
-  {
-    category: "China Supply Chain",
-    title: "China-based supplier capability and global demand",
-    description:
-      "This section will eventually connect global industrial demand with selected Chinese manufacturing capabilities and partner networks."
-  },
-  {
-    category: "Wang Corp View",
-    title: "From news to industrial action",
-    description:
-      "The long-term goal is not only to display news, but to explain what each development means for sourcing, logistics, RFQs, projects and suppliers."
-  }
 ];
 
-export default function MarketIntelligencePage() {
+async function getSteelNews(): Promise<FeedItem[]> {
+  const results = await Promise.allSettled(
+    feeds.map(async (feed) => {
+      const response = await fetch(feed.url, {
+        next: { revalidate: 3600 },
+      });
+
+      const xml = await response.text();
+      const parsedFeed = await parser.parseString(xml);
+
+      return parsedFeed.items.slice(0, 12).map((item) => ({
+        title: item.title || "Untitled",
+        link: item.link || "#",
+        pubDate: item.pubDate,
+        contentSnippet:
+          item.contentSnippet ||
+          item.content ||
+          "No summary available from source.",
+        source: feed.source,
+        category: feed.category,
+      }));
+    })
+  );
+
+  return results.flatMap((result) =>
+    result.status === "fulfilled" ? result.value : []
+  );
+}
+
+function formatDate(date?: string) {
+  if (!date) return "Date unavailable";
+
+  return new Intl.DateTimeFormat("en", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  }).format(new Date(date));
+}
+
+function trimText(text: string, maxLength = 150) {
+  const cleanText = text.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+
+  if (cleanText.length <= maxLength) return cleanText;
+
+  return `${cleanText.slice(0, maxLength)}...`;
+}
+
+function getUpdatedTime() {
+  return new Intl.DateTimeFormat("en", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(new Date());
+}
+
+export default async function SteelNewsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  const t = await getTranslations({
+    locale,
+    namespace: "NewsPages.steel",
+  });
+
+  const newsItems = await getSteelNews();
+
   return (
     <>
       <Navbar />
 
       <main className="platform-page">
         <section className="platform-hero">
-          <p className="platform-label">MARKET INTELLIGENCE</p>
+          <p className="platform-label">{t("label")}</p>
 
-          <h1 className="platform-title">Wang Corp Industrial Analysis</h1>
+          <h1 className="platform-title">{t("title")}</h1>
 
-          <p className="platform-description">
-            This section will become Wang Corp&apos;s own interpretation layer,
-            connecting global news with industrial sourcing, logistics, project
-            opportunities, equipment demand and supplier coordination.
-          </p>
+          <p className="platform-description">{t("description")}</p>
 
           <div className="platform-status">
             <span></span>
-            Internal analysis module in development
+            {t("status")}
           </div>
+
+          <p className="platform-description">
+            {t("lastUpdated")}: {getUpdatedTime()}
+          </p>
         </section>
 
         <section className="platform-grid">
-          {insights.map((item) => (
-            <article className="platform-card" key={item.title}>
+          {newsItems.map((item) => (
+            <article
+              key={`${item.source}-${item.category}-${item.title}`}
+              className="platform-card"
+            >
               <p className="platform-label">{item.category}</p>
 
               <h3>{item.title}</h3>
 
-              <p>{item.description}</p>
+              <p>{trimText(item.contentSnippet)}</p>
 
               <div className="locked-note">
-                Future Wang Corp analysis content
+                <p>
+                  <strong>{t("source")}:</strong> {item.source}
+                </p>
+
+                <p>
+                  <strong>{t("date")}:</strong> {formatDate(item.pubDate)}
+                </p>
+
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  {t("readOriginal")} →
+                </a>
               </div>
             </article>
           ))}
