@@ -25,6 +25,7 @@ export default function Navbar() {
         <a href={`/${locale}/about`}>{nav("about")}</a>
         <a href={`/${locale}/services`}>{nav("services")}</a>
         <a href={`/${locale}/platform`}>{nav("platform")}</a>
+        <a href={`/${locale}/news`}>{nav("news")}</a>
         <a href={`/${locale}/contact`}>{nav("contact")}</a>
 
         <a href={`/${locale}/portal`} className="login-button">
