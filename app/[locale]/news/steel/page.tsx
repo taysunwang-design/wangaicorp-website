@@ -1,27 +1,87 @@
 import Navbar from "../../components/Navbar";
+import Parser from "rss-parser";
 
-const steelSources = [
+export const revalidate = 3600;
+
+type FeedItem = {
+  title: string;
+  link: string;
+  pubDate?: string;
+  contentSnippet: string;
+  source: string;
+  category: string;
+};
+
+const parser = new Parser();
+
+const feeds = [
   {
-    title: "Steel Production & Market Updates",
-    description:
-      "Steel production trends, mill activity, global steel demand, prices and trade developments.",
-    source: "Steel-focused feeds will be connected after testing stable RSS sources.",
-  },
-  {
-    title: "Steel Plant Investments",
-    description:
-      "New steel plants, blast furnace upgrades, EAF investments, rolling mill projects and modernization plans.",
-    source: "Planned integration: industry media, public company releases and government investment announcements.",
-  },
-  {
-    title: "Decarbonization & Technology",
-    description:
-      "Hydrogen steelmaking, EAF transition, energy efficiency, emissions reduction and digital plant technology.",
-    source: "Planned integration: worldsteel, industry associations and technology providers.",
+    source: "GMK Center",
+    category: "Steel Market",
+    url: "https://gmk.center/en/feed/",
   },
 ];
 
-export default function SteelNewsPage() {
+async function getSteelNews(): Promise<FeedItem[]> {
+  const results = await Promise.allSettled(
+    feeds.map(async (feed) => {
+      const response = await fetch(feed.url, {
+        next: { revalidate: 3600 },
+      });
+
+      const xml = await response.text();
+      const parsedFeed = await parser.parseString(xml);
+
+      return parsedFeed.items.slice(0, 12).map((item) => ({
+        title: item.title || "Untitled",
+        link: item.link || "#",
+        pubDate: item.pubDate,
+        contentSnippet:
+          item.contentSnippet ||
+          item.content ||
+          "No summary available from source.",
+        source: feed.source,
+        category: feed.category,
+      }));
+    })
+  );
+
+  return results.flatMap((result) =>
+    result.status === "fulfilled" ? result.value : []
+  );
+}
+
+function formatDate(date?: string) {
+  if (!date) return "Date unavailable";
+
+  return new Intl.DateTimeFormat("en", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  }).format(new Date(date));
+}
+
+function trimText(text: string, maxLength = 150) {
+  const cleanText = text.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+
+  if (cleanText.length <= maxLength) return cleanText;
+
+  return `${cleanText.slice(0, maxLength)}...`;
+}
+
+function getUpdatedTime() {
+  return new Intl.DateTimeFormat("en", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(new Date());
+}
+
+export default async function SteelNewsPage() {
+  const newsItems = await getSteelNews();
+
   return (
     <>
       <Navbar />
@@ -33,26 +93,45 @@ export default function SteelNewsPage() {
           <h1 className="platform-title">Steel Industry Intelligence</h1>
 
           <p className="platform-description">
-            Steel production, steel plant investments, rolling mill projects,
-            blast furnace developments, steel trade, pricing trends and
-            technology updates.
+            Automatically updated headlines related to steel markets, steel
+            prices, production trends, trade, raw material impact and global
+            steel industry developments.
           </p>
 
           <div className="platform-status">
             <span></span>
-            Steel-specific RSS sources under testing
+            Auto-updating steel news feed active · Updated hourly
           </div>
+
+          <p className="platform-description">
+            Last updated: {getUpdatedTime()}
+          </p>
         </section>
 
         <section className="platform-grid">
-          {steelSources.map((item) => (
-            <article className="platform-card" key={item.title}>
+          {newsItems.map((item) => (
+            <article
+              key={`${item.source}-${item.category}-${item.title}`}
+              className="platform-card"
+            >
+              <p className="platform-label">{item.category}</p>
+
               <h3>{item.title}</h3>
 
-              <p>{item.description}</p>
+              <p>{trimText(item.contentSnippet)}</p>
 
               <div className="locked-note">
-                <p>{item.source}</p>
+                <p>
+                  <strong>Source:</strong> {item.source}
+                </p>
+
+                <p>
+                  <strong>Date:</strong> {formatDate(item.pubDate)}
+                </p>
+
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  Read original source →
+                </a>
               </div>
             </article>
           ))}

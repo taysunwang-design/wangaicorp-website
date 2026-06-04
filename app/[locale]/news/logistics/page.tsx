@@ -16,23 +16,18 @@ const parser = new Parser();
 
 const feeds = [
   {
-    source: "MINING.COM",
-    category: "Iron Ore",
-    url: "https://www.mining.com/feed/?post_type=post&s=iron%20ore",
+    source: "The Maritime Executive",
+    category: "Shipping",
+    url: "https://maritime-executive.com/rss",
   },
   {
-    source: "MINING.COM",
-    category: "Coal",
-    url: "https://www.mining.com/feed/?post_type=post&s=coal",
-  },
-  {
-    source: "MINING.COM",
-    category: "Copper",
-    url: "https://www.mining.com/feed/?post_type=post&s=copper",
+    source: "FreightWaves",
+    category: "Freight",
+    url: "https://www.freightwaves.com/news/feed",
   },
 ];
 
-async function getMiningNews(): Promise<FeedItem[]> {
+async function getLogisticsNews(): Promise<FeedItem[]> {
   const results = await Promise.allSettled(
     feeds.map(async (feed) => {
       const response = await fetch(feed.url, {
@@ -42,7 +37,7 @@ async function getMiningNews(): Promise<FeedItem[]> {
       const xml = await response.text();
       const parsedFeed = await parser.parseString(xml);
 
-      return parsedFeed.items.slice(0, 5).map((item) => ({
+      return parsedFeed.items.slice(0, 6).map((item) => ({
         title: item.title || "Untitled",
         link: item.link || "#",
         pubDate: item.pubDate,
@@ -89,8 +84,8 @@ function getUpdatedTime() {
   }).format(new Date());
 }
 
-export default async function MiningNewsPage() {
-  const newsItems = await getMiningNews();
+export default async function LogisticsNewsPage() {
+  const newsItems = await getLogisticsNews();
 
   return (
     <>
@@ -98,19 +93,19 @@ export default async function MiningNewsPage() {
 
       <main className="platform-page">
         <section className="platform-hero">
-          <p className="platform-label">MINING NEWS</p>
+          <p className="platform-label">LOGISTICS NEWS</p>
 
-          <h1 className="platform-title">Mining & Raw Materials Intelligence</h1>
+          <h1 className="platform-title">Shipping & Logistics Intelligence</h1>
 
           <p className="platform-description">
-            Automatically updated headlines related to iron ore, coal, copper,
-            raw material supply, mining projects and industrial commodity
-            markets.
+            Automatically updated headlines related to global shipping, freight,
+            ports, supply chain disruptions, vessel movements and international
+            logistics risks.
           </p>
 
           <div className="platform-status">
             <span></span>
-            Auto-updating mining news feed active · Updated hourly
+            Auto-updating logistics news feed active · Updated hourly
           </div>
 
           <p className="platform-description">

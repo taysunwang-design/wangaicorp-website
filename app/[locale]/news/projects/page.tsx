@@ -16,23 +16,23 @@ const parser = new Parser();
 
 const feeds = [
   {
-    source: "MINING.COM",
-    category: "Iron Ore",
-    url: "https://www.mining.com/feed/?post_type=post&s=iron%20ore",
+    source: "Mining Technology",
+    category: "Mining Projects",
+    url: "https://www.mining-technology.com/feed/",
   },
   {
-    source: "MINING.COM",
-    category: "Coal",
-    url: "https://www.mining.com/feed/?post_type=post&s=coal",
+    source: "Power Technology",
+    category: "Energy Projects",
+    url: "https://www.power-technology.com/feed/",
   },
   {
-    source: "MINING.COM",
-    category: "Copper",
-    url: "https://www.mining.com/feed/?post_type=post&s=copper",
+    source: "Offshore Technology",
+    category: "Industrial Infrastructure",
+    url: "https://www.offshore-technology.com/feed/",
   },
 ];
 
-async function getMiningNews(): Promise<FeedItem[]> {
+async function getProjectNews(): Promise<FeedItem[]> {
   const results = await Promise.allSettled(
     feeds.map(async (feed) => {
       const response = await fetch(feed.url, {
@@ -89,8 +89,8 @@ function getUpdatedTime() {
   }).format(new Date());
 }
 
-export default async function MiningNewsPage() {
-  const newsItems = await getMiningNews();
+export default async function ProjectsNewsPage() {
+  const newsItems = await getProjectNews();
 
   return (
     <>
@@ -98,19 +98,19 @@ export default async function MiningNewsPage() {
 
       <main className="platform-page">
         <section className="platform-hero">
-          <p className="platform-label">MINING NEWS</p>
+          <p className="platform-label">PROJECT NEWS</p>
 
-          <h1 className="platform-title">Mining & Raw Materials Intelligence</h1>
+          <h1 className="platform-title">Industrial Project Intelligence</h1>
 
           <p className="platform-description">
-            Automatically updated headlines related to iron ore, coal, copper,
-            raw material supply, mining projects and industrial commodity
-            markets.
+            Automatically updated headlines related to mining investments,
+            energy infrastructure, industrial expansion projects, EPC activity
+            and global development opportunities.
           </p>
 
           <div className="platform-status">
             <span></span>
-            Auto-updating mining news feed active · Updated hourly
+            Auto-updating project news feed active · Updated hourly
           </div>
 
           <p className="platform-description">

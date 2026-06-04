@@ -16,23 +16,23 @@ const parser = new Parser();
 
 const feeds = [
   {
-    source: "MINING.COM",
-    category: "Iron Ore",
-    url: "https://www.mining.com/feed/?post_type=post&s=iron%20ore",
+    source: "Power Technology",
+    category: "Power",
+    url: "https://www.power-technology.com/feed/",
   },
   {
-    source: "MINING.COM",
-    category: "Coal",
-    url: "https://www.mining.com/feed/?post_type=post&s=coal",
+    source: "Offshore Technology",
+    category: "Oil & Gas",
+    url: "https://www.offshore-technology.com/feed/",
   },
   {
-    source: "MINING.COM",
-    category: "Copper",
-    url: "https://www.mining.com/feed/?post_type=post&s=copper",
+    source: "Energy Monitor",
+    category: "Energy Markets",
+    url: "https://www.energymonitor.ai/feed/",
   },
 ];
 
-async function getMiningNews(): Promise<FeedItem[]> {
+async function getEnergyNews(): Promise<FeedItem[]> {
   const results = await Promise.allSettled(
     feeds.map(async (feed) => {
       const response = await fetch(feed.url, {
@@ -89,8 +89,8 @@ function getUpdatedTime() {
   }).format(new Date());
 }
 
-export default async function MiningNewsPage() {
-  const newsItems = await getMiningNews();
+export default async function EnergyNewsPage() {
+  const newsItems = await getEnergyNews();
 
   return (
     <>
@@ -98,19 +98,19 @@ export default async function MiningNewsPage() {
 
       <main className="platform-page">
         <section className="platform-hero">
-          <p className="platform-label">MINING NEWS</p>
+          <p className="platform-label">ENERGY NEWS</p>
 
-          <h1 className="platform-title">Mining & Raw Materials Intelligence</h1>
+          <h1 className="platform-title">Energy Market Intelligence</h1>
 
           <p className="platform-description">
-            Automatically updated headlines related to iron ore, coal, copper,
-            raw material supply, mining projects and industrial commodity
-            markets.
+            Automatically updated headlines related to power generation, oil and
+            gas, industrial energy costs, electricity markets and energy
+            infrastructure developments affecting heavy industry.
           </p>
 
           <div className="platform-status">
             <span></span>
-            Auto-updating mining news feed active · Updated hourly
+            Auto-updating energy news feed active · Updated hourly
           </div>
 
           <p className="platform-description">
