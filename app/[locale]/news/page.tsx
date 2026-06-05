@@ -80,7 +80,7 @@ const newsCategories: NewsCategory[] = [
   },
   {
     key: "marketIntelligence",
-    href: "market-intelligence",
+    href: "intelligence",
   },
 ];
 

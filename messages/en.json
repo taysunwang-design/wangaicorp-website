@@ -162,6 +162,38 @@
     "readOriginal": "Read original source"
   }
 },
+"Intelligence": {
+  "label": "PREMIUM ACCESS",
+  "title": "Wang Corp Intelligence",
+  "description": "Premium industrial intelligence, investment monitoring, procurement opportunities, supplier tracking and proprietary Wang Corp market analysis.",
+  "status": "Premium intelligence module under development",
+  "modules": {
+    "investmentWatch": {
+      "title": "Investment Watch",
+      "text": "Major steel, mining, logistics and energy investments worldwide."
+    },
+    "procurementSignals": {
+      "title": "Procurement Signals",
+      "text": "Equipment demand, sourcing opportunities and purchasing activity."
+    },
+    "chinaIntelligence": {
+      "title": "China Industrial Monitoring",
+      "text": "Chinese industrial policy, supplier developments and market trends."
+    },
+    "turkiyeIntelligence": {
+      "title": "Türkiye Industrial Monitoring",
+      "text": "Turkish steel, mining and industrial investment developments."
+    },
+    "supplierWatch": {
+      "title": "Supplier Watch",
+      "text": "Manufacturing capability expansions, supplier activity and market positioning."
+    },
+    "opportunityRadar": {
+      "title": "Opportunity Radar",
+      "text": "Potential business opportunities converted from news, market signals and project announcements."
+    }
+  }
+},
   "Contact": {
     "label": "CONTACT",
     "title": "Contact Infrastructure Under Development",

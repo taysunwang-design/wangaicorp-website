@@ -162,6 +162,38 @@
     "readOriginal": "Orijinal kaynağı oku"
   }
 },
+"Intelligence": {
+  "label": "PREMIUM ERİŞİM",
+  "title": "Wang Corp Endüstriyel İstihbarat",
+  "description": "Premium endüstriyel istihbarat, yatırım takibi, satın alma fırsatları, tedarikçi izleme ve Wang Corp'a özel piyasa analizleri.",
+  "status": "Premium istihbarat modülü geliştirme aşamasında",
+  "modules": {
+    "investmentWatch": {
+      "title": "Yatırım Takibi",
+      "text": "Dünya genelindeki önemli çelik, madencilik, lojistik ve enerji yatırımları."
+    },
+    "procurementSignals": {
+      "title": "Satın Alma Sinyalleri",
+      "text": "Ekipman talebi, tedarik fırsatları ve satın alma faaliyetlerinin takibi."
+    },
+    "chinaIntelligence": {
+      "title": "Çin Sanayi Takibi",
+      "text": "Çin sanayi politikaları, tedarikçi gelişmeleri ve piyasa eğilimleri."
+    },
+    "turkiyeIntelligence": {
+      "title": "Türkiye Sanayi Takibi",
+      "text": "Türkiye'deki çelik, madencilik ve endüstriyel yatırım gelişmeleri."
+    },
+    "supplierWatch": {
+      "title": "Tedarikçi Takibi",
+      "text": "Üretici kapasite artışları, tedarikçi faaliyetleri ve pazardaki konumlanmaları."
+    },
+    "opportunityRadar": {
+      "title": "Fırsat Radarı",
+      "text": "Haberler, piyasa sinyalleri ve proje duyurularından oluşturulan iş fırsatları."
+    }
+  }
+},
   "Contact": {
     "label": "İLETİŞİM",
     "title": "Bizimle İletişime Geçin",

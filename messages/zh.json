@@ -162,6 +162,38 @@
     "readOriginal": "阅读原始来源"
   }
 },
+"Intelligence": {
+  "label": "高级权限",
+  "title": "Wang Corp 工业情报",
+  "description": "高级工业情报、投资监测、采购机会、供应商追踪以及 Wang Corp 独家市场分析。",
+  "status": "高级情报模块开发中",
+  "modules": {
+    "investmentWatch": {
+      "title": "投资监测",
+      "text": "全球钢铁、矿业、物流及能源领域的重要投资项目。"
+    },
+    "procurementSignals": {
+      "title": "采购信号",
+      "text": "设备需求、采购机会及采购活动追踪。"
+    },
+    "chinaIntelligence": {
+      "title": "中国工业监测",
+      "text": "中国工业政策、供应商动态及市场趋势分析。"
+    },
+    "turkiyeIntelligence": {
+      "title": "土耳其工业监测",
+      "text": "土耳其钢铁、矿业及工业投资发展动态。"
+    },
+    "supplierWatch": {
+      "title": "供应商追踪",
+      "text": "制造能力扩张、供应商活动及市场定位分析。"
+    },
+    "opportunityRadar": {
+      "title": "机会雷达",
+      "text": "从新闻、市场信号及项目公告中挖掘潜在商业机会。"
+    }
+  }
+},
   "Contact": {
     "label": "联系我们",
     "title": "欢迎与我们联系",
