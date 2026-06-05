@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 
@@ -7,6 +8,7 @@ export default function Navbar() {
   const locale = useLocale();
   const nav = useTranslations("Nav");
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
 
   const switchLanguage = (newLocale: string) => {
     const segments = pathname.split("/");
@@ -20,7 +22,15 @@ export default function Navbar() {
         WANG CORP.
       </a>
 
-      <div className="nav-links">
+      <button
+        className="mobile-menu-button"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle menu"
+      >
+        ☰
+      </button>
+
+      <div className={`nav-links ${isOpen ? "open" : ""}`}>
         <a href={`/${locale}`}>{nav("home")}</a>
         <a href={`/${locale}/about`}>{nav("about")}</a>
         <a href={`/${locale}/services`}>{nav("services")}</a>
