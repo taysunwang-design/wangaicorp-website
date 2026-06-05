@@ -27,8 +27,13 @@ async function getSteelNews(): Promise<FeedItem[]> {
   const results = await Promise.allSettled(
     feeds.map(async (feed) => {
       const response = await fetch(feed.url, {
-        next: { revalidate: 3600 },
-      });
+  next: { revalidate: 3600 },
+  headers: {
+    "User-Agent":
+      "Mozilla/5.0 (compatible; WangCorpBot/1.0; +https://wangaicorp.com)",
+    Accept: "application/rss+xml, application/xml, text/xml",
+  },
+});
 
       const xml = await response.text();
       const parsedFeed = await parser.parseString(xml);
