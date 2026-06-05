@@ -18,9 +18,40 @@ const parser = new Parser();
 const feeds = [
   {
     source: "Power Technology",
-    category: "Power",
+    category: "Energy",
     url: "https://www.power-technology.com/feed/",
   },
+  {
+    source: "Offshore Energy",
+    category: "Energy",
+    url: "https://www.offshore-energy.biz/feed/",
+  },
+];
+
+const keywords = [
+  "energy",
+  "power",
+  "electricity",
+  "wind",
+  "solar",
+  "hydrogen",
+  "battery",
+  "storage",
+  "offshore",
+  "gas",
+  "lng",
+  "oil",
+  "nuclear",
+  "renewable",
+  "grid",
+  "transmission",
+  "substation",
+  "power plant",
+  "turbine",
+  "decarbonization",
+  "carbon",
+  "emissions",
+  "pipeline",
 ];
 
 async function getEnergyNews(): Promise<FeedItem[]> {
@@ -38,23 +69,41 @@ async function getEnergyNews(): Promise<FeedItem[]> {
       const xml = await response.text();
       const parsedFeed = await parser.parseString(xml);
 
-      return parsedFeed.items.slice(0, 12).map((item) => ({
-        title: item.title || "Untitled",
-        link: item.link || "#",
-        pubDate: item.pubDate,
-        contentSnippet:
-          item.contentSnippet ||
-          item.content ||
-          "No summary available from source.",
-        source: feed.source,
-        category: feed.category,
-      }));
+      return parsedFeed.items
+        .filter((item) => {
+          const text = `${item.title || ""} ${
+            item.contentSnippet || item.content || ""
+          }`.toLowerCase();
+
+          return keywords.some((keyword) =>
+            text.includes(keyword.toLowerCase())
+          );
+        })
+        .slice(0, 12)
+        .map((item) => ({
+          title: item.title || "Untitled",
+          link: item.link || "#",
+          pubDate: item.pubDate,
+          contentSnippet:
+            item.contentSnippet ||
+            item.content ||
+            "No summary available from source.",
+          source: feed.source,
+          category: feed.category,
+        }));
     })
   );
 
-  return results.flatMap((result) =>
+  const combinedItems = results.flatMap((result) =>
     result.status === "fulfilled" ? result.value : []
   );
+
+  const uniqueItems = combinedItems.filter(
+    (item, index, self) =>
+      index === self.findIndex((x) => x.title === item.title)
+  );
+
+  return uniqueItems.slice(0, 12);
 }
 
 function formatDate(date?: string) {

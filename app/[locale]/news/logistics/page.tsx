@@ -17,15 +17,41 @@ const parser = new Parser();
 
 const feeds = [
   {
-    source: "The Maritime Executive",
-    category: "Shipping",
-    url: "https://maritime-executive.com/rss",
+    source: "Offshore Energy",
+    category: "Logistics",
+    url: "https://www.offshore-energy.biz/feed/",
   },
   {
     source: "Hellenic Shipping News",
-    category: "Shipping Markets",
+    category: "Shipping",
     url: "https://www.hellenicshippingnews.com/feed/",
   },
+];
+
+const keywords = [
+  "shipping",
+  "logistics",
+  "freight",
+  "port",
+  "terminal",
+  "container",
+  "vessel",
+  "cargo",
+  "bulk",
+  "dry bulk",
+  "tanker",
+  "carrier",
+  "maritime",
+  "supply chain",
+  "transport",
+  "route",
+  "canal",
+  "red sea",
+  "suez",
+  "black sea",
+  "rail",
+  "warehouse",
+  "trade lane",
 ];
 
 async function getLogisticsNews(): Promise<FeedItem[]> {
@@ -43,23 +69,41 @@ async function getLogisticsNews(): Promise<FeedItem[]> {
       const xml = await response.text();
       const parsedFeed = await parser.parseString(xml);
 
-      return parsedFeed.items.slice(0, 6).map((item) => ({
-        title: item.title || "Untitled",
-        link: item.link || "#",
-        pubDate: item.pubDate,
-        contentSnippet:
-          item.contentSnippet ||
-          item.content ||
-          "No summary available from source.",
-        source: feed.source,
-        category: feed.category,
-      }));
+      return parsedFeed.items
+        .filter((item) => {
+          const text = `${item.title || ""} ${
+            item.contentSnippet || item.content || ""
+          }`.toLowerCase();
+
+          return keywords.some((keyword) =>
+            text.includes(keyword.toLowerCase())
+          );
+        })
+        .slice(0, 12)
+        .map((item) => ({
+          title: item.title || "Untitled",
+          link: item.link || "#",
+          pubDate: item.pubDate,
+          contentSnippet:
+            item.contentSnippet ||
+            item.content ||
+            "No summary available from source.",
+          source: feed.source,
+          category: feed.category,
+        }));
     })
   );
 
-  return results
-    .flatMap((result) => (result.status === "fulfilled" ? result.value : []))
-    .slice(0, 12);
+  const combinedItems = results.flatMap((result) =>
+    result.status === "fulfilled" ? result.value : []
+  );
+
+  const uniqueItems = combinedItems.filter(
+    (item, index, self) =>
+      index === self.findIndex((x) => x.title === item.title)
+  );
+
+  return uniqueItems.slice(0, 12);
 }
 
 function formatDate(date?: string) {

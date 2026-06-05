@@ -18,43 +18,89 @@ const parser = new Parser();
 const feeds = [
   {
     source: "GMK Center",
-    category: "Steel Market",
+    category: "Steel",
     url: "https://gmk.center/en/feed/",
   },
+];
+
+const keywords = [
+  "steel",
+  "steelmaking",
+  "steel mill",
+  "blast furnace",
+  "electric arc furnace",
+  "eaf",
+  "rolling mill",
+  "hot strip",
+  "rebar",
+  "coil",
+  "slab",
+  "billet",
+  "iron ore",
+  "scrap",
+  "coking coal",
+  "green steel",
+  "decarbonization",
+  "production",
+  "capacity",
+  "export",
+  "import",
+  "tariff",
+  "trade",
+  "plant",
+  "investment",
 ];
 
 async function getSteelNews(): Promise<FeedItem[]> {
   const results = await Promise.allSettled(
     feeds.map(async (feed) => {
       const response = await fetch(feed.url, {
-  next: { revalidate: 3600 },
-  headers: {
-    "User-Agent":
-      "Mozilla/5.0 (compatible; WangCorpBot/1.0; +https://wangaicorp.com)",
-    Accept: "application/rss+xml, application/xml, text/xml",
-  },
-});
+        next: { revalidate: 3600 },
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (compatible; WangCorpBot/1.0; +https://wangaicorp.com)",
+          Accept: "application/rss+xml, application/xml, text/xml",
+        },
+      });
 
       const xml = await response.text();
       const parsedFeed = await parser.parseString(xml);
 
-      return parsedFeed.items.slice(0, 12).map((item) => ({
-        title: item.title || "Untitled",
-        link: item.link || "#",
-        pubDate: item.pubDate,
-        contentSnippet:
-          item.contentSnippet ||
-          item.content ||
-          "No summary available from source.",
-        source: feed.source,
-        category: feed.category,
-      }));
+      return parsedFeed.items
+        .filter((item) => {
+          const text = `${item.title || ""} ${
+            item.contentSnippet || item.content || ""
+          }`.toLowerCase();
+
+          return keywords.some((keyword) =>
+            text.includes(keyword.toLowerCase())
+          );
+        })
+        .slice(0, 12)
+        .map((item) => ({
+          title: item.title || "Untitled",
+          link: item.link || "#",
+          pubDate: item.pubDate,
+          contentSnippet:
+            item.contentSnippet ||
+            item.content ||
+            "No summary available from source.",
+          source: feed.source,
+          category: feed.category,
+        }));
     })
   );
 
-  return results.flatMap((result) =>
+  const combinedItems = results.flatMap((result) =>
     result.status === "fulfilled" ? result.value : []
   );
+
+  const uniqueItems = combinedItems.filter(
+    (item, index, self) =>
+      index === self.findIndex((x) => x.title === item.title)
+  );
+
+  return uniqueItems.slice(0, 12);
 }
 
 function formatDate(date?: string) {

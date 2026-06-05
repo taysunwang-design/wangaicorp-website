@@ -17,10 +17,51 @@ const parser = new Parser();
 
 const feeds = [
   {
-    source: "Global Construction Review",
+    source: "Mining.com",
     category: "Projects",
-    url: "https://www.globalconstructionreview.com/feed/",
+    url: "https://www.mining.com/feed/",
   },
+  {
+    source: "Offshore Energy",
+    category: "Projects",
+    url: "https://www.offshore-energy.biz/feed/",
+  },
+  {
+    source: "Power Technology",
+    category: "Projects",
+    url: "https://www.power-technology.com/feed/",
+  },
+  {
+    source: "GMK Center",
+    category: "Projects",
+    url: "https://gmk.center/en/feed/",
+  },
+];
+
+const keywords = [
+  "project",
+  "investment",
+  "plant",
+  "mine",
+  "expansion",
+  "construction",
+  "contract",
+  "facility",
+  "steel",
+  "copper",
+  "iron ore",
+  "coal",
+  "energy",
+  "port",
+  "terminal",
+  "epc",
+  "power",
+  "wind",
+  "solar",
+  "battery",
+  "hydrogen",
+  "smelter",
+  "refinery",
 ];
 
 async function getProjectNews(): Promise<FeedItem[]> {
@@ -38,23 +79,41 @@ async function getProjectNews(): Promise<FeedItem[]> {
       const xml = await response.text();
       const parsedFeed = await parser.parseString(xml);
 
-      return parsedFeed.items.slice(0, 12).map((item) => ({
-        title: item.title || "Untitled",
-        link: item.link || "#",
-        pubDate: item.pubDate,
-        contentSnippet:
-          item.contentSnippet ||
-          item.content ||
-          "No summary available from source.",
-        source: feed.source,
-        category: feed.category,
-      }));
+      return parsedFeed.items
+        .filter((item) => {
+          const text = `${item.title || ""} ${
+            item.contentSnippet || item.content || ""
+          }`.toLowerCase();
+
+          return keywords.some((keyword) =>
+            text.includes(keyword.toLowerCase())
+          );
+        })
+        .slice(0, 12)
+        .map((item) => ({
+          title: item.title || "Untitled",
+          link: item.link || "#",
+          pubDate: item.pubDate,
+          contentSnippet:
+            item.contentSnippet ||
+            item.content ||
+            "No summary available from source.",
+          source: feed.source,
+          category: feed.category,
+        }));
     })
   );
 
-  return results.flatMap((result) =>
+  const combinedItems = results.flatMap((result) =>
     result.status === "fulfilled" ? result.value : []
   );
+
+  const uniqueItems = combinedItems.filter(
+    (item, index, self) =>
+      index === self.findIndex((x) => x.title === item.title)
+  );
+
+  return uniqueItems.slice(0, 12);
 }
 
 function formatDate(date?: string) {

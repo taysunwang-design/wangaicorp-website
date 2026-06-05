@@ -17,20 +17,40 @@ const parser = new Parser();
 
 const feeds = [
   {
-    source: "MINING.COM",
-    category: "Iron Ore",
-    url: "https://www.mining.com/feed/?post_type=post&s=iron%20ore",
+    source: "Mining.com",
+    category: "Mining",
+    url: "https://www.mining.com/feed/",
   },
   {
-    source: "MINING.COM",
-    category: "Coal",
-    url: "https://www.mining.com/feed/?post_type=post&s=coal",
+    source: "GMK Center",
+    category: "Raw Materials",
+    url: "https://gmk.center/en/feed/",
   },
-  {
-    source: "MINING.COM",
-    category: "Copper",
-    url: "https://www.mining.com/feed/?post_type=post&s=copper",
-  },
+];
+
+const keywords = [
+  "mine",
+  "mining",
+  "ore",
+  "iron ore",
+  "copper",
+  "nickel",
+  "gold",
+  "coal",
+  "lithium",
+  "zinc",
+  "silver",
+  "bauxite",
+  "aluminum",
+  "aluminium",
+  "rare earth",
+  "mineral",
+  "pellet",
+  "concentrator",
+  "smelter",
+  "refinery",
+  "battery metals",
+  "commodity",
 ];
 
 async function getMiningNews(): Promise<FeedItem[]> {
@@ -38,28 +58,51 @@ async function getMiningNews(): Promise<FeedItem[]> {
     feeds.map(async (feed) => {
       const response = await fetch(feed.url, {
         next: { revalidate: 3600 },
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (compatible; WangCorpBot/1.0; +https://wangaicorp.com)",
+          Accept: "application/rss+xml, application/xml, text/xml",
+        },
       });
 
       const xml = await response.text();
       const parsedFeed = await parser.parseString(xml);
 
-      return parsedFeed.items.slice(0, 5).map((item) => ({
-        title: item.title || "Untitled",
-        link: item.link || "#",
-        pubDate: item.pubDate,
-        contentSnippet:
-          item.contentSnippet ||
-          item.content ||
-          "No summary available from source.",
-        source: feed.source,
-        category: feed.category,
-      }));
+      return parsedFeed.items
+        .filter((item) => {
+          const text = `${item.title || ""} ${
+            item.contentSnippet || item.content || ""
+          }`.toLowerCase();
+
+          return keywords.some((keyword) =>
+            text.includes(keyword.toLowerCase())
+          );
+        })
+        .slice(0, 12)
+        .map((item) => ({
+          title: item.title || "Untitled",
+          link: item.link || "#",
+          pubDate: item.pubDate,
+          contentSnippet:
+            item.contentSnippet ||
+            item.content ||
+            "No summary available from source.",
+          source: feed.source,
+          category: feed.category,
+        }));
     })
   );
 
-  return results
-    .flatMap((result) => (result.status === "fulfilled" ? result.value : []))
-    .slice(0, 12);
+  const combinedItems = results.flatMap((result) =>
+    result.status === "fulfilled" ? result.value : []
+  );
+
+  const uniqueItems = combinedItems.filter(
+    (item, index, self) =>
+      index === self.findIndex((x) => x.title === item.title)
+  );
+
+  return uniqueItems.slice(0, 12);
 }
 
 function formatDate(date?: string) {
