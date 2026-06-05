@@ -171,25 +171,24 @@
     "readOriginal": "Read original source"
   },
   "energy": {
-    "label": "ENERGY NEWS",
-    "title": "Energy Industry News",
-    "description": "Automatically updated headlines related to power, natural gas, coal, oil and industrial energy markets.",
-    "status": "Auto-updating energy news feed active · Updated hourly",
-    "lastUpdated": "Last updated",
-    "source": "Source",
-    "date": "Date",
-    "readOriginal": "Read original source"
-  },
-  "projects": {
-    "label": "INDUSTRIAL PROJECT NEWS",
-    "title": "Industrial Projects & Investments",
-    "description": "Automatically updated headlines related to new plant investments, EPC projects, capacity expansions and industrial developments.",
-    "status": "Auto-updating project news feed active · Updated hourly",
-    "lastUpdated": "Last updated",
-    "source": "Source",
-    "date": "Date",
-    "readOriginal": "Read original source"
-  }
+  "label": "ENERGY NEWS",
+  "title": "Energy Industry News",
+  "description": "Automatically updated headlines related to power, natural gas, coal, oil and industrial energy markets.",
+  "status": "Auto-updating energy news feed active · Updated hourly",
+  "lastUpdated": "Last updated",
+  "source": "Source",
+  "date": "Date",
+  "readOriginal": "Read original source"
+},
+"projects": {
+  "label": "INDUSTRIAL PROJECT NEWS",
+  "title": "Industrial Projects & Investments",
+  "description": "Automatically updated headlines related to new plant investments, EPC projects, capacity expansions and industrial developments.",
+  "status": "Auto-updating project news feed active · Updated hourly",
+  "lastUpdated": "Last updated",
+  "source": "Source",
+  "date": "Date",
+  "readOriginal": "Read original source"
 },
 "Intelligence": {
   "label": "PREMIUM ACCESS",
@@ -279,4 +278,4 @@
       "internal": "Internal"
     }
   }
-}
+}}

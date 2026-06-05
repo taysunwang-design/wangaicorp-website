@@ -170,25 +170,24 @@
     "readOriginal": "Orijinal kaynağı oku"
   },
   "energy": {
-    "label": "ENERJİ HABERLERİ",
-    "title": "Enerji Endüstrisi Haberleri",
-    "description": "Elektrik, doğal gaz, kömür, petrol ve endüstriyel enerji piyasalarıyla ilgili otomatik güncellenen haberler.",
-    "status": "Otomatik güncellenen enerji haber akışı aktif · Saatlik güncellenir",
-    "lastUpdated": "Son güncelleme",
-    "source": "Kaynak",
-    "date": "Tarih",
-    "readOriginal": "Orijinal kaynağı oku"
-  },
-  "projects": {
-    "label": "ENDÜSTRİYEL PROJE HABERLERİ",
-    "title": "Endüstriyel Projeler ve Yatırımlar",
-    "description": "Yeni tesis yatırımları, EPC projeleri, kapasite artışları ve sanayi yatırımlarıyla ilgili otomatik güncellenen haberler.",
-    "status": "Otomatik güncellenen proje haber akışı aktif · Saatlik güncellenir",
-    "lastUpdated": "Son güncelleme",
-    "source": "Kaynak",
-    "date": "Tarih",
-    "readOriginal": "Orijinal kaynağı oku"
-  }
+  "label": "ENERJİ HABERLERİ",
+  "title": "Enerji Endüstrisi Haberleri",
+  "description": "Elektrik, doğal gaz, kömür, petrol ve endüstriyel enerji piyasalarıyla ilgili otomatik güncellenen haberler.",
+  "status": "Otomatik güncellenen enerji haber akışı aktif · Saatlik güncellenir",
+  "lastUpdated": "Son güncelleme",
+  "source": "Kaynak",
+  "date": "Tarih",
+  "readOriginal": "Orijinal kaynağı oku"
+},
+"projects": {
+  "label": "ENDÜSTRİYEL PROJE HABERLERİ",
+  "title": "Endüstriyel Projeler ve Yatırımlar",
+  "description": "Yeni tesis yatırımları, EPC projeleri, kapasite artışları ve sanayi yatırımlarıyla ilgili otomatik güncellenen haberler.",
+  "status": "Otomatik güncellenen proje haber akışı aktif · Saatlik güncellenir",
+  "lastUpdated": "Son güncelleme",
+  "source": "Kaynak",
+  "date": "Tarih",
+  "readOriginal": "Orijinal kaynağı oku"
 },
 "Intelligence": {
   "label": "PREMIUM ERİŞİM",
@@ -278,4 +277,4 @@
       "internal": "Dahili"
     }
   }
-}
+}}

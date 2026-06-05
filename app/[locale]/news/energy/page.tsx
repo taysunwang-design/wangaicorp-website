@@ -17,17 +17,22 @@ const parser = new Parser();
 
 const feeds = [
   {
-    source: "GMK Center",
-    category: "Steel Market",
-    url: "https://gmk.center/en/feed/",
+    source: "Power Technology",
+    category: "Power",
+    url: "https://www.power-technology.com/feed/",
   },
 ];
 
-async function getSteelNews(): Promise<FeedItem[]> {
+async function getEnergyNews(): Promise<FeedItem[]> {
   const results = await Promise.allSettled(
     feeds.map(async (feed) => {
       const response = await fetch(feed.url, {
         next: { revalidate: 3600 },
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (compatible; WangCorpBot/1.0; +https://wangaicorp.com)",
+          Accept: "application/rss+xml, application/xml, text/xml",
+        },
       });
 
       const xml = await response.text();
@@ -80,7 +85,7 @@ function getUpdatedTime() {
   }).format(new Date());
 }
 
-export default async function SteelNewsPage({
+export default async function EnergyNewsPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -89,10 +94,10 @@ export default async function SteelNewsPage({
 
   const t = await getTranslations({
     locale,
-    namespace: "NewsPages.steel",
+    namespace: "NewsPages.energy",
   });
 
-  const newsItems = await getSteelNews();
+  const newsItems = await getEnergyNews();
 
   return (
     <>

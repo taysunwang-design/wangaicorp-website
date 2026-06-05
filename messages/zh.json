@@ -170,25 +170,24 @@
     "readOriginal": "阅读原文"
   },
   "energy": {
-    "label": "能源新闻",
-    "title": "能源行业新闻",
-    "description": "自动更新的电力、天然气、煤炭、石油及工业能源市场相关新闻。",
-    "status": "能源新闻自动更新中 · 每小时更新",
-    "lastUpdated": "最后更新",
-    "source": "来源",
-    "date": "日期",
-    "readOriginal": "阅读原文"
-  },
-  "projects": {
-    "label": "工业项目新闻",
-    "title": "工业项目与投资",
-    "description": "自动更新的新工厂投资、EPC项目、产能扩建及工业投资相关新闻。",
-    "status": "工业项目新闻自动更新中 · 每小时更新",
-    "lastUpdated": "最后更新",
-    "source": "来源",
-    "date": "日期",
-    "readOriginal": "阅读原文"
-  }
+  "label": "能源新闻",
+  "title": "能源行业新闻",
+  "description": "自动更新的电力、天然气、煤炭、石油及工业能源市场相关新闻。",
+  "status": "能源新闻自动更新中 · 每小时更新",
+  "lastUpdated": "最后更新",
+  "source": "来源",
+  "date": "日期",
+  "readOriginal": "阅读原文"
+},
+"projects": {
+  "label": "工业项目新闻",
+  "title": "工业项目与投资",
+  "description": "自动更新的新工厂投资、EPC项目、产能扩建及工业投资相关新闻。",
+  "status": "工业项目新闻自动更新中 · 每小时更新",
+  "lastUpdated": "最后更新",
+  "source": "来源",
+  "date": "日期",
+  "readOriginal": "阅读原文"
 },
 "Intelligence": {
   "label": "高级权限",
@@ -278,4 +277,4 @@
       "internal": "内部"
     }
   }
-}
+}}
