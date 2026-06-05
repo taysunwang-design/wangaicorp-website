@@ -138,24 +138,52 @@
     }
   }
 },
-
 "NewsPages": {
   "steel": {
     "label": "ÇELİK HABERLERİ",
     "title": "Çelik Endüstrisi Haberleri",
-    "description": "Çelik piyasaları, çelik fiyatları, üretim trendleri, ticaret, hammadde etkisi ve küresel çelik sektörü gelişmeleriyle ilgili otomatik güncellenen haberler.",
+    "description": "Çelik piyasaları, çelik fiyatları, üretim trendleri, ticaret, hammadde etkileri ve küresel çelik sektörü gelişmeleriyle ilgili otomatik güncellenen haberler.",
     "status": "Otomatik güncellenen çelik haber akışı aktif · Saatlik güncellenir",
     "lastUpdated": "Son güncelleme",
     "source": "Kaynak",
     "date": "Tarih",
     "readOriginal": "Orijinal kaynağı oku"
   },
-
   "mining": {
     "label": "MADENCİLİK HABERLERİ",
     "title": "Madencilik ve Hammadde Haberleri",
-    "description": "Demir cevheri, kömür, bakır, hammadde arzı, madencilik projeleri ve endüstriyel emtia piyasalarıyla ilgili otomatik güncellenen haberler.",
+    "description": "Demir cevheri, kömür, bakır, hammadde arzı, madencilik projeleri ve emtia piyasalarıyla ilgili otomatik güncellenen haberler.",
     "status": "Otomatik güncellenen madencilik haber akışı aktif · Saatlik güncellenir",
+    "lastUpdated": "Son güncelleme",
+    "source": "Kaynak",
+    "date": "Tarih",
+    "readOriginal": "Orijinal kaynağı oku"
+  },
+  "logistics": {
+    "label": "LOJİSTİK HABERLERİ",
+    "title": "Deniz Taşımacılığı ve Lojistik Haberleri",
+    "description": "Deniz taşımacılığı, limanlar, navlun piyasaları, lojistik aksaklıkları ve uluslararası ticaret rotalarıyla ilgili otomatik güncellenen haberler.",
+    "status": "Otomatik güncellenen lojistik haber akışı aktif · Saatlik güncellenir",
+    "lastUpdated": "Son güncelleme",
+    "source": "Kaynak",
+    "date": "Tarih",
+    "readOriginal": "Orijinal kaynağı oku"
+  },
+  "energy": {
+    "label": "ENERJİ HABERLERİ",
+    "title": "Enerji Endüstrisi Haberleri",
+    "description": "Elektrik, doğal gaz, kömür, petrol ve endüstriyel enerji piyasalarıyla ilgili otomatik güncellenen haberler.",
+    "status": "Otomatik güncellenen enerji haber akışı aktif · Saatlik güncellenir",
+    "lastUpdated": "Son güncelleme",
+    "source": "Kaynak",
+    "date": "Tarih",
+    "readOriginal": "Orijinal kaynağı oku"
+  },
+  "projects": {
+    "label": "ENDÜSTRİYEL PROJE HABERLERİ",
+    "title": "Endüstriyel Projeler ve Yatırımlar",
+    "description": "Yeni tesis yatırımları, EPC projeleri, kapasite artışları ve sanayi yatırımlarıyla ilgili otomatik güncellenen haberler.",
+    "status": "Otomatik güncellenen proje haber akışı aktif · Saatlik güncellenir",
     "lastUpdated": "Son güncelleme",
     "source": "Kaynak",
     "date": "Tarih",

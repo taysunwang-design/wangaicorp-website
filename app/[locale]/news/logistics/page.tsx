@@ -17,23 +17,33 @@ const parser = new Parser();
 
 const feeds = [
   {
-    source: "GMK Center",
-    category: "Steel Market",
-    url: "https://gmk.center/en/feed/",
+    source: "The Maritime Executive",
+    category: "Shipping",
+    url: "https://maritime-executive.com/rss",
+  },
+  {
+    source: "Hellenic Shipping News",
+    category: "Shipping Markets",
+    url: "https://www.hellenicshippingnews.com/feed/",
   },
 ];
 
-async function getSteelNews(): Promise<FeedItem[]> {
+async function getLogisticsNews(): Promise<FeedItem[]> {
   const results = await Promise.allSettled(
     feeds.map(async (feed) => {
       const response = await fetch(feed.url, {
         next: { revalidate: 3600 },
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (compatible; WangCorpBot/1.0; +https://wangaicorp.com)",
+          Accept: "application/rss+xml, application/xml, text/xml",
+        },
       });
 
       const xml = await response.text();
       const parsedFeed = await parser.parseString(xml);
 
-      return parsedFeed.items.slice(0, 12).map((item) => ({
+      return parsedFeed.items.slice(0, 6).map((item) => ({
         title: item.title || "Untitled",
         link: item.link || "#",
         pubDate: item.pubDate,
@@ -47,9 +57,9 @@ async function getSteelNews(): Promise<FeedItem[]> {
     })
   );
 
-  return results.flatMap((result) =>
-    result.status === "fulfilled" ? result.value : []
-  );
+  return results
+    .flatMap((result) => (result.status === "fulfilled" ? result.value : []))
+    .slice(0, 12);
 }
 
 function formatDate(date?: string) {
@@ -80,7 +90,7 @@ function getUpdatedTime() {
   }).format(new Date());
 }
 
-export default async function SteelNewsPage({
+export default async function LogisticsNewsPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -89,10 +99,10 @@ export default async function SteelNewsPage({
 
   const t = await getTranslations({
     locale,
-    namespace: "NewsPages.steel",
+    namespace: "NewsPages.logistics",
   });
 
-  const newsItems = await getSteelNews();
+  const newsItems = await getLogisticsNews();
 
   return (
     <>

@@ -138,28 +138,56 @@
     }
   }
 },
-
 "NewsPages": {
   "steel": {
     "label": "钢铁新闻",
     "title": "钢铁行业新闻",
-    "description": "自动更新与钢铁市场、钢材价格、生产趋势、贸易、原材料影响和全球钢铁行业发展相关的资讯。",
-    "status": "钢铁新闻自动更新已启用 · 每小时更新",
+    "description": "自动更新的钢铁市场、钢价、生产趋势、贸易、原材料影响及全球钢铁行业发展相关新闻。",
+    "status": "钢铁新闻自动更新中 · 每小时更新",
     "lastUpdated": "最后更新",
     "source": "来源",
     "date": "日期",
-    "readOriginal": "阅读原始来源"
+    "readOriginal": "阅读原文"
   },
-
   "mining": {
     "label": "矿业新闻",
     "title": "矿业与原材料新闻",
-    "description": "自动更新与铁矿石、煤炭、铜、原材料供应、矿业项目和工业大宗商品市场相关的资讯。",
-    "status": "矿业新闻自动更新已启用 · 每小时更新",
+    "description": "自动更新的铁矿石、煤炭、铜矿、原材料供应、矿业项目及大宗商品市场相关新闻。",
+    "status": "矿业新闻自动更新中 · 每小时更新",
     "lastUpdated": "最后更新",
     "source": "来源",
     "date": "日期",
-    "readOriginal": "阅读原始来源"
+    "readOriginal": "阅读原文"
+  },
+  "logistics": {
+    "label": "物流新闻",
+    "title": "航运与物流新闻",
+    "description": "自动更新的航运、港口、运费市场、物流中断及国际贸易路线相关新闻。",
+    "status": "物流新闻自动更新中 · 每小时更新",
+    "lastUpdated": "最后更新",
+    "source": "来源",
+    "date": "日期",
+    "readOriginal": "阅读原文"
+  },
+  "energy": {
+    "label": "能源新闻",
+    "title": "能源行业新闻",
+    "description": "自动更新的电力、天然气、煤炭、石油及工业能源市场相关新闻。",
+    "status": "能源新闻自动更新中 · 每小时更新",
+    "lastUpdated": "最后更新",
+    "source": "来源",
+    "date": "日期",
+    "readOriginal": "阅读原文"
+  },
+  "projects": {
+    "label": "工业项目新闻",
+    "title": "工业项目与投资",
+    "description": "自动更新的新工厂投资、EPC项目、产能扩建及工业投资相关新闻。",
+    "status": "工业项目新闻自动更新中 · 每小时更新",
+    "lastUpdated": "最后更新",
+    "source": "来源",
+    "date": "日期",
+    "readOriginal": "阅读原文"
   }
 },
 "Intelligence": {
