@@ -142,139 +142,122 @@
   "steel": {
     "label": "ÇELİK HABERLERİ",
     "title": "Çelik Endüstrisi Haberleri",
-    "description": "Çelik piyasaları, çelik fiyatları, üretim trendleri, ticaret, hammadde etkileri ve küresel çelik sektörü gelişmeleriyle ilgili otomatik güncellenen haberler.",
-    "status": "Otomatik güncellenen çelik haber akışı aktif · Saatlik güncellenir",
+    "description": "Çelik piyasaları, çelik fiyatları, üretim trendleri, ticaret ve küresel çelik sektörü gelişmeleri ile ilgili otomatik güncellenen haberler.",
+    "status": "Otomatik çelik haber akışı aktif · Saatlik güncellenir",
     "lastUpdated": "Son güncelleme",
     "source": "Kaynak",
     "date": "Tarih",
     "readOriginal": "Orijinal kaynağı oku"
   },
+
   "mining": {
     "label": "MADENCİLİK HABERLERİ",
     "title": "Madencilik ve Hammadde Haberleri",
-    "description": "Demir cevheri, kömür, bakır, hammadde arzı, madencilik projeleri ve emtia piyasalarıyla ilgili otomatik güncellenen haberler.",
-    "status": "Otomatik güncellenen madencilik haber akışı aktif · Saatlik güncellenir",
+    "description": "Demir cevheri, kömür, bakır, hammadde tedariki ve madencilik yatırımları ile ilgili otomatik güncellenen haberler.",
+    "status": "Otomatik madencilik haber akışı aktif · Saatlik güncellenir",
     "lastUpdated": "Son güncelleme",
     "source": "Kaynak",
     "date": "Tarih",
     "readOriginal": "Orijinal kaynağı oku"
   },
+
   "logistics": {
     "label": "LOJİSTİK HABERLERİ",
-    "title": "Deniz Taşımacılığı ve Lojistik Haberleri",
-    "description": "Deniz taşımacılığı, limanlar, navlun piyasaları, lojistik aksaklıkları ve uluslararası ticaret rotalarıyla ilgili otomatik güncellenen haberler.",
-    "status": "Otomatik güncellenen lojistik haber akışı aktif · Saatlik güncellenir",
+    "title": "Taşımacılık ve Lojistik Haberleri",
+    "description": "Limanlar, navlun piyasaları, lojistik aksaklıkları ve uluslararası ticaret rotaları ile ilgili otomatik güncellenen haberler.",
+    "status": "Otomatik lojistik haber akışı aktif · Saatlik güncellenir",
     "lastUpdated": "Son güncelleme",
     "source": "Kaynak",
     "date": "Tarih",
     "readOriginal": "Orijinal kaynağı oku"
   },
+
   "energy": {
-  "label": "ENERJİ HABERLERİ",
-  "title": "Enerji Endüstrisi Haberleri",
-  "description": "Elektrik, doğal gaz, kömür, petrol ve endüstriyel enerji piyasalarıyla ilgili otomatik güncellenen haberler.",
-  "status": "Otomatik güncellenen enerji haber akışı aktif · Saatlik güncellenir",
-  "lastUpdated": "Son güncelleme",
-  "source": "Kaynak",
-  "date": "Tarih",
-  "readOriginal": "Orijinal kaynağı oku"
+    "label": "ENERJİ HABERLERİ",
+    "title": "Enerji Endüstrisi Haberleri",
+    "description": "Elektrik, doğalgaz, kömür, petrol ve endüstriyel enerji piyasaları ile ilgili otomatik güncellenen haberler.",
+    "status": "Otomatik enerji haber akışı aktif · Saatlik güncellenir",
+    "lastUpdated": "Son güncelleme",
+    "source": "Kaynak",
+    "date": "Tarih",
+    "readOriginal": "Orijinal kaynağı oku"
+  },
+
+  "projects": {
+    "label": "ENDÜSTRİYEL PROJE HABERLERİ",
+    "title": "Endüstriyel Projeler ve Yatırımlar",
+    "description": "Yeni tesis yatırımları, EPC projeleri, kapasite artışları ve endüstriyel gelişmeler ile ilgili otomatik güncellenen haberler.",
+    "status": "Otomatik proje haber akışı aktif · Saatlik güncellenir",
+    "lastUpdated": "Son güncelleme",
+    "source": "Kaynak",
+    "date": "Tarih",
+    "readOriginal": "Orijinal kaynağı oku"
+  }
 },
-"projects": {
-  "label": "ENDÜSTRİYEL PROJE HABERLERİ",
-  "title": "Endüstriyel Projeler ve Yatırımlar",
-  "description": "Yeni tesis yatırımları, EPC projeleri, kapasite artışları ve sanayi yatırımlarıyla ilgili otomatik güncellenen haberler.",
-  "status": "Otomatik güncellenen proje haber akışı aktif · Saatlik güncellenir",
-  "lastUpdated": "Son güncelleme",
-  "source": "Kaynak",
-  "date": "Tarih",
-  "readOriginal": "Orijinal kaynağı oku"
-},
+
 "Intelligence": {
   "label": "PREMIUM ERİŞİM",
-  "title": "Wang Corp Endüstriyel İstihbarat",
-  "description": "Premium endüstriyel istihbarat, yatırım takibi, satın alma fırsatları, tedarikçi izleme ve Wang Corp'a özel piyasa analizleri.",
-  "status": "Premium istihbarat modülü geliştirme aşamasında",
-  "modules": {
-    "investmentWatch": {
-      "title": "Yatırım Takibi",
-      "text": "Dünya genelindeki önemli çelik, madencilik, lojistik ve enerji yatırımları."
+  "title": "Wang Corp İstihbarat Merkezi",
+  "description": "Endüstriyel istihbarat, yatırım takibi, satın alma fırsatları ve Wang Corp özel analizleri.",
+  "status": "Premium istihbarat modülü geliştirme aşamasında"
+},
+
+"Contact": {
+  "label": "İLETİŞİM",
+  "title": "İletişim Altyapısı Geliştiriliyor",
+  "description": "Resmi iletişim kanalları ve müşteri erişim sistemleri hazırlanmaktadır.",
+  "status": "İletişim sistemi geliştirme aşamasında",
+  "home": "ANA SAYFAYA DÖN",
+  "platform": "PLATFORMU GÖRÜNTÜLE"
+},
+
+"Portal": {
+  "label": "PORTAL",
+  "title": "Endüstriyel Platform",
+  "description": "Şirketler, kişiler, projeler, RFQ'lar ve endüstriyel kaynaklar için merkezi bir platform.",
+  "status": "Portal geliştirme aşamasında",
+  "cards": {
+    "companies": {
+      "title": "Şirketler",
+      "text": "Endüstriyel şirketler ve müşteri veritabanı."
     },
-    "procurementSignals": {
-      "title": "Satın Alma Sinyalleri",
-      "text": "Ekipman talebi, tedarik fırsatları ve satın alma faaliyetlerinin takibi."
+    "contacts": {
+      "title": "Kişiler",
+      "text": "İletişim ve kartvizit yönetimi."
     },
-    "chinaIntelligence": {
-      "title": "Çin Sanayi Takibi",
-      "text": "Çin sanayi politikaları, tedarikçi gelişmeleri ve piyasa eğilimleri."
+    "projects": {
+      "title": "Projeler",
+      "text": "Proje koordinasyonu ve takibi."
     },
-    "turkiyeIntelligence": {
-      "title": "Türkiye Sanayi Takibi",
-      "text": "Türkiye'deki çelik, madencilik ve endüstriyel yatırım gelişmeleri."
+    "rfqs": {
+      "title": "RFQ'lar",
+      "text": "Teklif talebi yönetimi."
     },
-    "supplierWatch": {
-      "title": "Tedarikçi Takibi",
-      "text": "Üretici kapasite artışları, tedarikçi faaliyetleri ve pazardaki konumlanmaları."
+    "resources": {
+      "title": "Kaynaklar",
+      "text": "Kataloglar, sunumlar, videolar ve çizimler."
     },
-    "opportunityRadar": {
-      "title": "Fırsat Radarı",
-      "text": "Haberler, piyasa sinyalleri ve proje duyurularından oluşturulan iş fırsatları."
+    "ai": {
+      "title": "Yapay Zeka Araçları",
+      "text": "Gelecekteki endüstriyel istihbarat ve yapay zeka çeviri modülleri."
     }
   }
 },
-  "Contact": {
-    "label": "İLETİŞİM",
-    "title": "Bizimle İletişime Geçin",
-    "description": "Endüstriyel iş birlikleri, tedarik fırsatları ve stratejik ortaklıklar için bizimle iletişime geçin.",
-    "status": "İletişim kanalları aktif",
-    "home": "ANA SAYFAYA DÖN",
-    "platform": "PLATFORMU GÖRÜNTÜLE"
-  },
-  "Portal": {
-    "label": "PORTAL",
-    "title": "Endüstriyel İstihbarat Platformu",
-    "description": "Şirketler, kişiler, projeler, RFQ’lar ve endüstriyel kaynaklar için merkezi platform.",
-    "status": "Portal iskeleti geliştirme aşamasında",
-    "cards": {
-      "companies": {
-        "title": "Şirketler",
-        "text": "Endüstriyel şirketler ve müşteri veritabanı."
-      },
-      "contacts": {
-        "title": "Kişiler",
-        "text": "Kişi ve kartvizit yönetimi."
-      },
-      "projects": {
-        "title": "Projeler",
-        "text": "Proje koordinasyonu ve takibi."
-      },
-      "rfqs": {
-        "title": "RFQ’lar",
-        "text": "Teklif talebi yönetimi."
-      },
-      "resources": {
-        "title": "Kaynaklar",
-        "text": "Kataloglar, sunumlar, videolar ve çizimler."
-      },
-      "ai": {
-        "title": "AI Araçları",
-        "text": "Gelecekteki endüstriyel istihbarat ve AI çeviri modülleri."
-      }
-    }
-  },
-  "Companies": {
-    "label": "ŞİRKETLER",
-    "title": "Endüstriyel Şirket Veritabanı",
-    "description": "Partnerler, müşteriler, tedarikçiler ve hedef hesaplar için yapılandırılmış veritabanı.",
-    "search": "Şirket, sektör veya ülke ara...",
-    "country": "Ülke",
-    "sector": "Sektör",
-    "status": "Durum",
-    "subscriptionNote": "Ek bilgiler abonelik seviyesine göre görüntülenebilir.",
-    "internalNote": "Şirket içi bilgiler yalnızca yetkili kullanıcılara açıktır.",
-    "access": {
-      "professional": "Profesyonel",
-      "premium": "Premium",
-      "internal": "Dahili"
-    }
+
+"Companies": {
+  "label": "ŞİRKETLER",
+  "title": "Endüstriyel Şirket Veritabanı",
+  "description": "Ortaklar, müşteriler, tedarikçiler ve hedef hesaplar için yapılandırılmış veritabanı.",
+  "search": "Şirket, sektör veya ülke ara...",
+  "country": "Ülke",
+  "sector": "Sektör",
+  "status": "Durum",
+  "subscriptionNote": "Ek bilgiler abonelik seviyesine göre görüntülenebilir.",
+  "internalNote": "Dahili şirket verileri yalnızca yetkili kullanıcılara açıktır.",
+  "access": {
+    "professional": "Professional",
+    "premium": "Premium",
+    "internal": "Internal"
   }
-}}
+}
+}

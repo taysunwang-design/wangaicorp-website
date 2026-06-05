@@ -171,25 +171,27 @@
     "readOriginal": "Read original source"
   },
   "energy": {
-  "label": "ENERGY NEWS",
-  "title": "Energy Industry News",
-  "description": "Automatically updated headlines related to power, natural gas, coal, oil and industrial energy markets.",
-  "status": "Auto-updating energy news feed active · Updated hourly",
-  "lastUpdated": "Last updated",
-  "source": "Source",
-  "date": "Date",
-  "readOriginal": "Read original source"
+    "label": "ENERGY NEWS",
+    "title": "Energy Industry News",
+    "description": "Automatically updated headlines related to power, natural gas, coal, oil and industrial energy markets.",
+    "status": "Auto-updating energy news feed active · Updated hourly",
+    "lastUpdated": "Last updated",
+    "source": "Source",
+    "date": "Date",
+    "readOriginal": "Read original source"
+  },
+  "projects": {
+    "label": "INDUSTRIAL PROJECT NEWS",
+    "title": "Industrial Projects & Investments",
+    "description": "Automatically updated headlines related to new plant investments, EPC projects, capacity expansions and industrial developments.",
+    "status": "Auto-updating project news feed active · Updated hourly",
+    "lastUpdated": "Last updated",
+    "source": "Source",
+    "date": "Date",
+    "readOriginal": "Read original source"
+  }
 },
-"projects": {
-  "label": "INDUSTRIAL PROJECT NEWS",
-  "title": "Industrial Projects & Investments",
-  "description": "Automatically updated headlines related to new plant investments, EPC projects, capacity expansions and industrial developments.",
-  "status": "Auto-updating project news feed active · Updated hourly",
-  "lastUpdated": "Last updated",
-  "source": "Source",
-  "date": "Date",
-  "readOriginal": "Read original source"
-},
+
 "Intelligence": {
   "label": "PREMIUM ACCESS",
   "title": "Wang Corp Intelligence",
@@ -222,60 +224,63 @@
     }
   }
 },
-  "Contact": {
-    "label": "CONTACT",
-    "title": "Contact Infrastructure Under Development",
-    "description": "Official WANG CORP. communication channels, enterprise email infrastructure and client access systems are currently being prepared.",
-    "status": "Contact system in development",
-    "home": "RETURN HOME",
-    "platform": "VIEW PLATFORM"
-  },
-  "Portal": {
-    "label": "PORTAL",
-    "title": "Industrial Intelligence Platform",
-    "description": "A centralized platform for companies, contacts, projects, RFQs and industrial resources.",
-    "status": "Portal shell in development",
-    "cards": {
-      "companies": {
-        "title": "Companies",
-        "text": "Industrial companies and customer database."
-      },
-      "contacts": {
-        "title": "Contacts",
-        "text": "Contact and business card management."
-      },
-      "projects": {
-        "title": "Projects",
-        "text": "Project coordination and tracking."
-      },
-      "rfqs": {
-        "title": "RFQs",
-        "text": "Request for quotation management."
-      },
-      "resources": {
-        "title": "Resources",
-        "text": "Catalogs, presentations, videos and drawings."
-      },
-      "ai": {
-        "title": "AI Tools",
-        "text": "Future industrial intelligence and AI translation modules."
-      }
-    }
-  },
-  "Companies": {
-    "label": "COMPANIES",
-    "title": "Industrial Company Database",
-    "description": "A structured database for partners, clients, suppliers and target accounts.",
-    "search": "Search companies, sectors, countries...",
-    "country": "Country",
-    "sector": "Sector",
-    "status": "Status",
-    "subscriptionNote": "Additional information is available according to subscription level.",
-    "internalNote": "Internal company data is restricted to authorized users.",
-    "access": {
-      "professional": "Professional",
-      "premium": "Premium",
-      "internal": "Internal"
+
+"Contact": {
+  "label": "CONTACT",
+  "title": "Contact Infrastructure Under Development",
+  "description": "Official WANG CORP. communication channels, enterprise email infrastructure and client access systems are currently being prepared.",
+  "status": "Contact system in development",
+  "home": "RETURN HOME",
+  "platform": "VIEW PLATFORM"
+},
+
+"Portal": {
+  "label": "PORTAL",
+  "title": "Industrial Platform",
+  "description": "A centralized platform for companies, contacts, projects, RFQs and industrial resources.",
+  "status": "Portal shell in development",
+  "cards": {
+    "companies": {
+      "title": "Companies",
+      "text": "Industrial companies and customer database."
+    },
+    "contacts": {
+      "title": "Contacts",
+      "text": "Contact and business card management."
+    },
+    "projects": {
+      "title": "Projects",
+      "text": "Project coordination and tracking."
+    },
+    "rfqs": {
+      "title": "RFQs",
+      "text": "Request for quotation management."
+    },
+    "resources": {
+      "title": "Resources",
+      "text": "Catalogs, presentations, videos and drawings."
+    },
+    "ai": {
+      "title": "AI Tools",
+      "text": "Future industrial intelligence and AI translation modules."
     }
   }
-}}
+},
+
+"Companies": {
+  "label": "COMPANIES",
+  "title": "Industrial Company Database",
+  "description": "A structured database for partners, clients, suppliers and target accounts.",
+  "search": "Search companies, sectors, countries...",
+  "country": "Country",
+  "sector": "Sector",
+  "status": "Status",
+  "subscriptionNote": "Additional information is available according to subscription level.",
+  "internalNote": "Internal company data is restricted to authorized users.",
+  "access": {
+    "professional": "Professional",
+    "premium": "Premium",
+    "internal": "Internal"
+  }
+}
+}
