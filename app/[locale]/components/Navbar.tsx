@@ -37,14 +37,15 @@ export default function Navbar() {
 </div>
 
       <button
-        className="mobile-menu-button"
-        onClick={() => setIsOpen(!isOpen)}
-        aria-label="Toggle menu"
-      >
-        ☰
-      </button>
+  className="mobile-menu-button"
+  onClick={() => setIsOpen(!isOpen)}
+  aria-label="Toggle menu"
+  type="button"
+>
+  ☰
+</button>
 
-      <div className={`nav-links ${isOpen ? "open" : ""}`}>
+<div className={`nav-links ${isOpen ? "open" : ""}`}>
         <a href={`/${locale}`}>{nav("home")}</a>
         <a href={`/${locale}/about`}>{nav("about")}</a>
         <a href={`/${locale}/services`}>{nav("services")}</a>
