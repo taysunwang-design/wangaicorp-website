@@ -808,4 +808,50 @@ a {
   .nav-holiday-ticker {
     display: none;
   }
+}/* MOBILE NAVBAR WIDGET FIX */
+
+@media (max-width: 900px) {
+  .nav-widget-wrap {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin: 0;
+    align-items: center;
+  }
+
+  .nav-widget-group {
+    gap: 5px;
+  }
+
+  .nav-mini-widget {
+    height: 30px;
+    padding: 5px 8px;
+  }
+
+  .nav-mini-widget strong {
+    font-size: 0.72rem;
+  }
+
+  .nav-mini-label {
+    display: none;
+  }
+
+  .nav-holiday-ticker {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .nav-mini-widget:nth-child(3) {
+    display: none;
+  }
+
+  .nav-mini-icon {
+    display: none;
+  }
+
+  .nav-widget-wrap {
+    max-width: 155px;
+  }
 }

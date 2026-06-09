@@ -29,10 +29,10 @@ export default function NavWorldClock() {
   if (!now) return null;
 
   const city = locale.startsWith("tr")
-    ? "Pekin"
-    : locale.startsWith("zh")
-    ? "北京"
-    : "Beijing";
+  ? "Pekin"
+  : locale.startsWith("zh")
+  ? "北京"
+  : "BJ";
 
   return (
     <div className="nav-mini-widget" title="Asia/Shanghai">
