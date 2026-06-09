@@ -669,7 +669,7 @@ a {
 .nav-widget-group {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   margin-left: 18px;
   margin-right: auto;
   white-space: nowrap;

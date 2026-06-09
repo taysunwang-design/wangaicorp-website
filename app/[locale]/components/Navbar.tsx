@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import NavBusinessClock from "./NavBusinessClock";
+import NavWorldClock from "./NavWorldClock";
 
 export default function Navbar() {
   const locale = useLocale();
@@ -25,6 +26,7 @@ export default function Navbar() {
 
       <div className="nav-widget-group">
   <NavBusinessClock />
+  <NavWorldClock />
 </div>
 
       <button
