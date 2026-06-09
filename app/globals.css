@@ -82,10 +82,9 @@ a {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 42px;
-
-  font-size: 1rem;
-
+  gap: 28px;
+  margin-left: 28px;
+  font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.84);
 }
 
@@ -498,7 +497,7 @@ a {
     font-size: 2.5rem;
   }
 }.language-selector {
-  padding: 8px 12px;
+  padding: 6px 10px;
 
   border-radius: 999px;
 
@@ -508,7 +507,7 @@ a {
 
   color: white;
 
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 
   outline: none;
 
@@ -734,9 +733,9 @@ a {
 .nav-widget-wrap {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
 
-  margin-left: 55px;
+  margin-left: 42px;
   margin-right: auto;
 
   min-width: 0;
@@ -826,7 +825,7 @@ a {
 
   .nav-mini-widget {
     height: 30px;
-    padding: 5px 8px;
+    padding: 4px 8px;
   }
 
   .nav-mini-widget strong {
@@ -853,5 +852,51 @@ a {
 
   .nav-widget-wrap {
     max-width: 155px;
+  }
+}/* FINAL MOBILE NAVBAR COMPACT FIX */
+
+@media (max-width: 900px) {
+  .nav-widget-wrap {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    align-items: center;
+  }
+
+  .nav-holiday-ticker {
+    display: none;
+  }
+
+  .nav-widget-group {
+    gap: 5px;
+  }
+
+  .nav-mini-widget {
+    height: 28px;
+    padding: 4px 8px;
+  }
+
+  .nav-mini-widget strong {
+    font-size: 0.72rem;
+  }
+
+  .nav-mini-label {
+    display: none;
+  }
+
+  .nav-mini-widget:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .nav-mini-icon {
+    display: none;
+  }
+
+  .nav-widget-group {
+    max-width: 145px;
+    overflow: hidden;
   }
 }
