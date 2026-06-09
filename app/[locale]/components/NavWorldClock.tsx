@@ -32,7 +32,7 @@ export default function NavWorldClock() {
   ? "Pekin"
   : locale.startsWith("zh")
   ? "北京"
-  : "BJ";
+  : "Beijing";
 
   return (
     <div className="nav-mini-widget" title="Asia/Shanghai">
