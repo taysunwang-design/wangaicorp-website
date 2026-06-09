@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
+import NavBusinessClock from "./NavBusinessClock";
 
 export default function Navbar() {
   const locale = useLocale();
@@ -21,6 +22,10 @@ export default function Navbar() {
       <a href={`/${locale}`} className="logo-text">
         WANG CORP.
       </a>
+
+      <div className="nav-widget-group">
+  <NavBusinessClock />
+</div>
 
       <button
         className="mobile-menu-button"

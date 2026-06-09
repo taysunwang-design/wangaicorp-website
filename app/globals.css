@@ -664,4 +664,69 @@ a {
 
 .company-card-link:hover {
   cursor: pointer;
+}/* NAVBAR LOCAL TIME WIDGET */
+
+.nav-widget-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 18px;
+  margin-right: auto;
+  white-space: nowrap;
+}
+
+.nav-mini-widget {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 30px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(210, 182, 109, 0.18);
+  background: rgba(255, 255, 255, 0.035);
+  color: #f5f2e8;
+  line-height: 1;
+}
+
+.nav-mini-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  line-height: 1;
+}
+
+.nav-mini-widget strong {
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+@media (max-width: 900px) {
+  .nav-widget-group {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+
+  .nav-mini-widget {
+    height: 29px;
+    padding: 5px 8px;
+  }
+
+  .nav-mini-widget strong {
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .nav-mini-icon {
+    display: none;
+  }
+
+  .nav-mini-widget {
+    padding: 5px 7px;
+  }
 }
