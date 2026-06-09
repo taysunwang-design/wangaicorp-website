@@ -899,4 +899,30 @@ a {
     max-width: 145px;
     overflow: hidden;
   }
+}/* HIDE NAVBAR WIDGETS ON NARROW MOBILE */
+
+/* MOBILE NAVBAR CLEANUP */
+
+@media (max-width: 640px) {
+  .nav-widget-wrap {
+    display: none;
+  }
+
+  .nav-widget-group {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .nav-mini-widget:nth-child(3) {
+    display: none;
+  }
+
+  .nav-holiday-ticker {
+    display: none;
+  }
+
+  .nav-mini-label {
+    display: none;
+  }
 }
