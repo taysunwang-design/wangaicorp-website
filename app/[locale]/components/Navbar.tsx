@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import NavBusinessClock from "./NavBusinessClock";
 import NavWorldClock from "./NavWorldClock";
 import NavBusinessCalendar from "./NavBusinessCalendar";
+import NavHolidayTicker from "./NavHolidayTicker";
 
 export default function Navbar() {
   const locale = useLocale();
@@ -25,10 +26,14 @@ export default function Navbar() {
         WANG CORP.
       </a>
 
-      <div className="nav-widget-group">
-  <NavBusinessClock />
-  <NavWorldClock />
-  <NavBusinessCalendar />
+      <div className="nav-widget-wrap">
+  <div className="nav-widget-group">
+    <NavBusinessClock />
+    <NavWorldClock />
+    <NavBusinessCalendar />
+  </div>
+
+  <NavHolidayTicker />
 </div>
 
       <button
