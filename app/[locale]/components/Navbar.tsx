@@ -3,9 +3,6 @@
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
-import NavBusinessClock from "./NavBusinessClock";
-import NavWorldClock from "./NavWorldClock";
-import NavBusinessCalendar from "./NavBusinessCalendar";
 
 export default function Navbar() {
   const locale = useLocale();
@@ -22,22 +19,16 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <a href={`/${locale}`} className="logo-text">
-  WANG CORP.
-</a>
+        WANG CORP.
+      </a>
 
-<div className="nav-widget-group">
-  <NavBusinessClock />
-  <NavWorldClock />
-  <NavBusinessCalendar />
-</div>
-
-<button
-  className="mobile-menu-button"
-  onClick={() => setIsOpen(!isOpen)}
-  aria-label="Toggle menu"
->
-  ☰
-</button>
+      <button
+        className="mobile-menu-button"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle menu"
+      >
+        ☰
+      </button>
 
       <div className={`nav-links ${isOpen ? "open" : ""}`}>
         <a href={`/${locale}`}>{nav("home")}</a>

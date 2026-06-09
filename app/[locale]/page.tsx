@@ -21,7 +21,7 @@ export default function Home() {
           </h1>
 
           <p className="home-description">{t("description")}</p>
-</section>
+        </section>
       </main>
     </>
   );
