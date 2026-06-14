@@ -972,4 +972,368 @@ a {
   .nav-links.open .language-selector {
     width: 100%;
   }
+}.office-login-grid {
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.office-login-card {
+  width: 100%;
+}
+
+.office-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.office-login-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+}
+
+.office-login-form input {
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(190, 220, 190, 0.22);
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+  outline: none;
+}
+
+.office-login-form input:focus {
+  border-color: rgba(158, 188, 164, 0.75);
+}
+
+.office-login-form button,
+.platform-card button {
+  border: 1px solid rgba(158, 188, 164, 0.55);
+  background: rgba(158, 188, 164, 0.12);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.office-login-form button:hover,
+.platform-card button:hover {
+  background: rgba(158, 188, 164, 0.22);
+}.office-login-grid {
+  display: flex;
+  justify-content: center;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.office-login-card {
+  width: 100%;
+}
+
+.office-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.office-login-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.office-login-form input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(190, 220, 190, 0.22);
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+  outline: none;
+  font-size: 14px;
+}
+
+.office-login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.office-login-form input:focus {
+  border-color: rgba(158, 188, 164, 0.75);
+}
+
+.office-login-form button,
+.platform-card button {
+  width: fit-content;
+  border: 1px solid rgba(158, 188, 164, 0.55);
+  background: rgba(158, 188, 164, 0.12);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.office-login-form button:hover,
+.platform-card button:hover {
+  background: rgba(158, 188, 164, 0.22);
+}.office-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.78)),
+    url("/bg-stone.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.office-sidebar {
+  min-height: 100vh;
+  padding: 24px 18px;
+  border-right: 1px solid rgba(158, 188, 164, 0.18);
+  background: rgba(5, 7, 6, 0.72);
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.office-brand {
+  padding: 8px 8px 18px;
+  border-bottom: 1px solid rgba(158, 188, 164, 0.16);
+}
+
+.office-logo {
+  font-size: 15px;
+  letter-spacing: 7px;
+  font-weight: 600;
+}
+
+.office-subtitle {
+  margin-top: 8px;
+  font-size: 11px;
+  color: rgba(158, 188, 164, 0.8);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.office-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.office-nav button {
+  border: 0;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.72);
+  background: transparent;
+  padding: 11px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.office-nav button:hover,
+.office-nav-active {
+  background: rgba(158, 188, 164, 0.14) !important;
+  color: white !important;
+}
+
+.office-user-box {
+  margin-top: auto;
+  padding: 14px;
+  border: 1px solid rgba(158, 188, 164, 0.16);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.office-user-box span {
+  color: rgba(158, 188, 164, 0.85);
+  font-size: 13px;
+}
+
+.office-user-box button {
+  margin-top: 8px;
+  border: 1px solid rgba(158, 188, 164, 0.4);
+  background: rgba(158, 188, 164, 0.08);
+  color: white;
+  border-radius: 999px;
+  padding: 9px 12px;
+  cursor: pointer;
+}
+
+.office-main {
+  padding: 28px 34px 42px;
+  overflow-y: auto;
+}
+
+.office-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.office-label {
+  color: rgba(158, 188, 164, 0.9);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.office-header h1 {
+  margin: 0;
+  font-size: clamp(34px, 4vw, 58px);
+  letter-spacing: -2px;
+}
+
+.office-header-user {
+  min-width: 230px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(158, 188, 164, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.office-header-user small {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.office-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.office-stat-card,
+.office-panel {
+  border: 1px solid rgba(158, 188, 164, 0.15);
+  background: rgba(10, 12, 11, 0.72);
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+}
+
+.office-stat-card span {
+  color: rgba(158, 188, 164, 0.9);
+  font-size: 13px;
+}
+
+.office-stat-card strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 26px;
+}
+
+.office-stat-card p {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.office-content-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 16px;
+}
+
+.office-wide-panel {
+  grid-column: 1 / -1;
+}
+
+.office-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.office-panel-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.office-panel-header button,
+.office-actions button,
+.office-actions a {
+  border: 1px solid rgba(158, 188, 164, 0.38);
+  background: rgba(158, 188, 164, 0.08);
+  color: white;
+  border-radius: 999px;
+  padding: 9px 13px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.office-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.office-profile p {
+  margin: 9px 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.office-empty-state {
+  padding: 24px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .office-page {
+    grid-template-columns: 1fr;
+  }
+
+  .office-sidebar {
+    min-height: auto;
+  }
+
+  .office-summary-grid,
+  .office-content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .office-header {
+    flex-direction: column;
+  }
+}.office-login-note {
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.office-login-note strong {
+  color: rgba(198, 224, 205, 0.95);
 }
