@@ -197,13 +197,34 @@
     "status": "高级情报模块开发中"
   },
   "Contact": {
-    "label": "联系我们",
-    "title": "联系系统开发中",
-    "description": "王氏公司官方联系方式、企业邮箱系统及客户访问系统正在建设中。",
-    "status": "联系系统开发中",
-    "home": "返回首页",
-    "platform": "查看平台"
+  "label": "联系我们",
+  "title": "联系我们",
+  "description": "如需采购、工业设备、项目协调、贸易及国际商务合作相关咨询，请通过电子邮件联系 WANG CORP.",
+  "status": "企业邮箱系统已启用",
+  "home": "返回首页",
+  "platform": "查看平台",
+  "generalInquiry": {
+    "title": "一般咨询",
+    "text": "如需商务咨询、项目讨论、采购需求、供应商介绍及国际合作机会，请联系我们。",
+    "emailLabel": "邮箱"
   },
+  "website": {
+    "title": "网站",
+    "webLabel": "网址"
+  },
+  "responseTime": {
+    "title": "回复时间",
+    "text": "我们通常会在 1 至 2 个工作日内回复商务咨询。"
+  },
+  "businessFocus": {
+    "title": "业务方向",
+    "coordination": "工业协调",
+    "sourcing": "战略采购",
+    "trading": "贸易与咨询",
+    "communication": "项目沟通",
+    "cooperation": "国际合作"
+  }
+},
   "Portal": {
     "label": "平台",
     "title": "工业平台",

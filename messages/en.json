@@ -226,12 +226,33 @@
 },
 
 "Contact": {
-  "label": "CONTACT",
-  "title": "Contact Infrastructure Under Development",
-  "description": "Official WANG CORP. communication channels, enterprise email infrastructure and client access systems are currently being prepared.",
-  "status": "Contact system in development",
-  "home": "RETURN HOME",
-  "platform": "VIEW PLATFORM"
+  "label": "Contact",
+  "title": "Get In Touch",
+  "description": "For inquiries regarding sourcing, industrial equipment, project coordination, trading, and international business cooperation, please contact WANG CORP. by email.",
+  "status": "Corporate email system active",
+  "home": "Return Home",
+  "platform": "View Platform",
+  "generalInquiry": {
+    "title": "General Inquiry",
+    "text": "For general business inquiries, project discussions, sourcing requests, supplier introductions, and international cooperation opportunities, please contact us.",
+    "emailLabel": "Email"
+  },
+  "website": {
+    "title": "Website",
+    "webLabel": "Web"
+  },
+  "responseTime": {
+    "title": "Response Time",
+    "text": "We aim to respond to business inquiries within 1 to 2 business days."
+  },
+  "businessFocus": {
+    "title": "Business Focus",
+    "coordination": "Industrial Coordination",
+    "sourcing": "Strategic Sourcing",
+    "trading": "Trading & Consulting",
+    "communication": "Project Communication",
+    "cooperation": "International Cooperation"
+  }
 },
 
 "Portal": {

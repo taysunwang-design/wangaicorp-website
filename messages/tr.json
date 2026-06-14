@@ -203,12 +203,33 @@
 },
 
 "Contact": {
-  "label": "İLETİŞİM",
-  "title": "İletişim Altyapısı Geliştiriliyor",
-  "description": "Resmi iletişim kanalları ve müşteri erişim sistemleri hazırlanmaktadır.",
-  "status": "İletişim sistemi geliştirme aşamasında",
-  "home": "ANA SAYFAYA DÖN",
-  "platform": "PLATFORMU GÖRÜNTÜLE"
+  "label": "İletişim",
+  "title": "Bizimle İletişime Geçin",
+  "description": "Tedarik, endüstriyel ekipman, proje koordinasyonu, ticaret ve uluslararası iş birliği konularındaki talepleriniz için WANG CORP. ile e-posta yoluyla iletişime geçebilirsiniz.",
+  "status": "Kurumsal e-posta sistemi aktif",
+  "home": "Ana sayfaya dön",
+  "platform": "Platformu görüntüle",
+  "generalInquiry": {
+    "title": "Genel İletişim",
+    "text": "Genel iş görüşmeleri, proje değerlendirmeleri, tedarik talepleri, tedarikçi yönlendirmeleri ve uluslararası iş birliği fırsatları için bizimle iletişime geçebilirsiniz.",
+    "emailLabel": "E-posta"
+  },
+  "website": {
+    "title": "Web Sitesi",
+    "webLabel": "Web"
+  },
+  "responseTime": {
+    "title": "Yanıt Süresi",
+    "text": "İş taleplerine genellikle 1 ila 2 iş günü içinde yanıt vermeyi hedefliyoruz."
+  },
+  "businessFocus": {
+    "title": "Faaliyet Alanları",
+    "coordination": "Endüstriyel koordinasyon",
+    "sourcing": "Stratejik tedarik",
+    "trading": "Ticaret ve danışmanlık",
+    "communication": "Proje iletişimi",
+    "cooperation": "Uluslararası iş birliği"
+  }
 },
 
 "Portal": {
