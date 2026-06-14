@@ -1336,4 +1336,794 @@ a {
 
 .office-login-note strong {
   color: rgba(198, 224, 205, 0.95);
+}.office-mail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.office-mail-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(158, 188, 164, 0.12);
+}
+
+.office-mail-item strong {
+  display: block;
+  margin-bottom: 6px;
+  color: white;
+}
+
+.office-mail-item p {
+  margin: 0 0 6px;
+  color: rgba(158, 188, 164, 0.85);
+  font-size: 13px;
+}
+
+.office-mail-item span {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 13px;
+}
+
+.office-mail-item small {
+  white-space: nowrap;
+  color: rgba(198, 224, 205, 0.9);
+}.office-panel-subtitle {
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.office-task-board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.office-task-column {
+  min-height: 420px;
+  border: 1px solid rgba(158, 188, 164, 0.13);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.035);
+  padding: 14px;
+}
+
+.office-task-column-header {
+  padding: 6px 4px 12px;
+  border-bottom: 1px solid rgba(158, 188, 164, 0.12);
+  margin-bottom: 12px;
+}
+
+.office-task-column-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.office-task-column-header p {
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.office-task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.office-task-card {
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(10, 12, 11, 0.72);
+  border: 1px solid rgba(158, 188, 164, 0.13);
+}
+
+.office-task-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.office-task-card-header strong {
+  color: white;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.office-task-card-header span {
+  white-space: nowrap;
+  color: rgba(198, 224, 205, 0.95);
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(158, 188, 164, 0.22);
+  background: rgba(158, 188, 164, 0.08);
+}
+
+.office-task-card p {
+  margin: 10px 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.office-task-card small {
+  color: rgba(158, 188, 164, 0.82);
+}
+
+@media (max-width: 1200px) {
+  .office-task-board {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .office-task-board {
+    grid-template-columns: 1fr;
+  }
+}.office-panel-subtitle {
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.office-task-board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.office-task-column {
+  min-height: 420px;
+  border: 1px solid rgba(158, 188, 164, 0.13);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.035);
+  padding: 14px;
+}
+
+.office-task-column-header {
+  padding: 6px 4px 12px;
+  border-bottom: 1px solid rgba(158, 188, 164, 0.12);
+  margin-bottom: 12px;
+}
+
+.office-task-column-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.office-task-column-header p {
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.office-task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.office-task-card {
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(10, 12, 11, 0.72);
+  border: 1px solid rgba(158, 188, 164, 0.13);
+}
+
+.office-task-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.office-task-card-header strong {
+  color: white;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.office-task-card-header span {
+  white-space: nowrap;
+  color: rgba(198, 224, 205, 0.95);
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(158, 188, 164, 0.22);
+  background: rgba(158, 188, 164, 0.08);
+}
+
+.office-task-card p {
+  margin: 10px 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.office-task-card small {
+  color: rgba(158, 188, 164, 0.82);
+}
+
+@media (max-width: 1200px) {
+  .office-task-board {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .office-task-board {
+    grid-template-columns: 1fr;
+  }
+}.office-reminder-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.office-reminder-group {
+  min-height: 360px;
+  border: 1px solid rgba(158, 188, 164, 0.13);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.035);
+  padding: 14px;
+}
+
+.office-reminder-group-header {
+  padding: 6px 4px 12px;
+  border-bottom: 1px solid rgba(158, 188, 164, 0.12);
+  margin-bottom: 12px;
+}
+
+.office-reminder-group-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.office-reminder-group-header p {
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.office-reminder-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.office-reminder-card {
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(10, 12, 11, 0.72);
+  border: 1px solid rgba(158, 188, 164, 0.13);
+}
+
+.office-reminder-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.office-reminder-card-top strong {
+  color: white;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.office-reminder-card-top span {
+  white-space: nowrap;
+  color: rgba(198, 224, 205, 0.95);
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(158, 188, 164, 0.22);
+  background: rgba(158, 188, 164, 0.08);
+}
+
+.office-reminder-card p {
+  margin: 10px 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.office-reminder-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: rgba(158, 188, 164, 0.82);
+}
+
+.office-reminder-meta small {
+  color: rgba(158, 188, 164, 0.82);
+}
+
+@media (max-width: 1200px) {
+  .office-reminder-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .office-reminder-grid {
+    grid-template-columns: 1fr;
+  }
+}.office-ai-workspace {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.office-ai-input-panel,
+.office-ai-output-panel {
+  border: 1px solid rgba(158, 188, 164, 0.13);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.035);
+  padding: 18px;
+}
+
+.office-ai-input-panel h3,
+.office-ai-output-panel h3 {
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+.office-ai-input-panel label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+}
+
+.office-ai-input-panel input,
+.office-ai-input-panel select,
+.office-ai-input-panel textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(158, 188, 164, 0.18);
+  border-radius: 14px;
+  background: rgba(10, 12, 11, 0.72);
+  color: white;
+  padding: 12px 14px;
+  outline: none;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.office-ai-input-panel input::placeholder,
+.office-ai-input-panel textarea::placeholder {
+  color: rgba(255, 255, 255, 0.36);
+}
+
+.office-ai-input-panel input:focus,
+.office-ai-input-panel select:focus,
+.office-ai-input-panel textarea:focus {
+  border-color: rgba(158, 188, 164, 0.65);
+}
+
+.office-ai-output {
+  min-height: 270px;
+  border: 1px solid rgba(158, 188, 164, 0.13);
+  border-radius: 16px;
+  background: rgba(10, 12, 11, 0.72);
+  padding: 16px;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.office-tool-status {
+  white-space: nowrap;
+  color: rgba(198, 224, 205, 0.95);
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(158, 188, 164, 0.22);
+  background: rgba(158, 188, 164, 0.08);
+}
+
+.office-tool-description {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+@media (max-width: 1000px) {
+  .office-ai-workspace {
+    grid-template-columns: 1fr;
+  }
+}
+.office-chat-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr 280px;
+  gap: 16px;
+  min-height: calc(100vh - 170px);
+}
+
+.office-chat-tabs,
+.office-chat-window,
+.office-chat-sidepanel {
+  border: 1px solid rgba(158, 188, 164, 0.15);
+  background: rgba(10, 12, 11, 0.72);
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+}
+
+.office-chat-room-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.office-chat-room {
+  width: 100%;
+  text-align: left;
+  border: 1px solid rgba(158, 188, 164, 0.12);
+  background: rgba(255, 255, 255, 0.035);
+  color: white;
+  border-radius: 16px;
+  padding: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.office-chat-room.active,
+.office-chat-room:hover {
+  background: rgba(158, 188, 164, 0.12);
+  border-color: rgba(158, 188, 164, 0.28);
+}
+
+.office-chat-room strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.office-chat-room p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.office-chat-room span {
+  white-space: nowrap;
+  height: fit-content;
+  color: rgba(198, 224, 205, 0.95);
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(158, 188, 164, 0.22);
+  background: rgba(158, 188, 164, 0.08);
+}
+
+.office-chat-window {
+  display: flex;
+  flex-direction: column;
+}
+
+.office-chat-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(158, 188, 164, 0.13);
+}
+
+.office-chat-header h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.office-chat-header p {
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+}
+
+.office-chat-header button,
+.office-chat-composer button {
+  border: 1px solid rgba(158, 188, 164, 0.38);
+  background: rgba(158, 188, 164, 0.08);
+  color: white;
+  border-radius: 999px;
+  padding: 9px 14px;
+  cursor: pointer;
+}
+
+.office-chat-messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px 0;
+}
+
+.office-chat-message {
+  max-width: 78%;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(158, 188, 164, 0.13);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.office-chat-message-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.office-chat-message-top strong {
+  font-size: 13px;
+  color: rgba(198, 224, 205, 0.95);
+}
+
+.office-chat-message-top span {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 12px;
+}
+
+.office-chat-message p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.office-chat-composer {
+  display: flex;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(158, 188, 164, 0.13);
+}
+
+.office-chat-composer input {
+  flex: 1;
+  border: 1px solid rgba(158, 188, 164, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.055);
+  color: white;
+  padding: 12px 16px;
+  outline: none;
+}
+
+.office-chat-composer input::placeholder {
+  color: rgba(255, 255, 255, 0.36);
+}
+
+.office-chat-sidepanel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+@media (max-width: 1200px) {
+  .office-chat-layout {
+    grid-template-columns: 260px 1fr;
+  }
+
+  .office-chat-sidepanel {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 850px) {
+  .office-chat-layout {
+    grid-template-columns: 1fr;
+  }
+}.office-personnel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.office-personnel-card {
+  border: 1px solid rgba(158, 188, 164, 0.13);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.035);
+  padding: 18px;
+}
+
+.office-personnel-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: flex-start;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(158, 188, 164, 0.12);
+  margin-bottom: 14px;
+}
+
+.office-personnel-card-header h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.office-personnel-card-header p {
+  margin: 6px 0 0;
+  color: rgba(158, 188, 164, 0.9);
+  font-size: 15px;
+}
+
+.office-personnel-card-header span {
+  white-space: nowrap;
+  color: rgba(198, 224, 205, 0.95);
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(158, 188, 164, 0.22);
+  background: rgba(158, 188, 164, 0.08);
+  text-transform: uppercase;
+}
+
+.office-personnel-details p {
+  margin: 10px 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.office-personnel-details strong {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.office-personnel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.office-personnel-actions button {
+  border: 1px solid rgba(158, 188, 164, 0.38);
+  background: rgba(158, 188, 164, 0.08);
+  color: white;
+  border-radius: 999px;
+  padding: 9px 13px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.office-personnel-actions button:hover {
+  background: rgba(158, 188, 164, 0.18);
+}
+
+@media (max-width: 1100px) {
+  .office-personnel-grid {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .office-personnel-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.office-contact-toolbar {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 12px;
+  margin-top: 18px;
+  margin-bottom: 16px;
+}
+
+.office-contact-toolbar input,
+.office-contact-toolbar select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(158, 188, 164, 0.18);
+  border-radius: 14px;
+  background: rgba(10, 12, 11, 0.72);
+  color: white;
+  padding: 12px 14px;
+  outline: none;
+  font-size: 14px;
+}
+
+.office-contact-toolbar input::placeholder {
+  color: rgba(255, 255, 255, 0.36);
+}
+
+.office-contact-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.office-contact-card {
+  border: 1px solid rgba(158, 188, 164, 0.13);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.035);
+  padding: 18px;
+}
+
+.office-contact-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: flex-start;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(158, 188, 164, 0.12);
+  margin-bottom: 14px;
+}
+
+.office-contact-main h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.office-contact-main p {
+  margin: 6px 0 0;
+  color: rgba(158, 188, 164, 0.9);
+  font-size: 13px;
+}
+
+.office-contact-main span {
+  white-space: nowrap;
+  color: rgba(198, 224, 205, 0.95);
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(158, 188, 164, 0.22);
+  background: rgba(158, 188, 164, 0.08);
+}
+
+.office-contact-details p {
+  margin: 9px 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.office-contact-details strong {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.office-contact-note {
+  margin-top: 14px;
+  padding: 13px;
+  border-radius: 14px;
+  background: rgba(10, 12, 11, 0.58);
+  border: 1px solid rgba(158, 188, 164, 0.1);
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  .office-contact-list {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .office-contact-toolbar,
+  .office-contact-list {
+    grid-template-columns: 1fr;
+  }
 }
