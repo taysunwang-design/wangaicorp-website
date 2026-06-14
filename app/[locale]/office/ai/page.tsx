@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import OfficeLayout from "../components/OfficeLayout";
 
 const aiTools = [
@@ -5,7 +8,7 @@ const aiTools = [
     title: "Email Reply Assistant",
     description:
       "Draft professional replies for customers, suppliers, and internal communication.",
-    status: "Planned"
+    status: "Mock Active"
   },
   {
     title: "Email Translator",
@@ -40,6 +43,65 @@ const aiTools = [
 ];
 
 export default function OfficeAIPage() {
+  const [provider, setProvider] = useState("mock");
+  const [taskType, setTaskType] = useState("email-reply");
+  const [originalText, setOriginalText] = useState("");
+  const [instruction, setInstruction] = useState("");
+  const [output, setOutput] = useState(
+    "AI output will appear here. Mock mode is active for now."
+  );
+  const [isLoading, setIsLoading] = useState(false);
+
+  async function handleGenerate() {
+    if (!originalText.trim() && !instruction.trim()) {
+      alert("Please enter original text or an instruction first.");
+      return;
+    }
+
+    setIsLoading(true);
+    setOutput("Generating...");
+
+    try {
+      const response = await fetch("/api/office/ai", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          provider,
+          taskType,
+          originalText,
+          instruction
+        })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        setOutput(data.error || "AI request failed.");
+        return;
+      }
+
+      setOutput(data.output);
+    } catch (error) {
+      console.error(error);
+      setOutput("AI request failed. Please check the server and try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+  function handleClear() {
+    setOriginalText("");
+    setInstruction("");
+    setOutput("AI output will appear here. Mock mode is active for now.");
+  }
+
+  async function handleCopy() {
+    await navigator.clipboard.writeText(output);
+    alert("Draft copied.");
+  }
+
   return (
     <OfficeLayout title="AI Assistant" label="Virtual Office Assistant">
       <section className="office-panel office-wide-panel">
@@ -47,13 +109,15 @@ export default function OfficeAIPage() {
           <div>
             <h2>Wang Corp AI Workdesk</h2>
             <p className="office-panel-subtitle">
-              The AI Assistant will support daily office work: replying to
-              emails, translating messages, summarizing communication, preparing
-              RFQ notes, and creating follow-up actions.
+              The AI Assistant supports daily office work: replying to emails,
+              translating messages, summarizing communication, preparing RFQ
+              notes, and creating follow-up actions.
             </p>
           </div>
 
-          <button>New AI Task</button>
+          <button onClick={handleGenerate} disabled={isLoading}>
+            {isLoading ? "Generating..." : "Generate"}
+          </button>
         </div>
 
         <div className="office-ai-workspace">
@@ -61,8 +125,24 @@ export default function OfficeAIPage() {
             <h3>Assistant Input</h3>
 
             <label>
+              AI Provider
+              <select
+                value={provider}
+                onChange={(event) => setProvider(event.target.value)}
+              >
+                <option value="mock">Mock Provider</option>
+                <option value="openai">OpenAI / ChatGPT</option>
+                <option value="deepseek">DeepSeek</option>
+                <option value="qwen">Qwen</option>
+              </select>
+            </label>
+
+            <label>
               Task Type
-              <select defaultValue="email-reply">
+              <select
+                value={taskType}
+                onChange={(event) => setTaskType(event.target.value)}
+              >
                 <option value="email-reply">Email Reply</option>
                 <option value="translation">Translation</option>
                 <option value="summary">Summary</option>
@@ -75,6 +155,8 @@ export default function OfficeAIPage() {
             <label>
               Original Text
               <textarea
+                value={originalText}
+                onChange={(event) => setOriginalText(event.target.value)}
                 placeholder="Paste an email, message, RFQ request, or note here..."
                 rows={9}
               />
@@ -83,14 +165,18 @@ export default function OfficeAIPage() {
             <label>
               Instruction
               <input
+                value={instruction}
+                onChange={(event) => setInstruction(event.target.value)}
                 type="text"
                 placeholder="Example: Write a polite English reply, translate to Chinese, summarize for internal use..."
               />
             </label>
 
             <div className="office-actions">
-              <button>Generate Draft</button>
-              <button>Clear</button>
+              <button onClick={handleGenerate} disabled={isLoading}>
+                {isLoading ? "Generating..." : "Generate Draft"}
+              </button>
+              <button onClick={handleClear}>Clear</button>
             </div>
           </div>
 
@@ -98,13 +184,11 @@ export default function OfficeAIPage() {
             <h3>Draft Output</h3>
 
             <div className="office-ai-output">
-              AI output will appear here later. For now this is a prototype
-              interface. The real AI connection will be added through a secure
-              server-side API route.
+              <pre>{output}</pre>
             </div>
 
             <div className="office-actions">
-              <button>Copy Draft</button>
+              <button onClick={handleCopy}>Copy Draft</button>
               <button>Create Task</button>
               <button>Add Reminder</button>
             </div>
@@ -127,14 +211,14 @@ export default function OfficeAIPage() {
 
       <section className="office-panel office-wide-panel">
         <div className="office-panel-header">
-          <h2>Security Plan</h2>
+          <h2>Provider Strategy</h2>
         </div>
 
         <div className="office-empty-state">
-          The AI Assistant must never expose API keys in frontend code. The
-          browser will send requests to Wang Corp secure API routes, and the
-          server will communicate with the AI provider. Later this module will
-          connect to mail, tasks, reminders, RFQs, and internal company memory.
+          The AI Assistant is provider-ready. Mock mode works now. Later we can
+          connect OpenAI for global users, and DeepSeek or Qwen for China-side
+          access. API keys must stay on the server and must never be exposed in
+          frontend code.
         </div>
       </section>
     </OfficeLayout>

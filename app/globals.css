@@ -2905,4 +2905,55 @@ a {
   .office-reminder-form {
     grid-template-columns: 1fr;
   }
+}.office-ai-output pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: inherit;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.7;
+}
+
+.office-ai-input-panel select {
+  appearance: none;
+}/* AI Assistant layout improvement */
+.office-ai-workspace {
+  display: grid;
+  grid-template-columns: minmax(340px, 380px) 1fr;
+  gap: 16px;
+  margin-top: 18px;
+  align-items: stretch;
+}
+
+.office-ai-input-panel {
+  min-width: 340px;
+}
+
+.office-ai-input-panel label {
+  width: 100%;
+}
+
+.office-ai-input-panel input,
+.office-ai-input-panel select,
+.office-ai-input-panel textarea {
+  width: 100%;
+  min-width: 0;
+}
+
+.office-ai-output-panel {
+  min-width: 0;
+}
+
+.office-ai-output {
+  overflow-x: auto;
+}
+
+@media (max-width: 1100px) {
+  .office-ai-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .office-ai-input-panel {
+    min-width: 0;
+  }
 }
