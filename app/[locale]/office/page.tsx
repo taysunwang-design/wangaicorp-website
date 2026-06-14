@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 import OfficeLayout from "./components/OfficeLayout";
 
 type OfficeTask = {
@@ -27,6 +29,9 @@ type OfficeReminder = {
 };
 
 export default function OfficePage() {
+  const params = useParams();
+  const locale = typeof params.locale === "string" ? params.locale : "en";
+
   const [todayTaskCount, setTodayTaskCount] = useState(0);
   const [totalTaskCount, setTotalTaskCount] = useState(0);
   const [todayReminderCount, setTodayReminderCount] = useState(0);
@@ -124,10 +129,11 @@ export default function OfficePage() {
             >
               Open Zoho Mail
             </a>
-            <button>Draft Email Reply</button>
-            <button>Create Task</button>
-            <button>Add Reminder</button>
-            <button>Create RFQ Note</button>
+
+            <Link href={`/${locale}/office/ai`}>Draft Email Reply</Link>
+            <Link href={`/${locale}/office/tasks`}>Create Task</Link>
+            <Link href={`/${locale}/office/reminders`}>Add Reminder</Link>
+            <Link href={`/${locale}/office/rfqs`}>Create RFQ Note</Link>
           </div>
         </div>
 
@@ -155,13 +161,12 @@ export default function OfficePage() {
         <div className="office-panel office-wide-panel">
           <div className="office-panel-header">
             <h2>Upcoming Work</h2>
-            <button>Add Task</button>
+            <Link href={`/${locale}/office/tasks`}>Add Task</Link>
           </div>
 
           <div className="office-empty-state">
             The dashboard now reads saved tasks and reminders from localStorage.
-            Next, quick action buttons can be connected to Tasks, Reminders, AI,
-            and RFQ tools.
+            Quick actions are connected to Tasks, Reminders, AI, and RFQ tools.
           </div>
         </div>
       </section>
