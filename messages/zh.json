@@ -10,14 +10,14 @@
   },
   "Home": {
     "title1": "国际工业",
-    "title2": "协调与国际工业",
-    "description": "通过咨询、贸易协调与智能数字国际工业，在全球市场之间建立透明且可持续的工业合作。",
+    "title2": "协同与服务平台",
+    "description": "通过咨询、贸易协调与智能数字平台，在全球市场之间建立透明且可持续的工业合作。",
     "platform": "进入平台",
     "contact": "联系我们"
   },
   "About": {
     "label": "关于 WANG CORP.",
-    "title": "以现代数字国际工业支持全球工业协调。",
+    "title": "以现代数字平台支持全球工业协同。",
     "description": "WANG CORP. 是一家专注于重工业、工程合作、战略采购和数字工业平台的国际协调公司。",
     "cards": {
       "transparent": {
@@ -33,7 +33,7 @@
         "text": "我们优先考虑效率、灵活性和实际执行，而不是不必要的企业开销。"
       },
       "digital": {
-        "title": "数字国际工业",
+        "title": "数字工业平台",
         "text": "WANG CORP. 正在开发用于全球工业沟通与协作的智能数字平台。"
       }
     }
@@ -52,7 +52,7 @@
         "text": "专注于钢铁、矿业和重工业的全球采购与制造合作。"
       },
       "infrastructure": {
-        "title": "数字基础设施",
+        "title": "数字服务平台",
         "text": "集成人工智能、多语言沟通和运营协调的企业级工业平台。"
       },
       "communication": {
@@ -64,14 +64,14 @@
   "Platform": {
     "label": "WANG 平台",
     "title": "工业协调系统",
-    "description": "面向供应商协调、多语言沟通、RFQ 管理和国际工业合作的企业级数字基础设施。",
+    "description": "面向供应商协调、多语言沟通、RFQ 管理和国际工业合作的企业级数字服务平台。",
     "status": "平台架构开发中",
     "request": "申请访问权限",
     "return": "返回首页",
     "cards": {
       "translation": {
         "title": "AI 翻译层",
-        "text": "专为工业术语和跨境项目沟通设计的多语言沟通基础设施。"
+        "text": "专为工业术语和跨境项目沟通设计的多语言沟通系统。"
       },
       "crm": {
         "title": "工业 CRM",
@@ -99,165 +99,157 @@
       },
       "global": {
         "title": "全球协作",
-        "text": "连接中国、土耳其、欧洲及全球重工业市场的数字协作基础设施。"
+        "text": "连接中国、土耳其、欧洲及全球重工业市场的数字协作平台。"
       }
     }
   },
   "News": {
-  "label": "新闻",
-  "title": "全球工业新闻",
-  "description": "涵盖钢铁、矿业、物流、能源、工业项目和全球市场的精选自动更新新闻。",
-  "status": "实时分类预览已启用 · 每小时更新",
-  "latest": "最新新闻",
-  "statusLabel": "状态",
-  "analysisStatus": "高级情报专区仅向授权用户开放",
-  "categories": {
+    "label": "新闻",
+    "title": "全球工业新闻",
+    "description": "涵盖钢铁、矿业、物流、能源、工业项目和全球市场的精选自动更新新闻。",
+    "status": "实时分类预览已启用 · 每小时更新",
+    "latest": "最新新闻",
+    "statusLabel": "状态",
+    "analysisStatus": "高级情报专区仅向授权用户开放",
+    "categories": {
+      "steel": {
+        "title": "钢铁",
+        "description": "钢铁行业动态、生产趋势、工厂投资及全球钢铁市场发展。"
+      },
+      "mining": {
+        "title": "矿业",
+        "description": "矿业项目、原材料供应、铁矿石、铜、煤炭及矿业投资动态。"
+      },
+      "logistics": {
+        "title": "航运与物流",
+        "description": "运费、港口、运输中断、地缘政治风险及国际物流动态。"
+      },
+      "energy": {
+        "title": "能源",
+        "description": "影响重工业的煤炭、天然气、石油、电力及工业能源发展。"
+      },
+      "projects": {
+        "title": "工业项目",
+        "description": "新建工厂投资、EPC项目、基础设施建设及工业扩张新闻。"
+      },
+      "marketIntelligence": {
+        "title": "情报",
+        "description": "面向特定用户的 Wang Corp 高级分析、内部信息、机会信号和市场解读。"
+      }
+    }
+  },
+  "NewsPages": {
     "steel": {
-      "title": "钢铁",
-      "description": "钢铁行业动态、生产趋势、工厂投资及全球钢铁市场发展。"
+      "label": "钢铁新闻",
+      "title": "钢铁行业新闻",
+      "description": "自动更新的钢铁市场、钢价、生产趋势、贸易及全球钢铁行业动态。",
+      "status": "钢铁新闻自动更新中 · 每小时更新",
+      "lastUpdated": "最后更新",
+      "source": "来源",
+      "date": "日期",
+      "readOriginal": "查看原文"
     },
     "mining": {
-      "title": "矿业",
-      "description": "矿业项目、原材料供应、铁矿石、铜、煤炭及矿业投资动态。"
+      "label": "矿业新闻",
+      "title": "矿业与原材料新闻",
+      "description": "自动更新的铁矿石、煤炭、铜矿、原材料供应及矿业投资动态。",
+      "status": "矿业新闻自动更新中 · 每小时更新",
+      "lastUpdated": "最后更新",
+      "source": "来源",
+      "date": "日期",
+      "readOriginal": "查看原文"
     },
     "logistics": {
-      "title": "航运与物流",
-      "description": "运费、港口、运输中断、地缘政治风险及国际物流动态。"
+      "label": "物流新闻",
+      "title": "航运与物流新闻",
+      "description": "自动更新的港口、运费市场、物流中断及国际贸易路线相关新闻。",
+      "status": "物流新闻自动更新中 · 每小时更新",
+      "lastUpdated": "最后更新",
+      "source": "来源",
+      "date": "日期",
+      "readOriginal": "查看原文"
     },
     "energy": {
-      "title": "能源",
-      "description": "影响重工业的煤炭、天然气、石油、电力及工业能源发展。"
+      "label": "能源新闻",
+      "title": "能源行业新闻",
+      "description": "自动更新的电力、天然气、煤炭、石油及工业能源市场动态。",
+      "status": "能源新闻自动更新中 · 每小时更新",
+      "lastUpdated": "最后更新",
+      "source": "来源",
+      "date": "日期",
+      "readOriginal": "查看原文"
     },
     "projects": {
-      "title": "工业项目",
-      "description": "新建工厂投资、EPC项目、基础设施建设及工业扩张新闻。"
-    },
-    "marketIntelligence": {
-      "title": "情报",
-      "description": "面向特定用户的 Wang Corp 高级分析、内部信息、机会信号和市场解读。"
+      "label": "工业项目新闻",
+      "title": "工业项目与投资",
+      "description": "自动更新的新建工厂投资、EPC项目、产能扩张及工业发展动态。",
+      "status": "项目新闻自动更新中 · 每小时更新",
+      "lastUpdated": "最后更新",
+      "source": "来源",
+      "date": "日期",
+      "readOriginal": "查看原文"
+    }
+  },
+  "Intelligence": {
+    "label": "高级访问",
+    "title": "王氏工业情报中心",
+    "description": "工业情报、投资监测、采购机会追踪及王氏专属市场分析。",
+    "status": "高级情报模块开发中"
+  },
+  "Contact": {
+    "label": "联系我们",
+    "title": "联系系统开发中",
+    "description": "王氏公司官方联系方式、企业邮箱系统及客户访问系统正在建设中。",
+    "status": "联系系统开发中",
+    "home": "返回首页",
+    "platform": "查看平台"
+  },
+  "Portal": {
+    "label": "平台",
+    "title": "工业平台",
+    "description": "集中管理企业、联系人、项目、询价及工业资源的平台。",
+    "status": "平台框架开发中",
+    "cards": {
+      "companies": {
+        "title": "企业",
+        "text": "工业企业及客户数据库。"
+      },
+      "contacts": {
+        "title": "联系人",
+        "text": "联系人及名片管理。"
+      },
+      "projects": {
+        "title": "项目",
+        "text": "项目协调与跟踪。"
+      },
+      "rfqs": {
+        "title": "询价",
+        "text": "询价与报价管理。"
+      },
+      "resources": {
+        "title": "资源",
+        "text": "样本、演示文稿、视频及图纸。"
+      },
+      "ai": {
+        "title": "AI 工具",
+        "text": "未来工业情报及 AI 翻译模块。"
+      }
+    }
+  },
+  "Companies": {
+    "label": "企业库",
+    "title": "工业企业数据库",
+    "description": "合作伙伴、客户、供应商及目标客户数据库。",
+    "search": "搜索企业、行业或国家...",
+    "country": "国家",
+    "sector": "行业",
+    "status": "状态",
+    "subscriptionNote": "更多信息根据订阅级别开放。",
+    "internalNote": "内部企业数据仅限授权用户访问。",
+    "access": {
+      "professional": "Professional",
+      "premium": "Premium",
+      "internal": "Internal"
     }
   }
-},
-"NewsPages": {
-  "steel": {
-    "label": "钢铁新闻",
-    "title": "钢铁行业新闻",
-    "description": "自动更新的钢铁市场、钢价、生产趋势、贸易及全球钢铁行业动态。",
-    "status": "钢铁新闻自动更新中 · 每小时更新",
-    "lastUpdated": "最后更新",
-    "source": "来源",
-    "date": "日期",
-    "readOriginal": "查看原文"
-  },
-
-  "mining": {
-    "label": "矿业新闻",
-    "title": "矿业与原材料新闻",
-    "description": "自动更新的铁矿石、煤炭、铜矿、原材料供应及矿业投资动态。",
-    "status": "矿业新闻自动更新中 · 每小时更新",
-    "lastUpdated": "最后更新",
-    "source": "来源",
-    "date": "日期",
-    "readOriginal": "查看原文"
-  },
-
-  "logistics": {
-    "label": "物流新闻",
-    "title": "航运与物流新闻",
-    "description": "自动更新的港口、运费市场、物流中断及国际贸易路线相关新闻。",
-    "status": "物流新闻自动更新中 · 每小时更新",
-    "lastUpdated": "最后更新",
-    "source": "来源",
-    "date": "日期",
-    "readOriginal": "查看原文"
-  },
-
-  "energy": {
-    "label": "能源新闻",
-    "title": "能源行业新闻",
-    "description": "自动更新的电力、天然气、煤炭、石油及工业能源市场动态。",
-    "status": "能源新闻自动更新中 · 每小时更新",
-    "lastUpdated": "最后更新",
-    "source": "来源",
-    "date": "日期",
-    "readOriginal": "查看原文"
-  },
-
-  "projects": {
-    "label": "工业项目新闻",
-    "title": "工业项目与投资",
-    "description": "自动更新的新建工厂投资、EPC项目、产能扩张及工业发展动态。",
-    "status": "项目新闻自动更新中 · 每小时更新",
-    "lastUpdated": "最后更新",
-    "source": "来源",
-    "date": "日期",
-    "readOriginal": "查看原文"
-  }
-},
-
-"Intelligence": {
-  "label": "高级访问",
-  "title": "王氏工业情报中心",
-  "description": "工业情报、投资监测、采购机会追踪及王氏专属市场分析。",
-  "status": "高级情报模块开发中"
-},
-
-"Contact": {
-  "label": "联系我们",
-  "title": "联系系统开发中",
-  "description": "王氏公司官方联系方式、企业邮箱系统及客户访问系统正在建设中。",
-  "status": "联系系统开发中",
-  "home": "返回首页",
-  "platform": "查看平台"
-},
-
-"Portal": {
-  "label": "平台",
-  "title": "工业平台",
-  "description": "集中管理企业、联系人、项目、询价及工业资源的平台。",
-  "status": "平台框架开发中",
-  "cards": {
-    "companies": {
-      "title": "企业",
-      "text": "工业企业及客户数据库。"
-    },
-    "contacts": {
-      "title": "联系人",
-      "text": "联系人及名片管理。"
-    },
-    "projects": {
-      "title": "项目",
-      "text": "项目协调与跟踪。"
-    },
-    "rfqs": {
-      "title": "询价",
-      "text": "询价与报价管理。"
-    },
-    "resources": {
-      "title": "资源",
-      "text": "样本、演示文稿、视频及图纸。"
-    },
-    "ai": {
-      "title": "AI工具",
-      "text": "未来工业情报及AI翻译模块。"
-    }
-  }
-},
-
-"Companies": {
-  "label": "企业库",
-  "title": "工业企业数据库",
-  "description": "合作伙伴、客户、供应商及目标客户数据库。",
-  "search": "搜索企业、行业或国家...",
-  "country": "国家",
-  "sector": "行业",
-  "status": "状态",
-  "subscriptionNote": "更多信息根据订阅级别开放。",
-  "internalNote": "内部企业数据仅限授权用户访问。",
-  "access": {
-    "professional": "Professional",
-    "premium": "Premium",
-    "internal": "Internal"
-  }
-}
 }
