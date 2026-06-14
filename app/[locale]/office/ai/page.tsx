@@ -3,6 +3,29 @@
 import { useState } from "react";
 import OfficeLayout from "../components/OfficeLayout";
 
+type OfficeTask = {
+  id: string;
+  title: string;
+  owner: string;
+  priority: string;
+  status: string;
+  note: string;
+  dueDate: string;
+  relatedTo: string;
+};
+
+type OfficeReminder = {
+  id: string;
+  title: string;
+  owner: string;
+  type: string;
+  priority: string;
+  status: string;
+  reminderDate: string;
+  relatedTo: string;
+  note: string;
+};
+
 const aiTools = [
   {
     title: "Email Reply Assistant",
@@ -102,6 +125,65 @@ export default function OfficeAIPage() {
     alert("Draft copied.");
   }
 
+  function handleCreateTask() {
+    if (!output.trim() || output.includes("AI output will appear here")) {
+      alert("Please generate an AI output first.");
+      return;
+    }
+
+    const savedTasks = localStorage.getItem("wangcorp_tasks");
+    const currentTasks: OfficeTask[] = savedTasks ? JSON.parse(savedTasks) : [];
+
+    const newTask: OfficeTask = {
+      id: `task-${Date.now()}`,
+      title: `AI Task - ${taskType}`,
+      owner: "Taysun Wang",
+      priority: "Medium",
+      status: "Today",
+      note: output,
+      dueDate: "Today",
+      relatedTo: "AI Assistant"
+    };
+
+    localStorage.setItem(
+      "wangcorp_tasks",
+      JSON.stringify([newTask, ...currentTasks])
+    );
+
+    alert("AI output saved as a task.");
+  }
+
+  function handleAddReminder() {
+    if (!output.trim() || output.includes("AI output will appear here")) {
+      alert("Please generate an AI output first.");
+      return;
+    }
+
+    const savedReminders = localStorage.getItem("wangcorp_reminders");
+    const currentReminders: OfficeReminder[] = savedReminders
+      ? JSON.parse(savedReminders)
+      : [];
+
+    const newReminder: OfficeReminder = {
+      id: `reminder-${Date.now()}`,
+      title: `AI Reminder - ${taskType}`,
+      owner: "Taysun Wang",
+      type: "Follow-up",
+      priority: "Medium",
+      status: "Today",
+      reminderDate: "Today",
+      relatedTo: "AI Assistant",
+      note: output
+    };
+
+    localStorage.setItem(
+      "wangcorp_reminders",
+      JSON.stringify([newReminder, ...currentReminders])
+    );
+
+    alert("AI output saved as a reminder.");
+  }
+
   return (
     <OfficeLayout title="AI Assistant" label="Virtual Office Assistant">
       <section className="office-panel office-wide-panel">
@@ -188,8 +270,8 @@ export default function OfficeAIPage() {
 
             <div className="office-actions">
               <button onClick={handleCopy}>Copy Draft</button>
-              <button>Create Task</button>
-              <button>Add Reminder</button>
+              <button onClick={handleCreateTask}>Create Task</button>
+              <button onClick={handleAddReminder}>Add Reminder</button>
             </div>
           </div>
         </div>
@@ -215,8 +297,9 @@ export default function OfficeAIPage() {
 
         <div className="office-empty-state">
           The AI Assistant is provider-ready. Mock mode works now. Later we can
-connect OpenAI for global users and DeepSeek for China-side access.
-API keys must stay on the server and must never be exposed in frontend code.
+          connect OpenAI for global users and DeepSeek for China-side access.
+          API keys must stay on the server and must never be exposed in frontend
+          code.
         </div>
       </section>
     </OfficeLayout>
