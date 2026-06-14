@@ -133,7 +133,6 @@ export default function OfficeAIPage() {
                 <option value="mock">Mock Provider</option>
                 <option value="openai">OpenAI / ChatGPT</option>
                 <option value="deepseek">DeepSeek</option>
-                <option value="qwen">Qwen</option>
               </select>
             </label>
 
@@ -216,9 +215,8 @@ export default function OfficeAIPage() {
 
         <div className="office-empty-state">
           The AI Assistant is provider-ready. Mock mode works now. Later we can
-          connect OpenAI for global users, and DeepSeek or Qwen for China-side
-          access. API keys must stay on the server and must never be exposed in
-          frontend code.
+connect OpenAI for global users and DeepSeek for China-side access.
+API keys must stay on the server and must never be exposed in frontend code.
         </div>
       </section>
     </OfficeLayout>

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-type AIProvider = "mock" | "openai" | "deepseek" | "qwen";
+type AIProvider = "mock" | "openai" | "deepseek";
 
 type AIRequestBody = {
   provider?: AIProvider;
