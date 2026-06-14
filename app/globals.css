@@ -2381,3 +2381,137 @@ a {
     grid-template-columns: 1fr;
   }
 }
+.office-document-toolbar {
+  display: grid;
+  grid-template-columns: 1fr 220px 220px;
+  gap: 12px;
+  margin-top: 18px;
+  margin-bottom: 16px;
+}
+
+.office-document-toolbar input,
+.office-document-toolbar select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(158, 188, 164, 0.18);
+  border-radius: 14px;
+  background: rgba(10, 12, 11, 0.72);
+  color: white;
+  padding: 12px 14px;
+  outline: none;
+  font-size: 14px;
+}
+
+.office-document-toolbar input::placeholder {
+  color: rgba(255, 255, 255, 0.36);
+}
+
+.office-document-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.office-document-card {
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  gap: 18px;
+  border: 1px solid rgba(158, 188, 164, 0.13);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.035);
+  padding: 18px;
+}
+
+.office-document-icon {
+  width: 70px;
+  height: 84px;
+  border-radius: 16px;
+  border: 1px solid rgba(158, 188, 164, 0.18);
+  background: rgba(10, 12, 11, 0.72);
+  color: rgba(198, 224, 205, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.office-document-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(158, 188, 164, 0.12);
+  margin-bottom: 14px;
+}
+
+.office-document-header h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.office-document-header p {
+  margin: 7px 0 0;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.office-document-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.office-document-badges span {
+  white-space: nowrap;
+  color: rgba(198, 224, 205, 0.95);
+  font-size: 11px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(158, 188, 164, 0.18);
+  background: rgba(158, 188, 164, 0.07);
+}
+
+.office-document-info {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.office-document-info p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.office-document-info strong {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+@media (max-width: 1100px) {
+  .office-document-toolbar,
+  .office-document-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .office-document-card {
+    grid-template-columns: 1fr;
+  }
+
+  .office-document-icon {
+    width: 100%;
+    height: 54px;
+  }
+
+  .office-document-header {
+    flex-direction: column;
+  }
+}
